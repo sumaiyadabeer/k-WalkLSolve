@@ -4,6 +4,8 @@ $k$-WalkLSolve is a high-performance, CUDA-accelerated project designed to calcu
 
 The project includes the core GPU solvers written in CUDA C++ and a suite of Python evaluation scripts to measure ranking quality using metrics like Precision, Recall, F1-Score, NDCG, Spearman's Rho, and Kendall's Tau.
 
+See for master branch for all codes
+
 ## Project Structure
 
 * **`include/` & `src/`**: Contains the core CUDA C++ implementation.
