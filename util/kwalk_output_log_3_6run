@@ -1,0 +1,1069 @@
+-------------------------------- wikibug ------------------------------------
+
+K-WalkSolver starting: 
+max epoch is: 875
+Number of packets in network : 4096
+Negative index : 14028 	 -6722.000000
+Max epoch: 875
+x[0] = 0
+x[1] = 5.58674e-07
+x[2] = 2.79337e-07
+x[3] = 1.11735e-06
+x[4] = 5.58674e-07
+x[5] = 0
+x[6] = 7.5421e-06
+x[7] = 1.08942e-05
+x[8] = 0
+x[9] = 0
+K Elapsed time: 22191 μs
+Realtive Residual in Kwalk: 22.064535
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 875
+Number of packets in network : 8192
+Negative index : 14028 	 -6722.000000
+Max epoch: 875
+x[0] = 2.79337e-07
+x[1] = 1.39668e-06
+x[2] = 4.32973e-06
+x[3] = 6.98343e-07
+x[4] = 4.19006e-07
+x[5] = 0
+x[6] = 8.79911e-06
+x[7] = 1.17322e-05
+x[8] = 3.21238e-06
+x[9] = 1.53635e-06
+K Elapsed time: 23054 μs
+Realtive Residual in Kwalk: 14.519485
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 875
+Number of packets in network : 16384
+Negative index : 14028 	 -6722.000000
+Max epoch: 875
+x[0] = 0
+x[1] = 0
+x[2] = 0
+x[3] = 0
+x[4] = 2.09503e-07
+x[5] = 6.98342e-08
+x[6] = 7.82144e-06
+x[7] = 1.31288e-05
+x[8] = 0
+x[9] = 0
+K Elapsed time: 26618 μs
+Realtive Residual in Kwalk: 11.413800
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 875
+Number of packets in network : 32768
+Negative index : 14028 	 -6722.000000
+Max epoch: 875
+x[0] = 0
+x[1] = 0
+x[2] = 0
+x[3] = 2.79337e-07
+x[4] = 6.63426e-07
+x[5] = 2.09503e-07
+x[6] = 9.11338e-06
+x[7] = 1.23258e-05
+x[8] = 0
+x[9] = 0
+K Elapsed time: 36972 μs
+Realtive Residual in Kwalk: 7.324054
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 875
+Number of packets in network : 65536
+Negative index : 14028 	 -6722.000000
+Max epoch: 875
+x[0] = 1.74586e-08
+x[1] = 8.72928e-08
+x[2] = 1.57127e-07
+x[3] = 1.92044e-07
+x[4] = 5.23757e-07
+x[5] = 2.96796e-07
+x[6] = 7.52465e-06
+x[7] = 1.24305e-05
+x[8] = 1.39668e-07
+x[9] = 5.23757e-08
+K Elapsed time: 48013 μs
+Realtive Residual in Kwalk: 5.426612
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 875
+Number of packets in network : 131072
+Negative index : 14028 	 -6722.000000
+Max epoch: 875
+x[0] = 2.09503e-07
+x[1] = 5.84862e-07
+x[2] = 3.92818e-07
+x[3] = 6.0232e-07
+x[4] = 7.68177e-07
+x[5] = 2.96796e-07
+x[6] = 8.16188e-06
+x[7] = 1.35304e-05
+x[8] = 2.00774e-07
+x[9] = 1.04751e-07
+K Elapsed time: 73677 μs
+Realtive Residual in Kwalk: 3.911073
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+-------------------------------- wikioc -------------------------------- 
+
+K-WalkSolver starting: 
+max epoch is: 1511
+Number of packets in network : 4096
+Negative index : 4704 	 -48159.000000
+Max epoch: 1511
+x[0] = 0
+x[1] = 0
+x[2] = 3.23365e-07
+x[3] = 4.85047e-07
+x[4] = 3.23365e-07
+x[5] = 8.92488e-05
+x[6] = 6.4673e-06
+x[7] = 4.20375e-05
+x[8] = 1.81085e-05
+x[9] = 2.10187e-05
+K Elapsed time: 40105 μs
+Realtive Residual in Kwalk: 66.353767
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 1511
+Number of packets in network : 8192
+Negative index : 4704 	 -48159.000000
+Max epoch: 1511
+x[0] = 8.08412e-08
+x[1] = 0
+x[2] = 1.21262e-06
+x[3] = 4.85047e-07
+x[4] = 7.27571e-07
+x[5] = 9.5231e-05
+x[6] = 7.03318e-06
+x[7] = 4.89898e-05
+x[8] = 1.81084e-05
+x[9] = 1.78659e-05
+K Elapsed time: 43223 μs
+Realtive Residual in Kwalk: 48.033112
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 1511
+Number of packets in network : 16384
+Negative index : 4704 	 -48159.000000
+Max epoch: 1511
+x[0] = 4.04206e-08
+x[1] = 4.04206e-08
+x[2] = 9.70097e-07
+x[3] = 2.82944e-07
+x[4] = 4.85047e-07
+x[5] = 9.2159e-05
+x[6] = 5.90142e-06
+x[7] = 4.88281e-05
+x[8] = 1.92806e-05
+x[9] = 2.03315e-05
+K Elapsed time: 45172 μs
+Realtive Residual in Kwalk: 34.460903
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 1511
+Number of packets in network : 32768
+Negative index : 4704 	 -48159.000000
+Max epoch: 1511
+x[0] = 4.04206e-08
+x[1] = 4.04206e-08
+x[2] = 1.49556e-06
+x[3] = 3.23365e-07
+x[4] = 9.09465e-07
+x[5] = 9.38163e-05
+x[6] = 7.4172e-06
+x[7] = 4.88888e-05
+x[8] = 1.91796e-05
+x[9] = 2.03518e-05
+K Elapsed time: 58839 μs
+Realtive Residual in Kwalk: 24.332239
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 1511
+Number of packets in network : 65536
+Negative index : 4704 	 -48159.000000
+Max epoch: 1511
+x[0] = 1.21262e-07
+x[1] = 1.31367e-07
+x[2] = 1.13178e-06
+x[3] = 4.44626e-07
+x[4] = 7.67992e-07
+x[5] = 9.12193e-05
+x[6] = 6.29552e-06
+x[7] = 4.74235e-05
+x[8] = 1.85025e-05
+x[9] = 1.9988e-05
+K Elapsed time: 84217 μs
+Realtive Residual in Kwalk: 18.091345
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 1511
+Number of packets in network : 131072
+Negative index : 4704 	 -48159.000000
+Max epoch: 1511
+x[0] = 6.0631e-08
+x[1] = 6.06309e-08
+x[2] = 1.19746e-06
+x[3] = 2.52629e-07
+x[4] = 6.11363e-07
+x[5] = 9.27098e-05
+x[6] = 6.67951e-06
+x[7] = 4.71254e-05
+x[8] = 1.77244e-05
+x[9] = 1.96445e-05
+K Elapsed time: 125576 μs
+Realtive Residual in Kwalk: 13.477668
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+-------------------------------- wikisr -------------------------------- 
+
+K-WalkSolver starting: 
+max epoch is: 3356
+Number of packets in network : 4096
+Negative index : 777 	 -396473.000000
+Max epoch: 3356
+x[0] = 0
+x[1] = 0
+x[2] = 4.45348e-05
+x[3] = 2.61969e-06
+x[4] = 3.12908e-06
+x[5] = 0
+x[6] = 3.05631e-06
+x[7] = 9.67829e-06
+x[8] = 7.71353e-06
+x[9] = 7.27691e-08
+K Elapsed time: 388618 μs
+Realtive Residual in Kwalk: 679.070618
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3356
+Number of packets in network : 8192
+Negative index : 777 	 -396473.000000
+Max epoch: 3356
+x[0] = 4.00231e-07
+x[1] = 0
+x[2] = 4.45348e-05
+x[3] = 2.54692e-06
+x[4] = 2.98354e-06
+x[5] = 7.27691e-08
+x[6] = 4.25701e-06
+x[7] = 8.73228e-06
+x[8] = 7.49523e-06
+x[9] = 1.45538e-07
+K Elapsed time: 401278 μs
+Realtive Residual in Kwalk: 521.864380
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3356
+Number of packets in network : 16384
+Negative index : 777 	 -396473.000000
+Max epoch: 3356
+x[0] = 2.18308e-07
+x[1] = 0
+x[2] = 4.17149e-05
+x[3] = 2.838e-06
+x[4] = 2.52873e-06
+x[5] = 5.45769e-08
+x[6] = 4.11145e-06
+x[7] = 9.13255e-06
+x[8] = 7.04042e-06
+x[9] = 9.09615e-08
+K Elapsed time: 413430 μs
+Realtive Residual in Kwalk: 368.131500
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3356
+Number of packets in network : 32768
+Negative index : 777 	 -396473.000000
+Max epoch: 3356
+x[0] = 3.09269e-07
+x[1] = 9.09614e-09
+x[2] = 4.26063e-05
+x[3] = 2.64698e-06
+x[4] = 2.64698e-06
+x[5] = 1.81923e-07
+x[6] = 4.0387e-06
+x[7] = 9.52367e-06
+x[8] = 7.65895e-06
+x[9] = 1.72827e-07
+K Elapsed time: 445344 μs
+Realtive Residual in Kwalk: 255.117325
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3356
+Number of packets in network : 65536
+Negative index : 777 	 -396473.000000
+Max epoch: 3356
+x[0] = 3.32009e-07
+x[1] = 0
+x[2] = 4.4321e-05
+x[3] = 2.82435e-06
+x[4] = 2.65153e-06
+x[5] = 1.81923e-07
+x[6] = 4.58901e-06
+x[7] = 9.64191e-06
+x[8] = 7.24964e-06
+x[9] = 1.00058e-07
+K Elapsed time: 521534 μs
+Realtive Residual in Kwalk: 188.083298
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3356
+Number of packets in network : 131072
+Negative index : 777 	 -396473.000000
+Max epoch: 3356
+x[0] = 3.18365e-07
+x[1] = 6.82211e-09
+x[2] = 4.32704e-05
+x[3] = 3.00855e-06
+x[4] = 2.64926e-06
+x[5] = 1.4099e-07
+x[6] = 4.26381e-06
+x[7] = 1.01263e-05
+x[8] = 7.59073e-06
+x[9] = 8.86874e-08
+K Elapsed time: 667329 μs
+Realtive Residual in Kwalk: 136.255234
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+-------------------------------- gene -------------------------------- 
+
+K-WalkSolver starting: 
+max epoch is: 998
+Number of packets in network : 4096
+Negative index : 1719 	 -10924.000000
+Max epoch: 998
+x[0] = 2.76709e-05
+x[1] = 2.71812e-05
+x[2] = 2.81607e-05
+x[3] = 3.45274e-05
+x[4] = 3.918e-05
+x[5] = 3.42825e-05
+x[6] = 2.3508e-05
+x[7] = 5.14238e-05
+x[8] = 3.79557e-05
+x[9] = 9.79501e-06
+K Elapsed time: 25893 μs
+Realtive Residual in Kwalk: 20.142303
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 998
+Number of packets in network : 8192
+Negative index : 1719 	 -10924.000000
+Max epoch: 998
+x[0] = 3.13441e-05
+x[1] = 2.6569e-05
+x[2] = 2.96299e-05
+x[3] = 2.68138e-05
+x[4] = 4.45673e-05
+x[5] = 3.4405e-05
+x[6] = 2.42427e-05
+x[7] = 5.73008e-05
+x[8] = 3.26909e-05
+x[9] = 1.15091e-05
+K Elapsed time: 27738 μs
+Realtive Residual in Kwalk: 14.179873
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 998
+Number of packets in network : 16384
+Negative index : 1719 	 -10924.000000
+Max epoch: 998
+x[0] = 2.92014e-05
+x[1] = 2.63853e-05
+x[2] = 2.712e-05
+x[3] = 2.97523e-05
+x[4] = 4.13227e-05
+x[5] = 3.3303e-05
+x[6] = 2.46712e-05
+x[7] = 5.41174e-05
+x[8] = 3.74659e-05
+x[9] = 1.05909e-05
+K Elapsed time: 29996 μs
+Realtive Residual in Kwalk: 10.264283
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 998
+Number of packets in network : 32768
+Negative index : 1719 	 -10924.000000
+Max epoch: 998
+x[0] = 2.84974e-05
+x[1] = 2.43651e-05
+x[2] = 2.9936e-05
+x[3] = 2.87422e-05
+x[4] = 4.18125e-05
+x[5] = 3.48335e-05
+x[6] = 2.30795e-05
+x[7] = 5.49745e-05
+x[8] = 3.62416e-05
+x[9] = 1.09888e-05
+K Elapsed time: 34117 μs
+Realtive Residual in Kwalk: 7.297293
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 998
+Number of packets in network : 65536
+Negative index : 1719 	 -10924.000000
+Max epoch: 998
+x[0] = 2.79923e-05
+x[1] = 2.66455e-05
+x[2] = 2.91555e-05
+x[3] = 2.89412e-05
+x[4] = 4.13839e-05
+x[5] = 3.79863e-05
+x[6] = 2.25591e-05
+x[7] = 5.62142e-05
+x[8] = 3.43131e-05
+x[9] = 1.14479e-05
+K Elapsed time: 52429 μs
+Realtive Residual in Kwalk: 5.340726
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 998
+Number of packets in network : 131072
+Negative index : 1719 	 -10924.000000
+Max epoch: 998
+x[0] = 2.84285e-05
+x[1] = 2.63547e-05
+x[2] = 2.9385e-05
+x[3] = 2.83137e-05
+x[4] = 3.94096e-05
+x[5] = 3.51549e-05
+x[6] = 2.25897e-05
+x[7] = 5.60076e-05
+x[8] = 3.5308e-05
+x[9] = 1.05909e-05
+K Elapsed time: 78876 μs
+Realtive Residual in Kwalk: 3.966643
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+-------------------------------- brain -------------------------------- 
+
+K-WalkSolver starting: 
+max epoch is: 2501
+Number of packets in network : 4096
+Negative index : 1247 	 -392192.000000
+Max epoch: 2501
+x[0] = 0
+x[1] = 1.95312e-07
+x[2] = 9.76562e-08
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 0
+x[7] = 0
+x[8] = 0
+x[9] = 0
+K Elapsed time: 123529 μs
+Realtive Residual in Kwalk: 166.591949
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2501
+Number of packets in network : 8192
+Negative index : 1247 	 -392192.000000
+Max epoch: 2501
+x[0] = 0
+x[1] = 0
+x[2] = 0
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 0
+x[7] = 0
+x[8] = 0
+x[9] = 0
+K Elapsed time: 129909 μs
+Realtive Residual in Kwalk: 119.220825
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2501
+Number of packets in network : 16384
+Negative index : 1247 	 -392192.000000
+Max epoch: 2501
+x[0] = 0
+x[1] = 2.44141e-08
+x[2] = 2.44141e-08
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 0
+x[7] = 0
+x[8] = 0
+x[9] = 0
+K Elapsed time: 142450 μs
+Realtive Residual in Kwalk: 84.259766
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2501
+Number of packets in network : 32768
+Negative index : 1247 	 -392192.000000
+Max epoch: 2501
+x[0] = 7.32422e-08
+x[1] = 3.66211e-08
+x[2] = 1.2207e-08
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 0
+x[7] = 0
+x[8] = 0
+x[9] = 0
+K Elapsed time: 174680 μs
+Realtive Residual in Kwalk: 60.254406
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2501
+Number of packets in network : 65536
+Negative index : 1247 	 -392192.000000
+Max epoch: 2501
+x[0] = 2.44141e-08
+x[1] = 1.2207e-08
+x[2] = 4.8828e-08
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 0
+x[7] = 0
+x[8] = 0
+x[9] = 0
+K Elapsed time: 228535 μs
+Realtive Residual in Kwalk: 43.113155
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2501
+Number of packets in network : 131072
+Negative index : 1247 	 -392192.000000
+Max epoch: 2501
+x[0] = 9.15528e-09
+x[1] = 1.83106e-08
+x[2] = 2.13623e-08
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 0
+x[7] = 0
+x[8] = 0
+x[9] = 0
+K Elapsed time: 333512 μs
+Realtive Residual in Kwalk: 31.095844
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+-------------------------------- holl09 -------------------------------- 
+
+K-WalkSolver starting: 
+max epoch is: 2708
+Number of packets in network : 4096
+Negative index : 0 	 -564612.000000
+Max epoch: 2708
+x[0] = 8.11698e-06
+x[1] = 4.68981e-06
+x[2] = 8.29734e-06
+x[3] = 1.02815e-05
+x[4] = 0.000104799
+x[5] = 0.000169013
+x[6] = 0.000101102
+x[7] = 5.00547e-05
+x[8] = 8.11698e-07
+x[9] = 0
+K Elapsed time: 158224 μs
+Realtive Residual in Kwalk: 36.687557
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2708
+Number of packets in network : 8192
+Negative index : 0 	 -564612.000000
+Max epoch: 2708
+x[0] = 7.8464e-06
+x[1] = 3.47226e-06
+x[2] = 6.98962e-06
+x[3] = 1.10932e-05
+x[4] = 0.000105611
+x[5] = 0.000166443
+x[6] = 9.61411e-05
+x[7] = 4.65373e-05
+x[8] = 1.12736e-06
+x[9] = 1.80377e-07
+K Elapsed time: 163873 μs
+Realtive Residual in Kwalk: 30.701906
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2708
+Number of packets in network : 16384
+Negative index : 0 	 -564612.000000
+Max epoch: 2708
+x[0] = 8.72573e-06
+x[1] = 3.78793e-06
+x[2] = 7.5533e-06
+x[3] = 1.16794e-05
+x[4] = 0.000107189
+x[5] = 0.000172305
+x[6] = 0.000102026
+x[7] = 5.24446e-05
+x[8] = 1.14991e-06
+x[9] = 3.38207e-07
+K Elapsed time: 180066 μs
+Realtive Residual in Kwalk: 25.758711
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2708
+Number of packets in network : 32768
+Negative index : 0 	 -564612.000000
+Max epoch: 2708
+x[0] = 9.49235e-06
+x[1] = 3.85556e-06
+x[2] = 7.80132e-06
+x[3] = 1.10143e-05
+x[4] = 0.000107122
+x[5] = 0.000168574
+x[6] = 9.93879e-05
+x[7] = 4.99532e-05
+x[8] = 1.37538e-06
+x[9] = 3.26934e-07
+K Elapsed time: 208215 μs
+Realtive Residual in Kwalk: 22.856329
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2708
+Number of packets in network : 65536
+Negative index : 0 	 -564612.000000
+Max epoch: 2708
+x[0] = 9.20491e-06
+x[1] = 3.87247e-06
+x[2] = 7.68294e-06
+x[3] = 1.11552e-05
+x[4] = 0.000107871
+x[5] = 0.000173635
+x[6] = 0.000103835
+x[7] = 5.14808e-05
+x[8] = 1.16682e-06
+x[9] = 2.87476e-07
+K Elapsed time: 263581 μs
+Realtive Residual in Kwalk: 21.493320
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2708
+Number of packets in network : 131072
+Negative index : 0 	 -564612.000000
+Max epoch: 2708
+x[0] = 9.27251e-06
+x[1] = 3.82175e-06
+x[2] = 7.49694e-06
+x[3] = 1.12341e-05
+x[4] = 0.00010483
+x[5] = 0.000166759
+x[6] = 9.86213e-05
+x[7] = 4.99899e-05
+x[8] = 1.11608e-06
+x[9] = 3.83302e-07
+K Elapsed time: 382258 μs
+Realtive Residual in Kwalk: 20.869240
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+-------------------------------- asSki -------------------------------- 
+
+K-WalkSolver starting: 
+max epoch is: 2952
+Number of packets in network : 4096
+Negative index : 126 	 -207216.000000
+Max epoch: 2952
+x[0] = 7.57819e-05
+x[1] = 1.05069e-05
+x[2] = 9.10047e-07
+x[3] = 1.5719e-06
+x[4] = 1.65463e-06
+x[5] = 9.92778e-07
+x[6] = 2.48194e-06
+x[7] = 1.24097e-06
+x[8] = 1.48917e-06
+x[9] = 2.06829e-06
+K Elapsed time: 223677 μs
+Realtive Residual in Kwalk: 273.681122
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2952
+Number of packets in network : 8192
+Negative index : 126 	 -207216.000000
+Max epoch: 2952
+x[0] = 8.27313e-05
+x[1] = 1.19133e-05
+x[2] = 1.36507e-06
+x[3] = 2.60604e-06
+x[4] = 1.15824e-06
+x[5] = 1.65463e-06
+x[6] = 2.06829e-06
+x[7] = 1.61327e-06
+x[8] = 1.86146e-06
+x[9] = 1.28234e-06
+K Elapsed time: 229924 μs
+Realtive Residual in Kwalk: 193.607559
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2952
+Number of packets in network : 16384
+Negative index : 126 	 -207216.000000
+Max epoch: 2952
+x[0] = 8.34139e-05
+x[1] = 1.29888e-05
+x[2] = 1.40644e-06
+x[3] = 1.90282e-06
+x[4] = 1.36507e-06
+x[5] = 1.59258e-06
+x[6] = 2.23375e-06
+x[7] = 1.71668e-06
+x[8] = 1.26166e-06
+x[9] = 1.71668e-06
+K Elapsed time: 244002 μs
+Realtive Residual in Kwalk: 135.260284
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+K-WalkSolver starting: 
+max epoch is: 2952
+Number of packets in network : 32768
+Negative index : 126 	 -207216.000000
+Max epoch: 2952
+x[0] = 8.24316e-05
+x[1] = 1.22029e-05
+x[2] = 1.42712e-06
+x[3] = 2.51297e-06
+x[4] = 1.22029e-06
+x[5] = 1.34439e-06
+x[6] = 1.91317e-06
+x[7] = 1.32371e-06
+x[8] = 1.74771e-06
+x[9] = 1.65463e-06
+K Elapsed time: 278573 μs
+Realtive Residual in Kwalk: 100.087318
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2952
+Number of packets in network : 65536
+Negative index : 126 	 -207216.000000
+Max epoch: 2952
+x[0] = 8.2173e-05
+x[1] = 1.18151e-05
+x[2] = 1.40127e-06
+x[3] = 2.05277e-06
+x[4] = 1.50468e-06
+x[5] = 1.28234e-06
+x[6] = 1.908e-06
+x[7] = 1.55122e-06
+x[8] = 1.43229e-06
+x[9] = 1.58224e-06
+K Elapsed time: 359597 μs
+Realtive Residual in Kwalk: 71.200600
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 2952
+Number of packets in network : 131072
+Negative index : 126 	 -207216.000000
+Max epoch: 2952
+x[0] = 8.21212e-05
+x[1] = 1.2495e-05
+x[2] = 1.49951e-06
+x[3] = 2.09414e-06
+x[4] = 1.46848e-06
+x[5] = 1.52795e-06
+x[6] = 1.85112e-06
+x[7] = 1.43228e-06
+x[8] = 1.50209e-06
+x[9] = 1.69599e-06
+K Elapsed time: 513253 μs
+Realtive Residual in Kwalk: 52.142822
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+-------------------------------- holl11 -------------------------------- 
+
+K-WalkSolver starting: 
+max epoch is: 3028
+Number of packets in network : 4096
+Negative index : 2 	 -864362.000000
+Max epoch: 3028
+x[0] = 0
+x[1] = 0
+x[2] = 0
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 0
+x[7] = 0
+x[8] = 5.43609e-05
+x[9] = 5.3232e-05
+K Elapsed time: 246432 μs
+Realtive Residual in Kwalk: 0.000000
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3028
+Number of packets in network : 8192
+Negative index : 2 	 -864362.000000
+Max epoch: 3028
+x[0] = 0
+x[1] = 0
+x[2] = 0
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 4.03271e-08
+x[7] = 0
+x[8] = 6.09343e-05
+x[9] = 6.30717e-05
+K Elapsed time: 256617 μs
+Realtive Residual in Kwalk: 0.000000
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3028
+Number of packets in network : 16384
+Negative index : 2 	 -864362.000000
+Max epoch: 3028
+x[0] = 0
+x[1] = 0
+x[2] = 2.01636e-08
+x[3] = 0
+x[4] = 2.01636e-08
+x[5] = 2.01636e-08
+x[6] = 4.03271e-08
+x[7] = 0
+x[8] = 5.80308e-05
+x[9] = 5.71032e-05
+K Elapsed time: 272962 μs
+Realtive Residual in Kwalk: 36052.832031
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+K-WalkSolver starting: 
+max epoch is: 3028
+Number of packets in network : 32768
+Negative index : 2 	 -864362.000000
+Max epoch: 3028
+x[0] = 0
+x[1] = 0
+x[2] = 1.00818e-08
+x[3] = 2.01636e-08
+x[4] = 6.04907e-08
+x[5] = 3.02453e-08
+x[6] = 9.07359e-08
+x[7] = 3.02453e-08
+x[8] = 5.45223e-05
+x[9] = 5.49358e-05
+K Elapsed time: 308934 μs
+Realtive Residual in Kwalk: 6036.247559
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3028
+Number of packets in network : 65536
+Negative index : 2 	 -864362.000000
+Max epoch: 3028
+x[0] = 0
+x[1] = 0
+x[2] = 1.00818e-08
+x[3] = 0
+x[4] = 3.02454e-08
+x[5] = 1.51227e-08
+x[6] = 8.06543e-08
+x[7] = 4.03271e-08
+x[8] = 5.98856e-05
+x[9] = 6.04e-05
+K Elapsed time: 391531 μs
+Realtive Residual in Kwalk: 17906.845703
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.
+
+K-WalkSolver starting: 
+max epoch is: 3028
+Number of packets in network : 131072
+Negative index : 2 	 -864362.000000
+Max epoch: 3028
+x[0] = 0
+x[1] = 0
+x[2] = 1.26022e-08
+x[3] = 5.04089e-09
+x[4] = 4.28476e-08
+x[5] = 3.27658e-08
+x[6] = 7.3093e-08
+x[7] = 4.78885e-08
+x[8] = 5.81994e-05
+x[9] = 5.761e-05
+K Elapsed time: 551452 μs
+Realtive Residual in Kwalk: 9539.793945
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+Main application finished.

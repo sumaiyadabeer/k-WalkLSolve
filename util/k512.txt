@@ -1,0 +1,490 @@
+gene
+config_backup.h
+config.h
+modules
+Please enter the new values for the configuration file.
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Sparse Matrix Operations Demo
+==================================
+Using GPU: Tesla V100-PCIE-32GB
+Code is executing on device 1 
+K-WalkSolver starting: 
+max epoch is: 109265
+Number of packets in network : 512
+Negative index : 1719 	 -10924.000000
+Max epoch: 109265
+Epoch: 100000Max_epoch: 109265
+x[0] = 2.38992e-05
+x[1] = 2.01453e-05
+x[2] = 2.38457e-05
+x[3] = 2.54902e-05
+x[4] = 3.64833e-05
+x[5] = 3.41056e-05
+x[6] = 2.21476e-05
+x[7] = 4.92999e-05
+x[8] = 3.15314e-05
+x[9] = 1.02604e-05
+K Elapsed time: 2607953 μs
+Realtive Residual in Kwalk: 5.852035
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+brain
+config_backup.h
+config.h
+modules
+Please enter the new values for the configuration file.
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Sparse Matrix Operations Demo
+==================================
+Using GPU: Tesla V100-PCIE-32GB
+Code is executing on device 1 
+K-WalkSolver starting: 
+max epoch is: 3921310
+Number of packets in network : 512
+Negative index : 1247 	 -392192.000000
+Max epoch: 3921310
+Epoch: 100000Max_epoch: 3921310
+Epoch: 200000Max_epoch: 3921310
+Epoch: 300000Max_epoch: 3921310
+Epoch: 400000Max_epoch: 3921310
+Epoch: 500000Max_epoch: 3921310
+Epoch: 600000Max_epoch: 3921310
+Epoch: 700000Max_epoch: 3921310
+Epoch: 800000Max_epoch: 3921310
+Epoch: 900000Max_epoch: 3921310
+Epoch: 1000000Max_epoch: 3921310
+Epoch: 1100000Max_epoch: 3921310
+Epoch: 1200000Max_epoch: 3921310
+Epoch: 1300000Max_epoch: 3921310
+Epoch: 1400000Max_epoch: 3921310
+Epoch: 1500000Max_epoch: 3921310
+Epoch: 1600000Max_epoch: 3921310
+Epoch: 1700000Max_epoch: 3921310
+Epoch: 1800000Max_epoch: 3921310
+Epoch: 1900000Max_epoch: 3921310
+Epoch: 2000000Max_epoch: 3921310
+Epoch: 2100000Max_epoch: 3921310
+Epoch: 2200000Max_epoch: 3921310
+Epoch: 2300000Max_epoch: 3921310
+Epoch: 2400000Max_epoch: 3921310
+Epoch: 2500000Max_epoch: 3921310
+Epoch: 2600000Max_epoch: 3921310
+Epoch: 2700000Max_epoch: 3921310
+Epoch: 2800000Max_epoch: 3921310
+Epoch: 2900000Max_epoch: 3921310
+Epoch: 3000000Max_epoch: 3921310
+Epoch: 3100000Max_epoch: 3921310
+Epoch: 3200000Max_epoch: 3921310
+Epoch: 3300000Max_epoch: 3921310
+Epoch: 3400000Max_epoch: 3921310
+Epoch: 3500000Max_epoch: 3921310
+Epoch: 3600000Max_epoch: 3921310
+Epoch: 3700000Max_epoch: 3921310
+Epoch: 3800000Max_epoch: 3921310
+Epoch: 3900000Max_epoch: 3921310
+x[0] = 2.48566e-09
+x[1] = 6.97632e-09
+x[2] = 1.09294e-08
+x[3] = 0
+x[4] = 0
+x[5] = 0
+x[6] = 0
+x[7] = 0
+x[8] = 0
+x[9] = 0
+K Elapsed time: 187969711 μs
+Realtive Residual in Kwalk: 27.913363
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+holl09
+config_backup.h
+config.h
+modules
+Please enter the new values for the configuration file.
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Sparse Matrix Operations Demo
+==================================
+Using GPU: Tesla V100-PCIE-32GB
+Code is executing on device 1 
+K-WalkSolver starting: 
+max epoch is: 5652295
+Number of packets in network : 512
+Negative index : 0 	 -564612.000000
+Max epoch: 5652295
+Epoch: 100000Max_epoch: 5652295
+Epoch: 200000Max_epoch: 5652295
+Epoch: 300000Max_epoch: 5652295
+Epoch: 400000Max_epoch: 5652295
+Epoch: 500000Max_epoch: 5652295
+Epoch: 600000Max_epoch: 5652295
+Epoch: 700000Max_epoch: 5652295
+Epoch: 800000Max_epoch: 5652295
+Epoch: 900000Max_epoch: 5652295
+Epoch: 1000000Max_epoch: 5652295
+Epoch: 1100000Max_epoch: 5652295
+Epoch: 1200000Max_epoch: 5652295
+Epoch: 1300000Max_epoch: 5652295
+Epoch: 1400000Max_epoch: 5652295
+Epoch: 1500000Max_epoch: 5652295
+Epoch: 1600000Max_epoch: 5652295
+Epoch: 1700000Max_epoch: 5652295
+Epoch: 1800000Max_epoch: 5652295
+Epoch: 1900000Max_epoch: 5652295
+Epoch: 2000000Max_epoch: 5652295
+Epoch: 2100000Max_epoch: 5652295
+Epoch: 2200000Max_epoch: 5652295
+Epoch: 2300000Max_epoch: 5652295
+Epoch: 2400000Max_epoch: 5652295
+Epoch: 2500000Max_epoch: 5652295
+Epoch: 2600000Max_epoch: 5652295
+Epoch: 2700000Max_epoch: 5652295
+Epoch: 2800000Max_epoch: 5652295
+Epoch: 2900000Max_epoch: 5652295
+Epoch: 3000000Max_epoch: 5652295
+Epoch: 3100000Max_epoch: 5652295
+Epoch: 3200000Max_epoch: 5652295
+Epoch: 3300000Max_epoch: 5652295
+Epoch: 3400000Max_epoch: 5652295
+Epoch: 3500000Max_epoch: 5652295
+Epoch: 3600000Max_epoch: 5652295
+Epoch: 3700000Max_epoch: 5652295
+Epoch: 3800000Max_epoch: 5652295
+Epoch: 3900000Max_epoch: 5652295
+Epoch: 4000000Max_epoch: 5652295
+Epoch: 4100000Max_epoch: 5652295
+Epoch: 4200000Max_epoch: 5652295
+Epoch: 4300000Max_epoch: 5652295
+Epoch: 4400000Max_epoch: 5652295
+Epoch: 4500000Max_epoch: 5652295
+Epoch: 4600000Max_epoch: 5652295
+Epoch: 4700000Max_epoch: 5652295
+Epoch: 4800000Max_epoch: 5652295
+Epoch: 4900000Max_epoch: 5652295
+Epoch: 5000000Max_epoch: 5652295
+Epoch: 5100000Max_epoch: 5652295
+Epoch: 5200000Max_epoch: 5652295
+Epoch: 5300000Max_epoch: 5652295
+Epoch: 5400000Max_epoch: 5652295
+Epoch: 5500000Max_epoch: 5652295
+Epoch: 5600000Max_epoch: 5652295
+x[0] = 5.04598e-08
+x[1] = 1.93846e-08
+x[2] = 3.58593e-08
+x[3] = 5.325e-08
+x[4] = 2.01836e-07
+x[5] = 1.61512e-07
+x[6] = 1.32336e-07
+x[7] = 1.34499e-07
+x[8] = 2.25993e-07
+x[9] = 6.37003e-08
+K Elapsed time: 322496195 μs
+Realtive Residual in Kwalk: 434.621094
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+holl11
+config_backup.h
+config.h
+modules
+Please enter the new values for the configuration file.
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Sparse Matrix Operations Demo
+==================================
+Using GPU: Tesla V100-PCIE-32GB
+Code is executing on device 1 
+K-WalkSolver starting: 
+max epoch is: 9584025
+Number of packets in network : 512
+Negative index : 2 	 -864362.000000
+Max epoch: 9584025
+Epoch: 100000Max_epoch: 9584025
+Epoch: 200000Max_epoch: 9584025
+Epoch: 300000Max_epoch: 9584025
+Epoch: 400000Max_epoch: 9584025
+Epoch: 500000Max_epoch: 9584025
+Epoch: 600000Max_epoch: 9584025
+Epoch: 700000Max_epoch: 9584025
+Epoch: 800000Max_epoch: 9584025
+Epoch: 900000Max_epoch: 9584025
+Epoch: 1000000Max_epoch: 9584025
+Epoch: 1100000Max_epoch: 9584025
+Epoch: 1200000Max_epoch: 9584025
+Epoch: 1300000Max_epoch: 9584025
+Epoch: 1400000Max_epoch: 9584025
+Epoch: 1500000Max_epoch: 9584025
+Epoch: 1600000Max_epoch: 9584025
+Epoch: 1700000Max_epoch: 9584025
+Epoch: 1800000Max_epoch: 9584025
+Epoch: 1900000Max_epoch: 9584025
+Epoch: 2000000Max_epoch: 9584025
+Epoch: 2100000Max_epoch: 9584025
+Epoch: 2200000Max_epoch: 9584025
+Epoch: 2300000Max_epoch: 9584025
+Epoch: 2400000Max_epoch: 9584025
+Epoch: 2500000Max_epoch: 9584025
+Epoch: 2600000Max_epoch: 9584025
+Epoch: 2700000Max_epoch: 9584025
+Epoch: 2800000Max_epoch: 9584025
+Epoch: 2900000Max_epoch: 9584025
+Epoch: 3000000Max_epoch: 9584025
+Epoch: 3100000Max_epoch: 9584025
+Epoch: 3200000Max_epoch: 9584025
+Epoch: 3300000Max_epoch: 9584025
+Epoch: 3400000Max_epoch: 9584025
+Epoch: 3500000Max_epoch: 9584025
+Epoch: 3600000Max_epoch: 9584025
+Epoch: 3700000Max_epoch: 9584025
+Epoch: 3800000Max_epoch: 9584025
+Epoch: 3900000Max_epoch: 9584025
+Epoch: 4000000Max_epoch: 9584025
+Epoch: 4100000Max_epoch: 9584025
+Epoch: 4200000Max_epoch: 9584025
+Epoch: 4300000Max_epoch: 9584025
+Epoch: 4400000Max_epoch: 9584025
+Epoch: 4500000Max_epoch: 9584025
+Epoch: 4600000Max_epoch: 9584025
+Epoch: 4700000Max_epoch: 9584025
+Epoch: 4800000Max_epoch: 9584025
+Epoch: 4900000Max_epoch: 9584025
+Epoch: 5000000Max_epoch: 9584025
+Epoch: 5100000Max_epoch: 9584025
+Epoch: 5200000Max_epoch: 9584025
+Epoch: 5300000Max_epoch: 9584025
+Epoch: 5400000Max_epoch: 9584025
+Epoch: 5500000Max_epoch: 9584025
+Epoch: 5600000Max_epoch: 9584025
+Epoch: 5700000Max_epoch: 9584025
+Epoch: 5800000Max_epoch: 9584025
+Epoch: 5900000Max_epoch: 9584025
+Epoch: 6000000Max_epoch: 9584025
+Epoch: 6100000Max_epoch: 9584025
+Epoch: 6200000Max_epoch: 9584025
+Epoch: 6300000Max_epoch: 9584025
+Epoch: 6400000Max_epoch: 9584025
+Epoch: 6500000Max_epoch: 9584025
+Epoch: 6600000Max_epoch: 9584025
+Epoch: 6700000Max_epoch: 9584025
+Epoch: 6800000Max_epoch: 9584025
+Epoch: 6900000Max_epoch: 9584025
+Epoch: 7000000Max_epoch: 9584025
+Epoch: 7100000Max_epoch: 9584025
+Epoch: 7200000Max_epoch: 9584025
+Epoch: 7300000Max_epoch: 9584025
+Epoch: 7400000Max_epoch: 9584025
+Epoch: 7500000Max_epoch: 9584025
+Epoch: 7600000Max_epoch: 9584025
+Epoch: 7700000Max_epoch: 9584025
+Epoch: 7800000Max_epoch: 9584025
+Epoch: 7900000Max_epoch: 9584025
+Epoch: 8000000Max_epoch: 9584025
+Epoch: 8100000Max_epoch: 9584025
+Epoch: 8200000Max_epoch: 9584025
+Epoch: 8300000Max_epoch: 9584025
+Epoch: 8400000Max_epoch: 9584025
+Epoch: 8500000Max_epoch: 9584025
+Epoch: 8600000Max_epoch: 9584025
+Epoch: 8700000Max_epoch: 9584025
+Epoch: 8800000Max_epoch: 9584025
+Epoch: 8900000Max_epoch: 9584025
+Epoch: 9000000Max_epoch: 9584025
+Epoch: 9100000Max_epoch: 9584025
+Epoch: 9200000Max_epoch: 9584025
+Epoch: 9300000Max_epoch: 9584025
+Epoch: 9400000Max_epoch: 9584025
+Epoch: 9500000Max_epoch: 9584025
+x[0] = 0
+x[1] = 0
+x[2] = 8.56606e-09
+x[3] = 7.46726e-09
+x[4] = 2.58477e-08
+x[5] = 2.18384e-08
+x[6] = 4.83399e-08
+x[7] = 3.05306e-08
+x[8] = 5.22146e-08
+x[9] = 5.84212e-08
+K Elapsed time: 751209397 μs
+Realtive Residual in Kwalk: 1769.054810
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+asSki
+config_backup.h
+config.h
+modules
+Please enter the new values for the configuration file.
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_70,code=sm_70 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Sparse Matrix Operations Demo
+==================================
+Using GPU: Tesla V100-PCIE-32GB
+Code is executing on device 1 
+K-WalkSolver starting: 
+max epoch is: 8482075
+Number of packets in network : 512
+Negative index : 126 	 -207216.000000
+Max epoch: 8482075
+Epoch: 100000Max_epoch: 8482075
+Epoch: 200000Max_epoch: 8482075
+Epoch: 300000Max_epoch: 8482075
+Epoch: 400000Max_epoch: 8482075
+Epoch: 500000Max_epoch: 8482075
+Epoch: 600000Max_epoch: 8482075
+Epoch: 700000Max_epoch: 8482075
+Epoch: 800000Max_epoch: 8482075
+Epoch: 900000Max_epoch: 8482075
+Epoch: 1000000Max_epoch: 8482075
+Epoch: 1100000Max_epoch: 8482075
+Epoch: 1200000Max_epoch: 8482075
+Epoch: 1300000Max_epoch: 8482075
+Epoch: 1400000Max_epoch: 8482075
+Epoch: 1500000Max_epoch: 8482075
+Epoch: 1600000Max_epoch: 8482075
+Epoch: 1700000Max_epoch: 8482075
+Epoch: 1800000Max_epoch: 8482075
+Epoch: 1900000Max_epoch: 8482075
+Epoch: 2000000Max_epoch: 8482075
+Epoch: 2100000Max_epoch: 8482075
+Epoch: 2200000Max_epoch: 8482075
+Epoch: 2300000Max_epoch: 8482075
+Epoch: 2400000Max_epoch: 8482075
+Epoch: 2500000Max_epoch: 8482075
+Epoch: 2600000Max_epoch: 8482075
+Epoch: 2700000Max_epoch: 8482075
+Epoch: 2800000Max_epoch: 8482075
+Epoch: 2900000Max_epoch: 8482075
+Epoch: 3000000Max_epoch: 8482075
+Epoch: 3100000Max_epoch: 8482075
+Epoch: 3200000Max_epoch: 8482075
+Epoch: 3300000Max_epoch: 8482075
+Epoch: 3400000Max_epoch: 8482075
+Epoch: 3500000Max_epoch: 8482075
+Epoch: 3600000Max_epoch: 8482075
+Epoch: 3700000Max_epoch: 8482075
+Epoch: 3800000Max_epoch: 8482075
+Epoch: 3900000Max_epoch: 8482075
+Epoch: 4000000Max_epoch: 8482075
+Epoch: 4100000Max_epoch: 8482075
+Epoch: 4200000Max_epoch: 8482075
+Epoch: 4300000Max_epoch: 8482075
+Epoch: 4400000Max_epoch: 8482075
+Epoch: 4500000Max_epoch: 8482075
+Epoch: 4600000Max_epoch: 8482075
+Epoch: 4700000Max_epoch: 8482075
+Epoch: 4800000Max_epoch: 8482075
+Epoch: 4900000Max_epoch: 8482075
+Epoch: 5000000Max_epoch: 8482075
+Epoch: 5100000Max_epoch: 8482075
+Epoch: 5200000Max_epoch: 8482075
+Epoch: 5300000Max_epoch: 8482075
+Epoch: 5400000Max_epoch: 8482075
+Epoch: 5500000Max_epoch: 8482075
+Epoch: 5600000Max_epoch: 8482075
+Epoch: 5700000Max_epoch: 8482075
+Epoch: 5800000Max_epoch: 8482075
+Epoch: 5900000Max_epoch: 8482075
+Epoch: 6000000Max_epoch: 8482075
+Epoch: 6100000Max_epoch: 8482075
+Epoch: 6200000Max_epoch: 8482075
+Epoch: 6300000Max_epoch: 8482075
+Epoch: 6400000Max_epoch: 8482075
+Epoch: 6500000Max_epoch: 8482075
+Epoch: 6600000Max_epoch: 8482075
+Epoch: 6700000Max_epoch: 8482075
+Epoch: 6800000Max_epoch: 8482075
+Epoch: 6900000Max_epoch: 8482075
+Epoch: 7000000Max_epoch: 8482075
+Epoch: 7100000Max_epoch: 8482075
+Epoch: 7200000Max_epoch: 8482075
+Epoch: 7300000Max_epoch: 8482075
+Epoch: 7400000Max_epoch: 8482075
+Epoch: 7500000Max_epoch: 8482075
+Epoch: 7600000Max_epoch: 8482075
+Epoch: 7700000Max_epoch: 8482075
+Epoch: 7800000Max_epoch: 8482075
+Epoch: 7900000Max_epoch: 8482075
+Epoch: 8000000Max_epoch: 8482075
+Epoch: 8100000Max_epoch: 8482075
+Epoch: 8200000Max_epoch: 8482075
+Epoch: 8300000Max_epoch: 8482075
+Epoch: 8400000Max_epoch: 8482075
+x[0] = 1.633e-05
+x[1] = 9.76832e-06
+x[2] = 4.09571e-07
+x[3] = 9.1852e-07
+x[4] = 2.65022e-07
+x[5] = 2.74688e-07
+x[6] = 7.77121e-07
+x[7] = 3.08324e-07
+x[8] = 4.02802e-07
+x[9] = 4.46957e-07
+K Elapsed time: 605413789 μs
+Realtive Residual in Kwalk: 61.762939
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.

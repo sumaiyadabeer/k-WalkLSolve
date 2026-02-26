@@ -1,0 +1,49 @@
+PyamgSA: Wikibug
+PyamgSA
+Time 0.8844344615936279          Relative Residual 0.007005885688835373
+
+pyamg_SA: wikioc
+PyamgSA
+Time 31.425809860229492 	 Relative Residual 0.004442464424262087
+
+pyamg_SA: wikisr : OOM
+
+pyamg_SA: brain
+PyamgSA
+Time 141.9089195728302 	 Relative Residual 0.008923965464164955
+
+pyamg_SA: gene
+PyamgSA
+Time 10.804832458496094 	 Relative Residual 0.003496715847731708
+
+pyamg_SA: holl09 : OOM
+pyamg_SA: holl11 : OOM
+pyamg_SA: asSki : OOM
+
+-------------------------------------------------PyAMG_R-----------------------------------------------
+
+Pyamg_R: wikibug
+Pyamg
+Time 21.896551609039307          residual 0.023617112392975436
+
+Pyamg_R: wikioc
+Pyamg
+Timeout :: More than 8 hours
+from prev run 
+Time: 22.61736798286438     Relative Residual 0.00014283
+
+Pyamg_R: wikisr
+Pyamg
+Timeout :: More than 8 hours
+
+pyamg_R: gene
+Pyamg
+Time 2795.9611296653748 	 residual 0.0038869367404918516
+
+pyamg_R: brain
+Pyamg
+Time 14118.500728607178 	 residual 0.005323868018104316
+
+pyamg_R: holl09 : Inner denominator was zero.
+pyamg_R: holl11 : Inner denominator was zero.
+pyamg_R: asSki : Inner denominator was zero.

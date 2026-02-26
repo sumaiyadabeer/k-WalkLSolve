@@ -1,0 +1,92 @@
+OK :: /data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikibug/bug_csr
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikibug/bug_csr_P
+--- Transformed Matrix P ((D^-1 A)^T with row modification) ---
+Matrix size: 14229x14229
+Non-zero elements: 6758867
+Sparsity: 96.66%
+
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikibug/bug_50b.txt
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikibug/bug_ijv
+--------------------------------------------------------------------------------------
+
+
+OK :: /data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikioc/oc_csr
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikioc/oc_csr_P
+--- Transformed Matrix P ((D^-1 A)^T with row modification) ---
+Matrix size: 96201x96201
+Non-zero elements: 29321242
+Sparsity: 95.59%
+
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikioc/oc_50_b.txt  
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikioc/wikipedia_link_oc_ijv
+--------------------------------------------------------------------------------------
+
+
+OK :: /data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikisr/out.wikipedia_link_sr_csr
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikisr/out.wikipedia_link_sr_csr_P
+--- Transformed Matrix P ((D^-1 A)^T with row modification) ---
+Matrix size: 3175009x3175009
+Non-zero elements: 207018069
+Sparsity: 47.44%
+
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikisr/out.wikipedia_link_sr-b
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikisr/out.wikipedia_link_sr_ijv
+--------------------------------------------------------------------------------------
+
+Maybe OK :: /data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/brain/brain.edges_csr
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/brain/brain.edges_csr
+matrix is not able to add
+
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/brain/brain-b
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/brain/brain.edges_ijv
+--------------------------------------------------------------------------------------
+ 
+OK :: /data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/gene/gene.edges_csr
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/gene/gene.edges_csr_P--- Transformed Matrix P ((D^-1 A)^T with row modification) ---
+Matrix size: 21853x21853
+Non-zero elements: 24657658
+Sparsity: 94.84%
+
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/gene/gene-b
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/gene/gene.edges_ijv
+--------------------------------------------------------------------------------------
+
+OK :: /data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-09/holl09_csr
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-09/holl09_csr_P
+--- Transformed Matrix P ((D^-1 A)^T with row modification) ---
+Matrix size: 1130459x1130459
+Non-zero elements: 27175207
+Sparsity: 101.38%
+
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-09/holl09_50_b.txt  
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-09/holl09_ijv
+--------------------------------------------------------------------------------------
+
+
+OK :: /data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-11/holl11_csr
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-11/holl11_csr_P
+--- Transformed Matrix P ((D^-1 A)^T with row modification) ---
+Matrix size: 1916805x1916805
+Non-zero elements: 49396020
+Sparsity: 97.46%
+
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-11/holl11_50_b.txt
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-11/holl11_ijv
+--------------------------------------------------------------------------------------
+
+OK :: /data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/as-ski/as-skitter.txt_csr
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/as-ski/as-skitter.txt_csr_P
+--- Transformed Matrix P ((D^-1 A)^T with row modification) ---
+Matrix size: 1696415x1696415
+Non-zero elements: 22397794
+Sparsity: 88.56%
+
+/data1/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/as-ski/as-skitter.txt_ijv
+/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/as-ski/as-skitter.txt-b
+--------------------------------------------------------------------------------------
+
++1 means :: increase last elemet of row ptr
+sample :: /home/sumaiya/FixedPS/kSolve/data/inputs/matrix_input.txt
+/home/sumaiya/FixedPS/kSolve/data/inputs/matrix_input_P.txt
+
+./P_creation <<< "/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-09/holl09_csr"

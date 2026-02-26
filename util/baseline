@@ -1,0 +1,76 @@
+import sys
+import numpy as np
+from scipy.sparse import csr_matrix
+from scipy.sparse.linalg import cg
+
+def solve_laplacian(filename):
+    """
+    Solves Lx = b for a graph Laplacian from a file using SciPy's CG solver.
+    """
+    print(f"1. Reading data from '{filename}'...")
+    try:
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' was not found.")
+        return
+
+    # 2. Parse the input file
+    try:
+        # First line: no_of_vertices, no_of_edges
+        v, e = map(int, lines[0].strip().split())
+
+        # Next lines: row_ptr, col_offset, values, b
+        row_ptr = list(map(int, lines[1].strip().split()))
+        col_offset = list(map(int, lines[2].strip().split()))
+        values = list(map(float, lines[3].strip().split()))
+        b = np.array(list(map(float, lines[4].strip().split())))
+
+        print(v,"\t", e)
+        print("row_ptr: ", row_ptr)
+        print("col_offset: ", col_offset)
+        print("values: ", values)
+        print("b: ", b)
+
+    except (ValueError, IndexError):
+        print("Error: The file format is incorrect. Please check the data.")
+        return
+
+    print(f"Parsed graph with {v} vertices and {e} edges.")
+
+    # 3. Construct the sparse Laplacian matrix (CSR format)
+    L = csr_matrix((values, col_offset, row_ptr), shape=(v, v))
+
+    # 4. Check if the sum of b is close to zero
+    b_sum = np.sum(b)
+    if not np.isclose(b_sum, 0.0):
+        print(f"Warning: Sum of vector b is not zero ({b_sum}). "
+              "Adjusting b to ensure a valid solution exists for the Laplacian.")
+        b -= b_sum / v
+
+    # 5. Solve the linear system Lx = b using Conjugate Gradient
+    print("5. Solving the linear system Lx = b...")
+    x, exit_code = cg(L, b, tol=1e-8)
+
+    # 6. Verify the solution
+    if exit_code == 0:
+        print("Solver converged successfully.")
+        
+        # Calculate the residual
+        Lx = L.dot(x)
+        residual_norm = np.linalg.norm(Lx - b)
+        b_norm = np.linalg.norm(b)
+        
+        relative_residual = residual_norm / b_norm if b_norm != 0 else 0
+        
+        print(f"Relative residual ||Lx - b|| / ||b||: {relative_residual:.10f}")
+        
+    else:
+        print(f"Solver failed to converge with exit code: {exit_code}")
+        
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python solve_laplacian.py <filename>")
+    else:
+        filename = sys.argv[1]
+        solve_laplacian(filename)

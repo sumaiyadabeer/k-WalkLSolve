@@ -1,0 +1,72 @@
+scipy_solver: bug
+1. Reading data from '/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikibug/bug_csr'...
+Parsed graph with 14229 vertices and 6752620 edges.
+5. Solving the linear system Lx = b...
+Solver time: 4.8693 seconds 
+Solver converged successfully.
+Relative residual ||Lx - b|| / ||b||: 19.8867588678
+7. Saving solution to '/home/sumaiya/FixedPS/kSolve/data/outputs/wikioc/scipy_sol'...
+Solution saved successfully. 
+
+scipy_solver: wikioc
+1. Reading data from '/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikioc/oc_csr'...
+Parsed graph with 96201 vertices and 29273256 edges.
+5. Solving the linear system Lx = b...
+Solver time: 104.6509 seconds 
+Solver converged successfully.
+Relative residual ||Lx - b|| / ||b||: 1.4124808613
+7. Saving solution to '/home/sumaiya/FixedPS/kSolve/data/outputs/wikioc/scipy_sol'...
+Solution saved successfully. 
+
+scipy_solver: wikisr
+1. Reading data from '/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/wikisr/out.wikipedia_link_sr_csr'...
+Parsed graph with 3175009 vertices and 206621674 edges.
+5. Solving the linear system Lx = b...
+Solver time: 3351.7201 seconds 
+Solver converged successfully.
+Relative residual ||Lx - b|| / ||b||: 2.4267065307
+7. Saving solution to '/home/sumaiya/FixedPS/kSolve/data/outputs/wikisr/scipy_sol'...
+Solution saved successfully. 
+
+scipy_solver: brain
+1. Reading data from '/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/brain/brain.edges_csr'...
+Parsed graph with 784262 vertices and 535689336 edges.
+5. Solving the linear system Lx = b...
+Solver time: 14929.4137 seconds 
+Solver converged successfully.
+Relative residual ||Lx - b|| / ||b||: 1.1823322726
+7. Saving solution to '/home/sumaiya/FixedPS/kSolve/data/outputs/brain/scipy_sol'...
+Solution saved successfully. 
+
+scipy_solver: gene
+1. Reading data from '/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/gene/gene.edges_csr'...
+Parsed graph with 21853 vertices and 24647296 edges.
+5. Solving the linear system Lx = b...
+Solver time: 30.4932 seconds 
+Solver converged successfully.
+Relative residual ||Lx - b|| / ||b||: 1.2298503201
+7. Saving solution to '/home/sumaiya/FixedPS/kSolve/data/outputs/gene/scipy_sol'...
+Solution saved successfully. 
+
+scipy_solver: holl09 : Time out more than 12 hours
+
+scipy_solver: holl11
+1. Reading data from '/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/holl-11/holl11_csr'...
+Parsed graph with 1916805 vertices and 48531662 edges.
+5. Solving the linear system Lx = b...
+Solver time: 1050.7880 seconds 
+Solver converged successfully.
+Relative residual ||Lx - b|| / ||b||: 11.0936698175
+7. Saving solution to '/home/sumaiya/FixedPS/kSolve/data/outputs/holl11/scipy_sol'...
+Solution saved successfully. 
+
+scipy_solver: asSki
+1. Reading data from '/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/as-ski/as-skitter.txt_csr'...
+Parsed graph with 1696415 vertices and 22190596 edges.
+5. Solving the linear system Lx = b...
+Solver time: 1297.3618 seconds 
+Solver converged successfully.
+Relative residual ||Lx - b|| / ||b||: 2.4265803039
+7. Saving solution to '/home/sumaiya/FixedPS/kSolve/data/outputs/asSki/scipy_sol'...
+Solution saved successfully. 
+

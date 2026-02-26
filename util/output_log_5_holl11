@@ -1,0 +1,181 @@
+holl11
+K-WalkSolver starting: 
+max epoch is: 633531
+Number of packets in network : 4096
+Negative index : 2 	 -864362.000000
+Max epoch: 633531
+Epoch: 100000Max_epoch: 633531
+Epoch: 200000Max_epoch: 633531
+Epoch: 300000Max_epoch: 633531
+Epoch: 400000Max_epoch: 633531
+Epoch: 500000Max_epoch: 633531
+Epoch: 600000Max_epoch: 633531
+x[0] = 0
+x[1] = 0
+x[2] = 8.09197e-09
+x[3] = 4.23885e-09
+x[4] = 1.88838e-08
+x[5] = 1.38732e-08
+x[6] = 4.04615e-08
+x[7] = 3.00588e-08
+x[8] = 3.13299e-07
+x[9] = 3.08306e-07
+K Elapsed time: 50506785 μs
+alpha value 0.000028
+Numerator_norm: 0.078814	 Denominator_norm: 0.000028 	 Realtive_residual: 2812.982910
+Realtive Residual in Kwalk: 2812.982910
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+K-WalkSolver starting: 
+max epoch is: 633531
+Number of packets in network : 8192
+Negative index : 2 	 -864362.000000
+Max epoch: 633531
+Epoch: 100000Max_epoch: 633531
+Epoch: 200000Max_epoch: 633531
+Epoch: 300000Max_epoch: 633531
+Epoch: 400000Max_epoch: 633531
+Epoch: 500000Max_epoch: 633531
+Epoch: 600000Max_epoch: 633531
+x[0] = 0
+x[1] = 0
+x[2] = 9.82652e-09
+x[3] = 5.78049e-09
+x[4] = 2.56266e-08
+x[5] = 1.98456e-08
+x[6] = 5.10614e-08
+x[7] = 2.77466e-08
+x[8] = 3.03858e-07
+x[9] = 3.0618e-07
+K Elapsed time: 52184809 μs
+alpha value 0.000076
+Numerator_norm: 0.111366	 Denominator_norm: 0.000076 	 Realtive_residual: 1462.266113
+Realtive Residual in Kwalk: 1462.266113
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+K-WalkSolver starting: 
+max epoch is: 633531
+Number of packets in network : 16384
+Negative index : 2 	 -864362.000000
+Max epoch: 633531
+Epoch: 100000Max_epoch: 633531
+Epoch: 200000Max_epoch: 633531
+Epoch: 300000Max_epoch: 633531
+Epoch: 400000Max_epoch: 633531
+Epoch: 500000Max_epoch: 633531
+Epoch: 600000Max_epoch: 633531
+x[0] = 0
+x[1] = 0
+x[2] = 1.03087e-08
+x[3] = 7.22588e-09
+x[4] = 2.69714e-08
+x[5] = 2.14845e-08
+x[6] = 5.26988e-08
+x[7] = 3.13075e-08
+x[8] = 3.0414e-07
+x[9] = 3.05584e-07
+K Elapsed time: 56796417 μs
+alpha value 0.000170
+Numerator_norm: 0.157818	 Denominator_norm: 0.000170 	 Realtive_residual: 930.151672
+Realtive Residual in Kwalk: 930.151672
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+K-WalkSolver starting: 
+max epoch is: 633531
+Number of packets in network : 32768
+Negative index : 2 	 -864362.000000
+Max epoch: 633531
+Epoch: 100000Max_epoch: 633531
+Epoch: 200000Max_epoch: 633531
+Epoch: 300000Max_epoch: 633531
+Epoch: 400000Max_epoch: 633531
+Epoch: 500000Max_epoch: 633531
+Epoch: 600000Max_epoch: 633531
+x[0] = 0
+x[1] = 0
+x[2] = 1.14645e-08
+x[3] = 7.80351e-09
+x[4] = 2.93369e-08
+x[5] = 2.17719e-08
+x[6] = 5.48182e-08
+x[7] = 3.46362e-08
+x[8] = 3.13784e-07
+x[9] = 3.16476e-07
+K Elapsed time: 64350708 μs
+alpha value 0.000368
+Numerator_norm: 0.223444	 Denominator_norm: 0.000368 	 Realtive_residual: 606.887024
+Realtive Residual in Kwalk: 606.887024
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+K-WalkSolver starting: 
+max epoch is: 633531
+Number of packets in network : 65536
+Negative index : 2 	 -864362.000000
+Max epoch: 633531
+Epoch: 100000Max_epoch: 633531
+Epoch: 200000Max_epoch: 633531
+Epoch: 300000Max_epoch: 633531
+Epoch: 400000Max_epoch: 633531
+Epoch: 500000Max_epoch: 633531
+Epoch: 600000Max_epoch: 633531
+x[0] = 0
+x[1] = 0
+x[2] = 1.04528e-08
+x[3] = 6.84023e-09
+x[4] = 2.72884e-08
+x[5] = 2.06173e-08
+x[6] = 5.30848e-08
+x[7] = 3.39578e-08
+x[8] = 3.08562e-07
+x[9] = 3.08516e-07
+K Elapsed time: 80770346 μs
+alpha value 0.000671
+Numerator_norm: 0.317020	 Denominator_norm: 0.000671 	 Realtive_residual: 472.293457
+Realtive Residual in Kwalk: 472.293457
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.
+K-WalkSolver starting: 
+max epoch is: 633531
+Number of packets in network : 131072
+Negative index : 2 	 -864362.000000
+Max epoch: 633531
+Epoch: 100000Max_epoch: 633531
+Epoch: 200000Max_epoch: 633531
+Epoch: 300000Max_epoch: 633531
+Epoch: 400000Max_epoch: 633531
+Epoch: 500000Max_epoch: 633531
+Epoch: 600000Max_epoch: 633531
+x[0] = 0
+x[1] = 0
+x[2] = 9.79056e-09
+x[3] = 6.6115e-09
+x[4] = 2.62773e-08
+x[5] = 2.02676e-08
+x[6] = 5.36862e-08
+x[7] = 3.36075e-08
+x[8] = 3.15985e-07
+x[9] = 3.17113e-07
+K Elapsed time: 115335034 μs
+alpha value 0.001294
+Numerator_norm: 0.453225	 Denominator_norm: 0.001294 	 Realtive_residual: 350.157288
+Realtive Residual in Kwalk: 350.157288
+Residual threshold reached
+Printing to file OpFileSolK
+Printing to file OpFileSolK complete
+
+Main application finished.

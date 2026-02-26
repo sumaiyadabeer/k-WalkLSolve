@@ -1,0 +1,20 @@
+
+
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/baselines/eta/pyamg_SA_eta_rank
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/baselines/eta/pyamg_eta_rank
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/baselines/eta/Chol_23_eta_rank
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/baselines/eta/Kyng_Sach_eta_rank
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/scipy_sol_eta_rank
+
+
+
+
+
+
+
+
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_relay_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/baselines/eta/pyamg_SA_eta_relay_rank
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_relay_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/baselines/eta/pyamg_eta_relay_rank
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_relay_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/baselines/eta/Chol_23_eta_relay_rank
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_relay_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/baselines/eta/Kyng_Sach_eta_relay_rank
+python partial_rank.py --mRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/eta/asSki_m-7_eta_b_relay_rank --kRank /home/sumaiya/FixedPS/kSolve/data/outputs/asSki/scipy_sol_eta_relay_rank

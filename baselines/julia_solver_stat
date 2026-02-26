@@ -1,0 +1,74 @@
+wikibug
+Reading input is started
+Reading input is done
+Creation of Adj and Sparse Matr is done
+Reading of b is done
+Cholesky 23 solver
+Time: 2.9262020587921143	 	 Residual: 1.6756509456840816e-8
+Kyng Sach Solver
+Time: 4.079373121261597	 	 Residual: 502.4848509736991
+
+wikioc: 
+Reading input is started
+Reading input is done
+Creation of Adj and Sparse Matr is done
+Reading of b is done
+Cholesky 23 solver
+Time: 13.157127141952515	 	 Residual: 1.3745791589813738e-6
+Kyng Sach Solver
+Time: 12.401612997055054	 	 Residual: 2111.322559341512
+
+gene: 
+Reading input is started
+Reading input is done
+Creation of Adj and Sparse Matr is done
+Reading of b is done
+Cholesky 23 solver
+Time: 12.524105072021484	 	 Residual: 5.4926644590614945e-9
+Kyng Sach Solver
+Time: 12.40540599822998	 	 Residual: 172.98824305891947
+
+brain: both killed due to mem
+Reading input is started
+Reading input is done
+Creation of Adj and Sparse Matr is done
+Reading of b is done
+Cholesky 23 solver
+
+holl09:
+Reading input is started
+Reading input is done
+Creation of Adj and Sparse Matr is done
+Reading of b is done
+Cholesky 23 solver: killed 
+Kyng Sach Solver
+Time: 26.23199701309204	 	 Residual: 7947.751448988823
+
+holl11:
+Reading input is started
+Reading input is done
+Creation of Adj and Sparse Matr is done
+Reading of b is done
+Cholesky 23 solver: killed 
+Kyng Sach Solver
+Time: 41.801778078079224	 	 Residual: 7997.486472021198
+
+asSki:
+Reading input is started
+Reading input is done
+Creation of Adj and Sparse Matr is done
+Reading of b is done
+Cholesky 23 solver
+Time: 109.0021710395813	 	 Residual: 5.868961564356393e-6
+Kyng Sach Solver
+Time: 14.399605989456177	 	 Residual: 4791.97454567292
+
+wikisr:
+Reading input is started
+Reading input is done
+Creation of Adj and Sparse Matr is done
+Reading of b is done
+Cholesky 23 solver
+Time: 464.07756185531616	 	 Residual: 0.000768019389507386
+Kyng Sach Solver
+Time: 107.41180801391602	 	 Residual: 13047.589484014505
