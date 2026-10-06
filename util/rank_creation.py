@@ -172,43 +172,20 @@ filepathA = args.fileK #"/home/sumaiya/FixedPS/kSolve/data/outputs/wikibug_new/w
 ignore_source_sink  = args.ignoreSource
 
 
-eta_a, source_sink = read_two_column_data_to_numpy_arrays(filepathM)
-eta_k = read_single_column_data_to_numpy_array(filepathA, dtype=float)
-print(eta_k, source_sink, eta_a)
-if ignore_source_sink:
-    print("ignoring sources and sinks")
-    filerankM = filepathM + "_relay_rank"
-    filerankA = filepathA + "_relay_rank"
-    # change eta_k and eta_a
-    # print(type(eta_k), type(source_sink), type(eta_a))
-    filtered_k =[]
-    filtered_a =[]
-    for i in range((source_sink.size)):
-        if source_sink[i] == 0:
-            filtered_k.append(eta_k[i])
-            filtered_a.append(eta_a[i])
-    eta_k =np.array(filtered_k)
-    eta_a =np.array(filtered_a)
+#eta_a, source_sink = read_two_column_data_to_numpy_arrays(filepathM)
 
-    # mask_array = (source_sink == 0)
-    # eta_k = (eta_k*(mask_array))
-    # mask_array = (eta_k != 0)
-    # eta_k = eta_k[mask_array]
-    # mask_array = (source_sink == 0)
-    # eta_a = (eta_a*(mask_array))
-    # mask_array = (eta_a != 0)
-    # eta_a = eta_a[mask_array]
-    print(eta_a.size, sum(eta_a), eta_k.size, sum(eta_k))
-else:
-    filerankM = filepathM + "_rank"
-    filerankA = filepathA + "_rank"
-   
+eta_a = read_single_column_data_to_numpy_array(filepathM, dtype=float)
+eta_k = read_single_column_data_to_numpy_array(filepathA, dtype=float)
+filerankM = filepathM + "_rank"
+filerankA = filepathA + "_rank"
+
+#removed ignored source sink logic   
     
 # get actual rank in np.array (MM)
 rank_a = get_ranks_from_vector(eta_a, method='min', order='descending')
 # get algo rank in np.array (KS)
 rank_k = get_ranks_from_vector(eta_k, method='min', order='descending')
 # save ranks for future
-print(rank_k, source_sink, rank_a)
+#print(rank_k, source_sink, rank_a)
 np.savetxt(filerankA, rank_k.astype(int), fmt='%i', delimiter='\n')
 np.savetxt(filerankM, rank_a.astype(int), fmt='%i', delimiter='\n')

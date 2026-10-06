@@ -1,0 +1,88 @@
+src/main.cu: In function ‘float evaluateRoundMetrics(int, int, const std::vector<int>&, const std::vector<float>&, const std::vector<int>&, const std::vector<float>&)’:
+src/main.cu:21:39: warning: unused parameter ‘curr_eta’ [-Wunused-parameter]
+   21 |                           const std::vector<int>& curr_idx, const std::vector<float>& curr_eta,
+      |                           ~~~~~~~~~~~~^~~~~~~~
+src/main.cu: In function ‘int main()’:
+src/main.cu:332:65: warning: comparison of integer expressions of different signedness: ‘long long unsigned int’ and ‘int’ [-Wsign-compare]
+  332 |             if (epoch > max_epoch && (num_msg_packets - *at_sink_host) > blockSize) {
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+src/main.cu:304:6: warning: variable ‘start_time_batch_walk’ set but not used [-Wunused-but-set-variable]
+  304 |             auto start_time_batch_walk = std::chrono::high_resolution_clock::now();
+      |      ^      ~~~~~~~~~~~~~~
+src/main.cu: In function ‘float evaluateRoundMetrics(int, int, const std::vector<int>&, const std::vector<float>&, const std::vector<int>&, const std::vector<float>&)’:
+src/main.cu:21:39: warning: unused parameter ‘curr_eta’ [-Wunused-parameter]
+   21 |                           const std::vector<int>& curr_idx, const std::vector<float>& curr_eta,
+      |                           ~~~~~~~~~~~~^~~~~~~~
+src/main.cu: In function ‘int main()’:
+src/main.cu:332:65: warning: comparison of integer expressions of different signedness: ‘long long unsigned int’ and ‘int’ [-Wsign-compare]
+  332 |             if (epoch > max_epoch && (num_msg_packets - *at_sink_host) > blockSize) {
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+src/main.cu:304:6: warning: variable ‘start_time_batch_walk’ set but not used [-Wunused-but-set-variable]
+  304 |             auto start_time_batch_walk = std::chrono::high_resolution_clock::now();
+      |      ^      ~~~~~~~~~~~~~~
+src/main.cu: In function ‘float evaluateRoundMetrics(int, int, const std::vector<int>&, const std::vector<float>&, const std::vector<int>&, const std::vector<float>&)’:
+src/main.cu:21:39: warning: unused parameter ‘curr_eta’ [-Wunused-parameter]
+   21 |                           const std::vector<int>& curr_idx, const std::vector<float>& curr_eta,
+      |                           ~~~~~~~~~~~~^~~~~~~~
+src/main.cu: In function ‘int main()’:
+src/main.cu:332:65: warning: comparison of integer expressions of different signedness: ‘long long unsigned int’ and ‘int’ [-Wsign-compare]
+  332 |             if (epoch > max_epoch && (num_msg_packets - *at_sink_host) > blockSize) {
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+src/main.cu:304:6: warning: variable ‘start_time_batch_walk’ set but not used [-Wunused-but-set-variable]
+  304 |             auto start_time_batch_walk = std::chrono::high_resolution_clock::now();
+      |      ^      ~~~~~~~~~~~~~~
+src/main.cu: In function ‘float evaluateRoundMetrics(int, int, const std::vector<int>&, const std::vector<float>&, const std::vector<int>&, const std::vector<float>&)’:
+src/main.cu:21:39: warning: unused parameter ‘curr_eta’ [-Wunused-parameter]
+   21 |                           const std::vector<int>& curr_idx, const std::vector<float>& curr_eta,
+      |                           ~~~~~~~~~~~~^~~~~~~~
+src/main.cu: In function ‘int main()’:
+src/main.cu:332:65: warning: comparison of integer expressions of different signedness: ‘long long unsigned int’ and ‘int’ [-Wsign-compare]
+  332 |             if (epoch > max_epoch && (num_msg_packets - *at_sink_host) > blockSize) {
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+src/main.cu:304:6: warning: variable ‘start_time_batch_walk’ set but not used [-Wunused-but-set-variable]
+  304 |             auto start_time_batch_walk = std::chrono::high_resolution_clock::now();
+      |      ^      ~~~~~~~~~~~~~~
+src/main.cu: In function ‘float evaluateRoundMetrics(int, int, const std::vector<int>&, const std::vector<float>&, const std::vector<int>&, const std::vector<float>&)’:
+src/main.cu:21:39: warning: unused parameter ‘curr_eta’ [-Wunused-parameter]
+   21 |                           const std::vector<int>& curr_idx, const std::vector<float>& curr_eta,
+      |                           ~~~~~~~~~~~~^~~~~~~~
+src/main.cu: In function ‘int main()’:
+src/main.cu:332:65: warning: comparison of integer expressions of different signedness: ‘long long unsigned int’ and ‘int’ [-Wsign-compare]
+  332 |             if (epoch > max_epoch && (num_msg_packets - *at_sink_host) > blockSize) {
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+src/main.cu:304:6: warning: variable ‘start_time_batch_walk’ set but not used [-Wunused-but-set-variable]
+  304 |             auto start_time_batch_walk = std::chrono::high_resolution_clock::now();
+      |      ^      ~~~~~~~~~~~~~~
+src/main.cu: In function ‘float evaluateRoundMetrics(int, int, const std::vector<int>&, const std::vector<float>&, const std::vector<int>&, const std::vector<float>&)’:
+src/main.cu:21:39: warning: unused parameter ‘curr_eta’ [-Wunused-parameter]
+   21 |                           const std::vector<int>& curr_idx, const std::vector<float>& curr_eta,
+      |                           ~~~~~~~~~~~~^~~~~~~~
+src/main.cu: In function ‘int main()’:
+src/main.cu:332:65: warning: comparison of integer expressions of different signedness: ‘long long unsigned int’ and ‘int’ [-Wsign-compare]
+  332 |             if (epoch > max_epoch && (num_msg_packets - *at_sink_host) > blockSize) {
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+src/main.cu:304:6: warning: variable ‘start_time_batch_walk’ set but not used [-Wunused-but-set-variable]
+  304 |             auto start_time_batch_walk = std::chrono::high_resolution_clock::now();
+      |      ^      ~~~~~~~~~~~~~~
+src/main.cu: In function ‘float evaluateRoundMetrics(int, int, const std::vector<int>&, const std::vector<float>&, const std::vector<int>&, const std::vector<float>&)’:
+src/main.cu:21:39: warning: unused parameter ‘curr_eta’ [-Wunused-parameter]
+   21 |                           const std::vector<int>& curr_idx, const std::vector<float>& curr_eta,
+      |                           ~~~~~~~~~~~~^~~~~~~~
+src/main.cu: In function ‘int main()’:
+src/main.cu:332:65: warning: comparison of integer expressions of different signedness: ‘long long unsigned int’ and ‘int’ [-Wsign-compare]
+  332 |             if (epoch > max_epoch && (num_msg_packets - *at_sink_host) > blockSize) {
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+src/main.cu:304:6: warning: variable ‘start_time_batch_walk’ set but not used [-Wunused-but-set-variable]
+  304 |             auto start_time_batch_walk = std::chrono::high_resolution_clock::now();
+      |      ^      ~~~~~~~~~~~~~~
+src/main.cu: In function ‘float evaluateRoundMetrics(int, int, const std::vector<int>&, const std::vector<float>&, const std::vector<int>&, const std::vector<float>&)’:
+src/main.cu:21:39: warning: unused parameter ‘curr_eta’ [-Wunused-parameter]
+   21 |                           const std::vector<int>& curr_idx, const std::vector<float>& curr_eta,
+      |                           ~~~~~~~~~~~~^~~~~~~~
+src/main.cu: In function ‘int main()’:
+src/main.cu:332:65: warning: comparison of integer expressions of different signedness: ‘long long unsigned int’ and ‘int’ [-Wsign-compare]
+  332 |             if (epoch > max_epoch && (num_msg_packets - *at_sink_host) > blockSize) {
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+src/main.cu:304:6: warning: variable ‘start_time_batch_walk’ set but not used [-Wunused-but-set-variable]
+  304 |             auto start_time_batch_walk = std::chrono::high_resolution_clock::now();
+      |      ^      ~~~~~~~~~~~~~~

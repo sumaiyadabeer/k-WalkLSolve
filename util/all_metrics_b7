@@ -1,0 +1,113 @@
+--------------------------------------------------
+Processing pair 1: wiki-bug/wikibug_b7_pcg_sol and wiki-bug/wikibug_b7_262144
+source vertices considered
+14229    14229
+
+Generating Scatter Plot of Algorithm Rank vs. True Rank...
+
+Both selected plots generated successfully!
+caculation Spearman's 
+calculating kendell's
+Spearman's Rho: 0.7627 (p-value: 0.000000)
+Kendall's Tau:  0.5992 (p-value: 0.000000)
+
+ 0.7626805146043542 , 0.5992062091207392 ,- ,-,0.9960652051714446 , 0.9152892561983471 , 0.9539703903095559 , 0.9939782481760445,0.9891075193253689 , 0.8226183518410286 , 0.8982131461391193 , 0.9872814914703432,0.9911007025761124 , 0.7652802893309223 , 0.863673469387755 , 0.9882474247587992,
+--------------------------------------------------
+Processing pair 2: wiki_oc/wikioc_b7_pcg_sol and wiki_oc/wikioc_b7_262144
+source vertices considered
+96201    96201
+
+Generating Scatter Plot of Algorithm Rank vs. True Rank...
+
+Both selected plots generated successfully!
+caculation Spearman's 
+calculating kendell's
+Spearman's Rho: 0.9684 (p-value: 0.000000)
+Kendall's Tau:  0.9270 (p-value: 0.000000)
+
+ 0.9683969204325025 , 0.9270381303124897 ,- ,-,0.9797097833769906 , 0.9796283207915852 , 0.9796690503908199 , 0.9810533671201913,0.9744815758016735 , 0.9722078191434201 , 0.9733433695849665 , 0.9762528819230685,0.9582149539186473 , 0.9582149539186473 , 0.9582149539186473 , 0.9616895461029642,
+--------------------------------------------------
+Processing pair 3: wiki-sr/wikisr_b7_pcg_sol and wiki-sr/wikisr_b7_262144
+source vertices considered
+3175009    3175009
+
+Generating Scatter Plot of Algorithm Rank vs. True Rank...
+
+Both selected plots generated successfully!
+caculation Spearman's 
+calculating kendell's
+Spearman's Rho: 0.6392 (p-value: 0.000000)
+Kendall's Tau:  0.5097 (p-value: 0.000000)
+
+ 0.6391983079238127 , 0.509701870259364 ,- ,-,0.8791311654885083 , 0.8791300579272672 , 0.8791306117075389 , 0.8882183679967565,0.9845165841997348 , 0.9845165841997348 , 0.9845165841997348 , 0.9857458091439942,0.980814778730588 , 0.980814778730588 , 0.980814778730588 , 0.9823400869321197,
+--------------------------------------------------
+Processing pair 4: brain/brain_b7_pcg_sol and brain/brain_b7_262144
+source vertices considered
+784262    784262
+
+Generating Scatter Plot of Algorithm Rank vs. True Rank...
+
+Both selected plots generated successfully!
+caculation Spearman's 
+calculating kendell's
+Spearman's Rho: 0.9986 (p-value: 0.000000)
+Kendall's Tau:  0.9755 (p-value: 0.000000)
+
+ 0.9986390893122439 , 0.9754725603622876 ,- ,-,0.9768598329134067 , 0.9768598329134067 , 0.9768598329134067 , 0.978796800041846,0.9732870904604949 , 0.9732870904604949 , 0.9732870904604949 , 0.9755303196758369,0.9719143148588916 , 0.9719143148588916 , 0.9719143148588916 , 0.9742861211428466,
+--------------------------------------------------
+Processing pair 5: gene/gene_b7_pcg_sol and gene/gene_b7_262144
+source vertices considered
+21853    21853
+
+Generating Scatter Plot of Algorithm Rank vs. True Rank...
+
+Both selected plots generated successfully!
+caculation Spearman's 
+calculating kendell's
+Spearman's Rho: 0.9997 (p-value: 0.000000)
+Kendall's Tau:  0.9937 (p-value: 0.000000)
+
+ 0.9996729521888023 , 0.9937310175689948 ,- ,-,0.9915812591508053 , 0.9915812591508053 , 0.9915812591508053 , 0.9909583188695053,0.991992679020819 , 0.991992679020819 , 0.991992679020819 , 0.9909765912330695,0.9923733984136669 , 0.9923733984136669 , 0.9923733984136669 , 0.990759853743235,
+--------------------------------------------------
+Processing pair 6: holl09/holl09_b7_pcg_sol and holl09/holl09_b7_262144
+source vertices considered
+1130459    1130459
+
+Generating Scatter Plot of Algorithm Rank vs. True Rank...
+
+Both selected plots generated successfully!
+caculation Spearman's 
+calculating kendell's
+Spearman's Rho: 0.9205 (p-value: 0.000000)
+Kendall's Tau:  0.8098 (p-value: 0.000000)
+
+ 0.9205297540339711 , 0.8097820587755812 ,- ,-,0.9942961272402385 , 0.9942961272402385 , 0.9942961272402385 , 0.9947400199858469,0.9952320294393433 , 0.9951572029419439 , 0.9951946147841337 , 0.9955901444766667,0.9945626853965053 , 0.9945274952086097 , 0.9945450899912722 , 0.994970587202315,
+--------------------------------------------------
+Processing pair 7: holl11/holl11_b7_pcg_sol and holl11/holl11_b7_262144
+source vertices considered
+1916805    1916805
+
+Generating Scatter Plot of Algorithm Rank vs. True Rank...
+
+Both selected plots generated successfully!
+caculation Spearman's 
+calculating kendell's
+Spearman's Rho: 0.9741 (p-value: 0.000000)
+Kendall's Tau:  0.8814 (p-value: 0.000000)
+
+ 0.9740735752604114 , 0.8813643471063389 ,- ,-,0.9924958576967542 , 0.9924958576967542 , 0.9924958576967542 , 0.9930870095772473,0.9942952092278317 , 0.9942666802304805 , 0.9942809445245098 , 0.9947374721935605,0.9944873591841987 , 0.9944631479368966 , 0.9944752534131874 , 0.9949121922942311,
+--------------------------------------------------
+Processing pair 8: as_ski/asSki_b7_pcg_sol and as_ski/asSki_b7_262144
+source vertices considered
+3175009    3175009
+
+Generating Scatter Plot of Algorithm Rank vs. True Rank...
+
+Both selected plots generated successfully!
+caculation Spearman's 
+calculating kendell's
+Spearman's Rho: 0.7794 (p-value: 0.000000)
+Kendall's Tau:  0.6277 (p-value: 0.000000)
+
+ 0.7793529401409122 , 0.6277089072037529 ,- ,-,0.9658621762689401 , 0.9658609594408343 , 0.9658615678545039 , 0.9684920350245079,0.9966425302597473 , 0.9966425302597473 , 0.9966425302597473 , 0.9968919144950267,0.9965123506043019 , 0.9965123506043019 , 0.9965123506043019 , 0.9967711576472761,
+bash script is complete

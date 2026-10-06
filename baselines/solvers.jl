@@ -4,13 +4,15 @@
 import Pkg
 #; Pkg.add("Plots")
 using Laplacians
+using Laplacians
+using Laplacians
 # using PyPlot
-using Plots
+using Plots 
 using SparseArrays
 using Random
 using LinearAlgebra
 using Statistics
-using Arpack
+using Arpack 
 using SparseArrays
 using DelimitedFiles
 # using ArgParse
@@ -60,6 +62,7 @@ end
 a = sparse(a)
 #match no of non zero enteries with row_ptr[n+1] in csr_conversion
 la = lap(a) 
+degrees = diag(la)
 
 println("Creation of Adj and Sparse Matr is done")
 # checking the degree of graph
@@ -90,38 +93,68 @@ println("Reading of b is done")
 # print(residual)
 # exit()
 
+a = sparse(Float64.(a))
+b = Float64.(b)
+
+println("========== Matrix Diagnostics ==========")
+println("size(a)          = ", size(a))
+println("nnz(a)           = ", nnz(a))
+println("eltype(a)        = ", eltype(a))
+println("symmetric error  = ", norm(a - a'))
+println("min(nonzeros(a)) = ", minimum(nonzeros(a)))
+println("max(nonzeros(a)) = ", maximum(nonzeros(a)))
+println("finite values    = ", all(isfinite, nonzeros(a)))
+println("========================================")
+
+# Remove self-loops, if any
+a[diagind(a)] .= 0
+dropzeros!(a)
+
+# Check symmetry
+if norm(a - a') > 1e-12
+    error("Adjacency matrix is not symmetric.")
+end
+
+# Check weights
+if !all(isfinite, nonzeros(a))
+    error("Adjacency matrix contains NaN or Inf.")
+end
+
+if minimum(nonzeros(a)) < 0
+    error("Adjacency matrix contains negative edge weights.")
+end
+
+ println("Cholesky 23 solver")
+ # Spielman23 approxchol_lap: a fast heuristic for solving Laplacians equations written by Yuan Gao, Rasmus Kyng, and Daniel Spielman. It is described in the paper "Robust and Practical Solution of Laplacian Equations by Approximate Elimination" (https://arxiv.org/abs/2303.00709). 
+ # sort(b) # chk the pattern again
+ # tolerance does not matter in this case
+ t = time()
+  chol_solver = chol_lap(a) #recall this routine should pass adjacency matrix
+  x = chol_solver(b)
+  dt = time() - t
+  shift = -x[sink_index]
+  x = x .+ shift
+  residual = la*x - b
+  curr_Dx = x .* degrees
+  # residual[sink_index] = 0
+  # residual = norm(residual)
 
 
- # println("Cholesky 23 solver")
- # # Spielman23 approxchol_lap: a fast heuristic for solving Laplacians equations written by Yuan Gao, Rasmus Kyng, and Daniel Spielman. It is described in the paper "Robust and Practical Solution of Laplacian Equations by Approximate Elimination" (https://arxiv.org/abs/2303.00709). 
- # # sort(b) # chk the pattern again
- # # tolerance does not matter in this case
- # t = time()
- #  chol_solver = chol_lap(a) #recall this routine should pass adjacency matrix
-  # x = chol_solver(b)
- #  dt = time() - t
- #  shift = -x[sink_index]
- #  x = x .+ shift
- #  residual = la*x - b
-  # # residual[sink_index] = 0
- #  # residual = norm(residual)
 
-
-
- #  filename = ARGS[3] * "_Chol_23"
- #  # FileIOStream =  open(filename,"w")
- #  # writedlm(FileIOStream, dt, "\n")
- #  # close(FileIOStream)
-  # print("Time: ", dt)
-
-  # # FileIOStream =  open(filename,"a")
-  # # writedlm(FileIOStream, residual, "\n")
-  # # close(FileIOStream)
-  # println("\t \t Residual: ", residual)
-  # FileIOStream =  open(filename,"a")
-  # writedlm(FileIOStream, x, "    ")
+  filename = ARGS[3] * "_Chol_23"
+  # FileIOStream =  open(filename,"w")
+  # writedlm(FileIOStream, dt, "\n")
   # close(FileIOStream)
-  # exit()
+  print("Time: ", dt)
+
+  # FileIOStream =  open(filename,"a")
+  # writedlm(FileIOStream, residual, "\n")
+  # close(FileIOStream)
+  println("\t \t Residual: ", norm(residual))
+  FileIOStream =  open(filename,"a")
+  writedlm(FileIOStream, curr_Dx, "    ")
+  close(FileIOStream)
+  exit()
 
 #measure time and write time residual and x 
 
@@ -157,7 +190,7 @@ print("Time: ", dt)
 # FileIOStream =  open(filename,"a")
 # writedlm(FileIOStream, residual, "\n")
 # close(FileIOStream)
-println("\t \t Residual: ", residual)
+println("\t \t Residual: ", norm(residual))
 
 FileIOStream =  open(filename,"a")
 writedlm(FileIOStream, x, "    ")

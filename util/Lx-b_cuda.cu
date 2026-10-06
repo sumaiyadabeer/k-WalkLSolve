@@ -89,12 +89,19 @@ double thrust_norm(const thrust::device_vector<double>& vec) {
     ));
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+    // --- Parse Command Line Arguments ---
+    if (argc < 3) {
+        std::cerr << "Usage: " << argv[0] << " <input_csr_file> <output_file>" << std::endl;
+        return 1;
+    }
+    std::string input_file_path = argv[1];
+    std::string OpFileName = argv[2];
+
     // --- 1. Read input file into host memory ---
-    std::ifstream infile("/home/sumaiya/LsolveVarient/LsolveMR_EAAI/MP/dataset_RHS/brain/brain.edges_csr");
-    std::string OpFileName = "/home/sumaiya/FixedPS/kSolve/data/outputs/brain/brain_m-7";
+    std::ifstream infile(input_file_path);
     if (!infile) {
-        std::cerr << "Error: Could not open input File" << std::endl;
+        std::cerr << "Error: Could not open input File: " << input_file_path << std::endl;
         return 1;
     }
 
@@ -173,14 +180,12 @@ int main() {
 
     d_r = d_b;
 
-    // The diagonal preconditioner M is just D_L, the diagonal of the Laplacian
     diagonal_preconditioner<<< (V + 255) / 256, 256 >>>(V, thrust::raw_pointer_cast(d_laplacian_diag.data()), thrust::raw_pointer_cast(d_r.data()), thrust::raw_pointer_cast(d_z.data()));
     d_p = d_z;
 
     double r_dot_z_old = thrust_dot(d_r, d_z);
 
     for (int k = 0; k < MAX_ITERS; ++k) {
-        // Calculate q = L * p = D*p - A*p
         thrust::device_vector<double> d_Ap(V);
         csr_mat_vec_mult<<< (V + 255) / 256, 256 >>>(V, thrust::raw_pointer_cast(d_row_ptr_A.data()), thrust::raw_pointer_cast(d_col_off_A.data()), thrust::raw_pointer_cast(d_values_A.data()), thrust::raw_pointer_cast(d_p.data()), thrust::raw_pointer_cast(d_Ap.data()));
         laplacian_mult_kernel<<< (V + 255) / 256, 256 >>>(V, thrust::raw_pointer_cast(d_laplacian_diag.data()), thrust::raw_pointer_cast(d_p.data()), thrust::raw_pointer_cast(d_Ap.data()), thrust::raw_pointer_cast(d_q.data()));
@@ -193,7 +198,6 @@ int main() {
         double alpha = r_dot_z_old / p_dot_q;
 
         axpby<<< (V + 255) / 256, 256 >>>(V, alpha, thrust::raw_pointer_cast(d_p.data()), 1.0, thrust::raw_pointer_cast(d_x.data()), thrust::raw_pointer_cast(d_x.data()));
-
         axpby<<< (V + 255) / 256, 256 >>>(V, -alpha, thrust::raw_pointer_cast(d_q.data()), 1.0, thrust::raw_pointer_cast(d_r.data()), thrust::raw_pointer_cast(d_r.data()));
 
         double r_norm = thrust_norm(d_r);
@@ -228,16 +232,11 @@ int main() {
     double final_residual = thrust_norm(d_diff) / b_norm;
     std::cout << "\nFinal Relative Residual: " << final_residual << std::endl;
 
-    // --- 6. Print the unshifted solution vector x ---
-    std::cout << "\nUnshifted Solution vector x:" << std::endl;
-    thrust::host_vector<double> h_x = d_x;
-    for (size_t i = 0; i < std::min(10, static_cast<int>(h_x.size())); ++i) {
-        std::cout << "x[" << i << "] = " << h_x[i] << std::endl;
-    }
-
-    // --- 7. Shift the solution and check for positivity ---
+    // --- 6. Shift the solution ---
     int sink_vertex_idx = -1;
     double sink_value = 0.0;
+    thrust::host_vector<double> h_x = d_x;
+
     for (size_t i = 0; i < b.size(); ++i) {
         if (b[i] < 0) {
             sink_vertex_idx = i;
@@ -251,40 +250,21 @@ int main() {
     
     thrust::host_vector<double> h_shifted_x = d_shifted_x;
 
-    std::cout << "\nShifted Solution vector x' (with sink at 0):" << std::endl;
-    bool all_positive = true;
-    for (size_t i = 0; i < std::min(10, static_cast<int>(h_shifted_x.size())); ++i) {
-        std::cout << "x'[" << i << "] = " << h_shifted_x[i] << std::endl;
-        // Check for positivity, allowing a small tolerance for floating-point errors
-        if (i != sink_vertex_idx && h_shifted_x[i] < -1e-9) { 
-            all_positive = false;
-        }
-    }
-
-    if (all_positive) {
-        std::cout << "\nAll non-sink components of the shifted solution are positive. ✅" << std::endl;
-    } else {
-        std::cout << "\nSome non-sink components of the shifted solution are not positive. ❌" << std::endl;
-    }
-
-     std::ofstream outputFile(OpFileName);
-    // Check if the file was opened successfully
+    // --- 7. Apply Degree Multiplication and Write to Output File ---
+    std::ofstream outputFile(OpFileName);
     if (!outputFile.is_open()) {
-        std::cerr << "Error: Unable to open the file." << std::endl;
-        return 1; // Indicate an error
+        std::cerr << "Error: Unable to open output file: " << OpFileName << std::endl;
+        return 1;
     }
-    // for (int i = 0; i < std::min(10, V); ++i) {
-    //     std::cout<< "centrality["<<i<< "] = "<< h_eta[i] <<std::endl;
-    // }
-    std::cout << "Printing to file OpFileSolK" << std::endl;
-    for (int i = 0; i < h_shifted_x.size(); ++i) {
-        // std::cout<< h_eta[i] <<std::endl;
-        outputFile <<  h_shifted_x[i] <<  "\n"; //h_b[i]?1:0 
-    }
-    std::cout << "Printing to file OpFileSolK complete" << std::endl;
-    // Close the file
-    outputFile.close();
 
+    std::cout << "Writing degree-multiplied solution to: " << OpFileName << std::endl;
+    for (size_t i = 0; i < h_shifted_x.size(); ++i) {
+        int degree = row_ptr_A[i+1] - row_ptr_A[i];
+        double degree_mult_val = h_shifted_x[i] * degree;
+        outputFile << degree_mult_val << "\n";
+    }
+    outputFile.close();
+    std::cout << "Writing completed successfully." << std::endl;
 
     return 0;
 }

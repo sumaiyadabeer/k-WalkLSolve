@@ -1,0 +1,103 @@
+==========================================
+ Processing Dataset: wikibug
+==========================================
+Successfully read graph with V=14229, E=6752620
+Iteration 0, Rel. Residual: 0.031258
+Iteration 100, Rel. Residual: 1.96668e-05
+Solver converged at iteration 149 with relative residual 4.58426e-08
+
+Final Relative Residual: 4.58425e-08
+Writing degree-multiplied solution to: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/wiki-bug/wikibug_b7_pcg_sol
+Writing completed successfully.
+Finished wikibug
+
+==========================================
+ Processing Dataset: wikioc
+==========================================
+Successfully read graph with V=96201, E=29273256
+Iteration 0, Rel. Residual: 0.0121156
+Iteration 100, Rel. Residual: 9.76839e-07
+Solver converged at iteration 116 with relative residual 9.54302e-08
+
+Final Relative Residual: 9.54302e-08
+Writing degree-multiplied solution to: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/wiki_oc/wikioc_b7_pcg_sol
+Writing completed successfully.
+Finished wikioc
+
+==========================================
+ Processing Dataset: wikisr
+==========================================
+Successfully read graph with V=3175009, E=206621674
+Iteration 0, Rel. Residual: 0.00563471
+Solver converged at iteration 100 with relative residual 9.32962e-08
+
+Final Relative Residual: 9.32962e-08
+Writing degree-multiplied solution to: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/wiki-sr/wikisr_b7_pcg_sol
+Writing completed successfully.
+Finished wikisr
+
+==========================================
+ Processing Dataset: brain
+==========================================
+Successfully read graph with V=784262, E=535689336
+Iteration 0, Rel. Residual: 0.00625247
+Iteration 100, Rel. Residual: 2.06494e-06
+Iteration 200, Rel. Residual: 6.38583e-07
+Solver converged at iteration 290 with relative residual 9.6492e-08
+
+Final Relative Residual: 9.6492e-08
+Writing degree-multiplied solution to: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/brain/brain_b7_pcg_sol
+Writing completed successfully.
+Finished brain
+
+==========================================
+ Processing Dataset: gene
+==========================================
+Successfully read graph with V=21853, E=24647296
+Iteration 0, Rel. Residual: 0.00614999
+Solver converged at iteration 20 with relative residual 5.77731e-08
+
+Final Relative Residual: 5.77731e-08
+Writing degree-multiplied solution to: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/gene/gene_b7_pcg_sol
+Writing completed successfully.
+Finished gene
+
+==========================================
+ Processing Dataset: holl09
+==========================================
+Successfully read graph with V=1130459, E=26610598
+Iteration 0, Rel. Residual: 0.0211267
+Iteration 100, Rel. Residual: 2.6515e-07
+Solver converged at iteration 128 with relative residual 9.70324e-08
+
+Final Relative Residual: 9.70324e-08
+Writing degree-multiplied solution to: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/holl09/holl09_b7_pcg_sol
+Writing completed successfully.
+Finished holl09
+
+==========================================
+ Processing Dataset: holl11
+==========================================
+Successfully read graph with V=1916805, E=48531662
+Iteration 0, Rel. Residual: 0.01917
+Iteration 100, Rel. Residual: 3.5159e-07
+Solver converged at iteration 155 with relative residual 9.72651e-08
+
+Final Relative Residual: 9.72651e-08
+Writing degree-multiplied solution to: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/holl11/holl11_b7_pcg_sol
+Writing completed successfully.
+Finished holl11
+
+==========================================
+ Processing Dataset: asSki
+==========================================
+Successfully read graph with V=3175009, E=206621674
+Iteration 0, Rel. Residual: 0.00563471
+Solver converged at iteration 100 with relative residual 9.32962e-08
+
+Final Relative Residual: 9.32962e-08
+Writing degree-multiplied solution to: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/as_ski/asSki_b7_pcg_sol
+Writing completed successfully.
+Finished asSki
+
+All datasets processed successfully.

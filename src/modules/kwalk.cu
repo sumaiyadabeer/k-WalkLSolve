@@ -1,6 +1,6 @@
-// src/modules/module1.cu
-#include "../../include/modules/kwalk.cuh" // Relative path to its header
-#include "../../include/config.h"           // Access global config
+// src/modules/kwalk.cu
+#include "../../include/modules/kwalk.cuh"
+#include "../../include/config.h"
 #include <curand_kernel.h>
 #include <stdio.h>
 #include <chrono>
@@ -9,178 +9,56 @@
 #include <thrust/reduce.h>
 #include <cuda_runtime.h>
 #include <iostream>
-#include <thrust/iterator/constant_iterator.h>
 
-
-int read_file_into_csr(const char* file_path, int** row_ptr, int** col_offset, float** values, float** b) {
-    FILE* graph = fopen(file_path, "r");
-    if (graph == NULL) {
-        fprintf(stderr, "Unable to open the file at %s\n", file_path);
-        return -1;
-    }
-
-    int V;
-    fscanf(graph, "%d", &V);
-    int non_zero_values = 0;
-
-    float degree[V];
-    memset(degree, 0, sizeof(degree));
-
-    float** matrix = (float**)malloc(sizeof(float*) * V);
-    for (int i = 0; i < V; i++) {
-        matrix[i] = (float*)malloc(sizeof(float) * V);
-        memset(matrix[i], 0, sizeof(float) * V);  // Initialize the matrix to zero
-    }
-
-    for (int i = 0; i < V; i++) {
-        for (int j = 0; j < V; j++) {
-            fscanf(graph, "%f", &matrix[i][j]);
-            if (matrix[i][j] != 0) {
-                non_zero_values++;
-                degree[i] += matrix[i][j];
-            }
-        }
-    }
-
-    // Normalize the weights
-    for (int i = 0; i < V; i++) {
-        for (int j = 0; j < V; j++) {
-            if (matrix[i][j] > 0) {
-                matrix[i][j] = matrix[i][j] / degree[i];
-            }
-        }
-    }
-
-    *row_ptr = (int*)malloc(sizeof(int) * (V + 1));
-    *col_offset = (int*)malloc(sizeof(int) * non_zero_values);
-    *values = (float*)malloc(sizeof(float) * non_zero_values);
-    *b = (float*)malloc(sizeof(float) * V);
-
-    int r = 0;
-    int c = 0;
-    int v = 0;
-
-    for (int i = 0; i < V; i++) {
-        (*row_ptr)[r] = c;
-        for (int j = 0; j < V; j++) {
-            if (matrix[i][j] != 0) {
-                (*col_offset)[c] = j;
-                (*values)[v] = matrix[i][j];
-                c++;
-                v++;
-            }
-        }
-        r++;
-    }
-    (*row_ptr)[r] = c;
-    float sum = 0;
-    for (int i = 0; i < V; i++) {
-        fscanf(graph, "%f", &((*b)[i]));
-        sum += (*b)[i];
-
-    }
-
-
-    for (int i = 0; i < V; i++) {
-        free(matrix[i]);
-    }
-    free(matrix);
-
-    fclose(graph);
-
-    return V;
-}
-
-
+// Reads Graph Structure in CSR format
 int read_csr(const char* file_path, int** row_ptr, int** col_ptr, float** values, float** b) {
-    // printf(".\n");
-
     FILE *file = fopen(file_path, "r");
     if (file == nullptr) {
-        perror("Failed to open file");
+        perror("Failed to open graph file");
         return -1; 
     }
-    // printf(".\n");
-
 
     int V, E;
     if (fscanf(file, "%d", &V) != 1 || fscanf(file, "%d", &E) != 1) {
-        perror("Failed to read V or E");
+        perror("Failed to read V or E dimensions");
         fclose(file);
         return -1; 
     }
-    // printf(".\n");
-
 
     *row_ptr = (int*)malloc(sizeof(int) * (V + 1));
     *col_ptr = (int*)malloc(sizeof(int) * E);
-    *values = (float*)malloc(sizeof(int) * E);
-    *b = (float*)malloc(sizeof(float) * V);
+    *values  = (float*)malloc(sizeof(float) * E);
+    *b       = (float*)malloc(sizeof(float) * V);
 
     if (*row_ptr == nullptr || *col_ptr == nullptr || *values == nullptr || *b == nullptr) {
-        perror("Failed to allocate memory");
+        perror("Failed host memory allocation");
         fclose(file);
         return -1; 
     }
-    // printf(".\n");
 
-    for (int i = 0; i <= V; ++i) {
-        if (fscanf(file, "%d", &(*row_ptr)[i]) != 1) {
-            perror("Failed to read row_ptr");
-            fclose(file);
-            return -1; 
-        }
-    }
+    for (int i = 0; i <= V; ++i) fscanf(file, "%d", &(*row_ptr)[i]);
+    for (int i = 0; i < E; ++i)  fscanf(file, "%d", &(*col_ptr)[i]);
+    for (int i = 0; i < E; ++i)  fscanf(file, "%f", &(*values)[i]);
+    for (int i = 0; i < V; ++i)  fscanf(file, "%f", &(*b)[i]);
 
-    // printf(".\n");
-
-    for (int i = 0; i < E; ++i) {
-        if (fscanf(file, "%d", &(*col_ptr)[i]) != 1) {
-            perror("Failed to read col_ptr");
-            fclose(file);
-            return -1; 
-        }
-    }
-
-    // printf(".\n");
-
-    for (int i = 0; i < E; ++i) {
-        if (fscanf(file, "%f", &(*values)[i]) != 1) {
-            perror("Failed to read values");
-            fclose(file);
-            return -1; 
-        }
-    }
-
-    // printf("Reading b starts.\n");
-
-    for (int i = 0; i < V; ++i) {
-        if (fscanf(file, "%f", &(*b)[i]) != 1) {
-            perror("Failed to read b");
-            fclose(file);
-            return -1; 
-        }
-    }
-    // printf("reading b from file end but file not closed\n");
-
-    for(int i = 0 ; i<V ; i++){
+    // Row degree normalization
+    for (int i = 0; i < V; i++) {
         int start_idx = (*row_ptr)[i];
-        int end_idx = (*row_ptr)[i+1];
-        float sum = 0;
-        for(int j = start_idx; j< end_idx ; j++){
+        int end_idx   = (*row_ptr)[i + 1];
+        float sum = 0.0f;
+        for (int j = start_idx; j < end_idx; j++) {
             sum += (*values)[j];
         }
-        // printf("start_idx, end_idx, sum: %d, %d, %f\n", start_idx, end_idx, sum);
-        for(int j = start_idx; j< end_idx ; j++){
-            (*values)[j] =  (*values)[j]/sum;
+        if (sum > 0.0f) {
+            for (int j = start_idx; j < end_idx; j++) {
+                (*values)[j] = (*values)[j] / sum;
+            }
         }
     }
 
     fclose(file);
-    // printf("file read done");
     return V;
 }
-
 
 int b2J(int V, float* b, float* neg_value, int* neg_index, int &source_nodes, int &sink_nodes) {
     *neg_value = 0;
@@ -201,133 +79,196 @@ int b2J(int V, float* b, float* neg_value, int* neg_index, int &source_nodes, in
     return 0;
 }
 
-void print_csr(int V, int* row_ptr, int* col_offset, float* values) {
-    for (int i = 0; i <= V; i++) {
-        printf("%d ", row_ptr[i]);
-    }
-    printf("\n");
-    for (int i = 0; i < V; i++) {
-        int curr = row_ptr[i];
-        int end = row_ptr[i + 1];
-        if (end - 1 < curr) continue;
-        for (int j = curr; j < end; j++) {
-            printf("%d ", col_offset[j]);
-        }
-    }
-    printf("\n");
+// Device-Side Philox Random Neighbor Selection
+__device__ int get_nbr_philox(unsigned long long seed, int idx, int epoch,
+                             const int* __restrict__ d_row_ptr,
+                             const int* __restrict__ d_col_offset,
+                             int curr_node) {
+    curandStatePhilox4_32_10_t state;
+    curand_init(seed, idx, epoch, &state);
+    
+    int start = __ldg(&d_row_ptr[curr_node]);
+    int end   = __ldg(&d_row_ptr[curr_node + 1]);
+    int degree = end - start;
+    if (degree <= 0) return curr_node;
 
-    for (int i = 0; i < V; i++) {
-        int curr = row_ptr[i];
-        int end = row_ptr[i + 1];
-        if (end - 1 < curr) continue;
-        for (int j = curr; j < end; j++) {
-            printf("%f ", values[j]);
-        }
-    }
-    printf("\n");
+    int offset = (int)(curand_uniform(&state) * degree);
+    if (offset >= degree) offset = degree - 1;
     
-    
+    return __ldg(&d_col_offset[start + offset]);
 }
 
+// Optimized Fused Message Processing Kernel
+__global__ void processMessages_Optimized(
+    const int* __restrict__ d_row_ptr,
+    const int* __restrict__ d_col_offset,
+    const float* __restrict__ d_values,
+    struct message* d_messages,
+    int num_msg_packets,
+    int V,
+    const float* __restrict__ d_b,
+    const int* __restrict__ d_source_idx,
+    int source_nodes,
+    int* d_traveller,
+    int epoch,
+    long long max_epoch,
+    unsigned long long* d_at_sink,
+    unsigned long long* d_walk_generated,
+    int* d_cnt,
+    unsigned long long seed) {
 
-__global__ void flush_boolArray(bool *d_recv, int V){
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if(idx >= V) return;
-    d_recv[idx] = 0;
+    if (idx >= num_msg_packets) return;
 
+    int curr_node = d_messages[idx].node;
+    if (curr_node < 0) return; // Inactive walker guard
+
+    float b_val = __ldg(&d_b[curr_node]);
+    int next_node;
+    if (b_val < 0) { // Current node is a Sink Vertex
+        // Count the arrival step at the sink vertex
+        atomicAdd(&d_cnt[curr_node], 1);
+
+        if (epoch < max_epoch) {
+            // Look-ahead / Restart Phase: Respawn walker at a random source node
+            curandStatePhilox4_32_10_t state;
+            curand_init(seed, idx, epoch, &state);
+            int src_idx = (int)(curand_uniform(&state) * source_nodes);
+            next_node = __ldg(&d_source_idx[src_idx]);
+            
+            atomicAdd(d_walk_generated, 1ULL);
+            atomicAdd(&d_cnt[next_node], 1); // Record initial visit at respawned source
+        } else {
+            // Final Phase: Terminate walker cleanly and increment sink counter EXACTLY ONCE
+            atomicAdd(d_at_sink, 1ULL);
+            d_messages[idx].node = -1;
+            d_traveller[idx] = -1;
+            return;
+        }
+    } else { // Regular Transition
+        next_node = get_nbr_philox(seed, idx, epoch, d_row_ptr, d_col_offset, curr_node);
+        atomicAdd(&d_cnt[next_node], 1);
+    }
+
+    // Update State Arrays
+    d_messages[idx].node = next_node;
+    d_traveller[idx] = next_node;
+}
+
+// Active Walk Compaction (AWC) via Kogge-Stone Parallel Scan
+__global__ void partitionValueToRight2(
+    int* __restrict__ d_input, 
+    int* __restrict__ d_output, 
+    struct message* __restrict__ d_msg_in,
+    struct message* __restrict__ d_msg_out,
+    int n, 
+    int s, 
+    int* d_non_s_cnt,
+    int* d_s_cnt) {
+    
+    extern __shared__ int temp_scan[]; 
+
+    int tid = threadIdx.x;
+    int idx = blockIdx.x * blockDim.x + tid;
+
+    int is_non_s = (idx < n && d_input[idx] != s) ? 1 : 0;
+    int is_s     = (idx < n && d_input[idx] == s) ? 1 : 0;
+    
+    temp_scan[tid] = is_non_s;
+    __syncthreads();
+
+    // Kogge-Stone Shared Memory Scan
+    for (int stride = 1; stride < blockDim.x; stride <<= 1) {
+        int val = (tid >= stride) ? temp_scan[tid - stride] : 0;
+        __syncthreads();
+        if (tid >= stride) temp_scan[tid] += val;
+        __syncthreads();
+    }
+
+    int block_exclusive_non_s = (tid == 0) ? 0 : temp_scan[tid - 1];
+    
+    int valid_threads_in_block = min(n - (int)(blockIdx.x * blockDim.x), (int)blockDim.x);
+    if (valid_threads_in_block < 0) valid_threads_in_block = 0;
+
+    int block_total_non_s = (valid_threads_in_block > 0) ? temp_scan[valid_threads_in_block - 1] : 0;
+    int block_total_s     = (valid_threads_in_block > 0) ? (valid_threads_in_block - block_total_non_s) : 0;
+    __syncthreads();
+
+    __shared__ int global_base_non_s;
+    __shared__ int global_base_s;
+
+    if (tid == 0) {
+        global_base_non_s = atomicAdd(d_non_s_cnt, block_total_non_s);
+        global_base_s     = atomicAdd(d_s_cnt, block_total_s);
+    }
+    __syncthreads();
+
+    if (idx < n) {
+        if (is_non_s) {
+            int dest_idx = global_base_non_s + block_exclusive_non_s;
+            d_output[dest_idx] = d_input[idx];
+            d_msg_out[dest_idx] = d_msg_in[idx];
+        } else if (is_s) {
+            int block_exclusive_s = tid - block_exclusive_non_s;
+            int tail_idx = n - 1 - (global_base_s + block_exclusive_s);
+            
+            if (tail_idx >= 0 && tail_idx < n) {
+                d_output[tail_idx] = s;
+                d_msg_out[tail_idx] = d_msg_in[idx];
+            }
+        }
+    }
+}
+
+// Single-Block Kernel for Top-R Extraction
+__global__ void extractTopRKernel(const int* d_cnt, int V, int r, int* d_top_indices, int* d_top_values) {
+    if (threadIdx.x == 0 && blockIdx.x == 0) {
+        for (int i = 0; i < r; i++) {
+            d_top_values[i] = -1;
+            d_top_indices[i] = -1;
+        }
+
+        for (int node = 0; node < V; node++) {
+            int count = d_cnt[node];
+
+            for (int i = 0; i < r; i++) {
+                if (count > d_top_values[i]) {
+                    for (int j = r - 1; j > i; j--) {
+                        d_top_values[j] = d_top_values[j - 1];
+                        d_top_indices[j] = d_top_indices[j - 1];
+                    }
+                    d_top_values[i] = count;
+                    d_top_indices[i] = node;
+                    break;
+                }
+            }
+        }
+    }
+}
+
+// Post-Processing Utility Kernels
+__global__ void update_eta_by_q(float* d_eta, const int* d_cnt, int V, unsigned long long total_walks) {
+    int idx = blockDim.x * blockIdx.x + threadIdx.x;
+    if (idx >= V) return;
+    d_eta[idx] = static_cast<float>(d_cnt[idx]) / static_cast<float>(total_walks);
+}
+
+__global__ void eta2x(float *d_eta, int V, const int *d_row_ptr) {
+    int idx = blockDim.x * blockIdx.x + threadIdx.x;
+    if (idx >= V) return;
+    int degree = d_row_ptr[idx + 1] - d_row_ptr[idx];
+    if (degree > 0) {
+        d_eta[idx] = d_eta[idx] / degree;
+    }
+}
+
+__global__ void flush_boolArray(bool *d_recv, int V) {
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    if (idx >= V) return;
+    d_recv[idx] = false;
 }
 
 __global__ void setup_kernel(curandState *state, unsigned long seed) {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     curand_init(seed, idx, 0, &state[idx]);
 }
-
-__device__ int get_source_node(curandState *state, int *d_source_idx, int source_nodes, int V) {
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    curandState localState = state[idx];
-    float random_number = curand_uniform(&localState);  // Generate random float in [0, 1]
-    state[idx] = localState;  // Store the state back
-    int lower_bound = 0;
-    int upper_bound = source_nodes;
-    int node_idx = lower_bound + (int)(random_number * (upper_bound - lower_bound));
-    int node = d_source_idx[node_idx];
-    return node;
-}
-
-__device__ int get_nbr(curandState *state, int* row_ptr, int* col_offset, float* values, int node) {
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    curandState localState = state[idx];
-    float random_number = curand_uniform(&localState);  // Generate random float in [0, 1]
-    state[idx] = localState;  // Store the state back
-    int lower_bound = row_ptr[node];
-    int upper_bound = row_ptr[node+1];
-    int nbr_node_idx = lower_bound + (int)(random_number * (upper_bound - lower_bound));
-    int nbr_node = col_offset[nbr_node_idx];
-
-    return nbr_node;
-}
-
-__global__ void processMessages(int *d_row_ptr, int *d_col_offset, float *d_values, struct message *d_messages,
-                                int num_msg_packets, int V, float *d_b ,int *d_source_idx, int source_nodes, 
-                                curandState *state, bool* d_recv, int neg_index, int *d_traveller) {
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    // print("hy")
-    if (idx < num_msg_packets) {
-        struct message *msg = &d_messages[idx];
-        int curr_node = msg->node;
-
-        if (d_b[curr_node] < 0) {
-            int src_node = get_source_node(state, d_source_idx, source_nodes,V);  // Device-compatible random number generation
-            msg->node = src_node;
-            d_traveller[idx] = src_node;
-            d_recv[src_node] = 1;
-        } else {
-            int nbr = get_nbr(state, d_row_ptr, d_col_offset, d_values, curr_node);  // Device-compatible random number generation
-            msg->node = nbr;
-            
-            d_recv[nbr] = 1;
-            d_traveller[idx] = nbr;
-        }
-    }
-}
-
-
-__global__ void update_eta_by_qLen(float* d_eta, float* d_prev_eta ,int *d_cnt, int V, bool *d_recv, int epoch, int num_msg_packets) {
-    int idx = blockDim.x * blockIdx.x + threadIdx.x;
-    if (idx >= V) return;
-    d_prev_eta[idx] = d_eta[idx];
-    d_eta[idx] = ((epoch-1)*d_eta[idx] + (1*d_cnt[idx]))/epoch;
-    d_recv[idx] = 0;
-    d_cnt[idx] = 0;
-
-}
-
-__global__ void normalise(float *d_eta, int V, int epoch){
-    int idx = blockDim.x * blockIdx.x + threadIdx.x;
-    if (idx >= V) return;
-    d_eta[idx] = d_eta[idx]/epoch;
-}
-
-__global__ void eta2x(float *d_eta, int V, int no_of_msjs, int *d_row_ptr){
-    int idx = blockDim.x * blockIdx.x + threadIdx.x;
-    if (idx >= V) return;
-    d_eta[idx] = d_eta[idx]/((d_row_ptr[idx+1]-d_row_ptr[idx])*no_of_msjs);
-}
-
-__global__ void cnt_diff(int *d_cnt, int *del_d_cnt, int V){
-    int idx = blockDim.x * blockIdx.x + threadIdx.x;
-    if (idx >= V) return;
-    del_d_cnt[idx] = del_d_cnt[idx] - d_cnt[idx];
-}
-
-__global__ void update_qlen(int *d_traveller, int num_msg_packets, int *d_cnt){
-    int idx = blockDim.x * blockIdx.x + threadIdx.x;
-    if(idx >= num_msg_packets) return;
-
-    int node = d_traveller[idx];
-    atomicAdd(&d_cnt[node], 1);
-}
-
-
-
-

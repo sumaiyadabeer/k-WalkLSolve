@@ -1,0 +1,1839 @@
+wikibug
+config_backup.h
+config.h
+modules
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Parallel K-Walk Solver Pipeline
+==================================
+Using GPU: NVIDIA A100-SXM4-80GB
+Code is executing on device 0 
+K-WalkSolver starting: 
+Max epoch per iteration batch: 4913
+Number of packets in network: 262144
+Negative index (Sink): 14125 	 -1565.000000
+
+==================================================
+STARTING MULTI-ROUND OPTIMIZED K-WALK SOLVER...
+==================================================
+
+>>> Beginning Round 1 Execution...
+Epoch: 1001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 2001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 3001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 4001 | Walks at Sink: 0 | Revised Blocks: 1024
+ [AWC] Compacted grid. Time taken: 46 us | Active Walks: 232664 | Revised Blocks: 909
+Epoch: 5001 | Walks at Sink: 29480 | Revised Blocks: 909
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 108174 | Revised Blocks: 423
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 50277 | Revised Blocks: 197
+Epoch: 6001 | Walks at Sink: 211867 | Revised Blocks: 197
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 23365 | Revised Blocks: 92
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 10894 | Revised Blocks: 43
+Epoch: 7001 | Walks at Sink: 251250 | Revised Blocks: 43
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 5114 | Revised Blocks: 20
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 2359 | Revised Blocks: 10
+Epoch: 8001 | Walks at Sink: 259785 | Revised Blocks: 10
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 989 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 448 | Revised Blocks: 2
+Epoch: 9001 | Walks at Sink: 261696 | Revised Blocks: 2
+Epoch: 10001 | Walks at Sink: 262103 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 0 | Revised Blocks: 0
+Round 1 Terminated | Total Epochs: 10501 | Final Sink Count: 262157
+>>> Beginning Round 2 Execution...
+Epoch: 1001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 2001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 3001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 4001 | Walks at Sink: 0 | Revised Blocks: 1024
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 232664 | Revised Blocks: 909
+Epoch: 5001 | Walks at Sink: 29480 | Revised Blocks: 909
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 108174 | Revised Blocks: 423
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 50277 | Revised Blocks: 197
+Epoch: 6001 | Walks at Sink: 211867 | Revised Blocks: 197
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 23365 | Revised Blocks: 92
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 10894 | Revised Blocks: 43
+Epoch: 7001 | Walks at Sink: 251250 | Revised Blocks: 43
+ [AWC] Compacted grid. Time taken: 18 us | Active Walks: 5114 | Revised Blocks: 20
+ [AWC] Compacted grid. Time taken: 18 us | Active Walks: 2359 | Revised Blocks: 10
+Epoch: 8001 | Walks at Sink: 259785 | Revised Blocks: 10
+ [AWC] Compacted grid. Time taken: 18 us | Active Walks: 989 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 17 us | Active Walks: 448 | Revised Blocks: 2
+Epoch: 9001 | Walks at Sink: 261696 | Revised Blocks: 2
+Epoch: 10001 | Walks at Sink: 262103 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 18 us | Active Walks: 0 | Revised Blocks: 0
+Round 2 Terminated | Total Epochs: 10501 | Final Sink Count: 262157
+ -> Round 2 | Top-R (50) Graded NDCG: 1.00000
+
+[TERMINATION TRIGGER] NDCG (1.00000) reached threshold 0.95000 at Round 2. Stopping multi-round loop.
+
+Total Multi-Round Execution Time: 539 ms
+
+First 10 calculated Eta (cnt / total_walks) values:
+eta[0] = 0.00004
+eta[1] = 0.00013
+eta[2] = 0.00014
+eta[3] = 0.00014
+eta[4] = 0.00017
+eta[5] = 0.00005
+eta[6] = 0.00288
+eta[7] = 0.00370
+eta[8] = 0.00009
+eta[9] = 0.00005
+
+--------------------------------------------------
+ LAPLACIAN SYSTEM DETAILED VALUES (Lx, b, Lx - b) 
+--------------------------------------------------
+Lx[0] = -0.00001	 b[0] = 0.00000	 Lx - b[0] = -0.00001
+Lx[1] = 0.00000	 b[1] = 0.00000	 Lx - b[1] = 0.00000
+Lx[2] = 0.00000	 b[2] = 0.00000	 Lx - b[2] = 0.00000
+Lx[3] = 0.00000	 b[3] = 0.00000	 Lx - b[3] = 0.00000
+Lx[4] = -0.00001	 b[4] = 0.00000	 Lx - b[4] = -0.00001
+Lx[5] = -0.00001	 b[5] = 0.00000	 Lx - b[5] = -0.00001
+Lx[6] = 0.00042	 b[6] = 0.00000	 Lx - b[6] = 0.00042
+Lx[7] = 0.00048	 b[7] = 0.00000	 Lx - b[7] = 0.00048
+Lx[8] = -0.00000	 b[8] = 0.00000	 Lx - b[8] = -0.00000
+Lx[9] = -0.00000	 b[9] = 0.00000	 Lx - b[9] = -0.00000
+Lx[14125] = -0.99991	 b[14125] = -1.00000	 Lx - b[14125] = 0.00009
+--------------------------------------------------
+
+ Norm ||Lx - b||_2 : 0.02131
+ Norm ||b||_2      : 1.00032
+ Relative Residual : 0.02130
+--------------------------------------------------
+
+Final Relative Residual calculated: 0.02130
+Writing solution output (Eta values) to file: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/wiki-bug/wikibug_b11_262144
+Printing to file OpFileSolK complete.
+
+Main application finished.
+
+----------------------------------------
+Program finished. Press ENTER to exit...wikioc
+config_backup.h
+config.h
+modules
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Parallel K-Walk Solver Pipeline
+==================================
+Using GPU: NVIDIA A100-SXM4-80GB
+Code is executing on device 0 
+K-WalkSolver starting: 
+Max epoch per iteration batch: 729
+Number of packets in network: 262144
+Negative index (Sink): 885 	 -10582.000000
+
+==================================================
+STARTING MULTI-ROUND OPTIMIZED K-WALK SOLVER...
+==================================================
+
+>>> Beginning Round 1 Execution...
+ [AWC] Compacted grid. Time taken: 40 us | Active Walks: 185267 | Revised Blocks: 724
+Epoch: 1001 | Walks at Sink: 76877 | Revised Blocks: 724
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 49079 | Revised Blocks: 192
+Epoch: 2001 | Walks at Sink: 213065 | Revised Blocks: 192
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 12713 | Revised Blocks: 50
+Epoch: 3001 | Walks at Sink: 249431 | Revised Blocks: 50
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 3303 | Revised Blocks: 13
+Epoch: 4001 | Walks at Sink: 258841 | Revised Blocks: 13
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 861 | Revised Blocks: 4
+Epoch: 5001 | Walks at Sink: 261283 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 342 | Revised Blocks: 2
+Epoch: 6001 | Walks at Sink: 262046 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 0 | Revised Blocks: 0
+Round 1 Terminated | Total Epochs: 6501 | Final Sink Count: 262173
+>>> Beginning Round 2 Execution...
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 185267 | Revised Blocks: 724
+Epoch: 1001 | Walks at Sink: 76877 | Revised Blocks: 724
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 49079 | Revised Blocks: 192
+Epoch: 2001 | Walks at Sink: 213065 | Revised Blocks: 192
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 12713 | Revised Blocks: 50
+Epoch: 3001 | Walks at Sink: 249431 | Revised Blocks: 50
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 3303 | Revised Blocks: 13
+Epoch: 4001 | Walks at Sink: 258841 | Revised Blocks: 13
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 861 | Revised Blocks: 4
+Epoch: 5001 | Walks at Sink: 261283 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 342 | Revised Blocks: 2
+Epoch: 6001 | Walks at Sink: 262046 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 0 | Revised Blocks: 0
+Round 2 Terminated | Total Epochs: 6501 | Final Sink Count: 262173
+ -> Round 2 | Top-R (50) Graded NDCG: 1.00000
+
+[TERMINATION TRIGGER] NDCG (1.00000) reached threshold 0.95000 at Round 2. Stopping multi-round loop.
+
+Total Multi-Round Execution Time: 801 ms
+
+First 10 calculated Eta (cnt / total_walks) values:
+eta[0] = 0.00007
+eta[1] = 0.00006
+eta[2] = 0.01460
+eta[3] = 0.00287
+eta[4] = 0.01183
+eta[5] = 0.04329
+eta[6] = 0.01532
+eta[7] = 0.05652
+eta[8] = 0.02972
+eta[9] = 0.04197
+
+--------------------------------------------------
+ LAPLACIAN SYSTEM DETAILED VALUES (Lx, b, Lx - b) 
+--------------------------------------------------
+Lx[0] = 0.00000	 b[0] = 0.00000	 Lx - b[0] = 0.00000
+Lx[1] = -0.00001	 b[1] = 0.00000	 Lx - b[1] = -0.00001
+Lx[2] = 0.00068	 b[2] = 0.00000	 Lx - b[2] = 0.00068
+Lx[3] = 0.00001	 b[3] = 0.00000	 Lx - b[3] = 0.00001
+Lx[4] = 0.00082	 b[4] = 0.00000	 Lx - b[4] = 0.00082
+Lx[5] = 0.00046	 b[5] = 0.00000	 Lx - b[5] = 0.00046
+Lx[6] = 0.00072	 b[6] = 0.00000	 Lx - b[6] = 0.00072
+Lx[7] = 0.00090	 b[7] = 0.00000	 Lx - b[7] = 0.00090
+Lx[8] = 0.00092	 b[8] = 0.00000	 Lx - b[8] = 0.00092
+Lx[9] = 0.00053	 b[9] = 0.00000	 Lx - b[9] = 0.00053
+Lx[885] = -0.99950	 b[885] = -1.00000	 Lx - b[885] = 0.00050
+--------------------------------------------------
+
+ Norm ||Lx - b||_2 : 0.04570
+ Norm ||b||_2      : 1.00005
+ Relative Residual : 0.04570
+--------------------------------------------------
+
+Final Relative Residual calculated: 0.04570
+Writing solution output (Eta values) to file: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/wiki_oc/wikioc_b11_262144
+Printing to file OpFileSolK complete.
+
+Main application finished.
+
+----------------------------------------
+Program finished. Press ENTER to exit...wikisr
+config_backup.h
+config.h
+modules
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Parallel K-Walk Solver Pipeline
+==================================
+Using GPU: NVIDIA A100-SXM4-80GB
+Code is executing on device 0 
+K-WalkSolver starting: 
+Max epoch per iteration batch: 1000
+Number of packets in network: 262144
+Negative index (Sink): 1307069 	 -349250.000000
+
+==================================================
+STARTING MULTI-ROUND OPTIMIZED K-WALK SOLVER...
+==================================================
+
+>>> Beginning Round 1 Execution...
+ [AWC] Compacted grid. Time taken: 37 us | Active Walks: 261730 | Revised Blocks: 1023
+Epoch: 1001 | Walks at Sink: 414 | Revised Blocks: 1023
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 124921 | Revised Blocks: 488
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 59169 | Revised Blocks: 232
+Epoch: 2001 | Walks at Sink: 202975 | Revised Blocks: 232
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 27922 | Revised Blocks: 110
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 13129 | Revised Blocks: 52
+Epoch: 3001 | Walks at Sink: 249015 | Revised Blocks: 52
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 6259 | Revised Blocks: 25
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 2864 | Revised Blocks: 12
+Epoch: 4001 | Walks at Sink: 259280 | Revised Blocks: 12
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 1254 | Revised Blocks: 5
+Epoch: 5001 | Walks at Sink: 261514 | Revised Blocks: 5
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 274 | Revised Blocks: 2
+Epoch: 6001 | Walks at Sink: 262134 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 0 | Revised Blocks: 0
+Round 1 Terminated | Total Epochs: 6501 | Final Sink Count: 262266
+>>> Beginning Round 2 Execution...
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 261730 | Revised Blocks: 1023
+Epoch: 1001 | Walks at Sink: 414 | Revised Blocks: 1023
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 124921 | Revised Blocks: 488
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 59169 | Revised Blocks: 232
+Epoch: 2001 | Walks at Sink: 202975 | Revised Blocks: 232
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 27922 | Revised Blocks: 110
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 13129 | Revised Blocks: 52
+Epoch: 3001 | Walks at Sink: 249015 | Revised Blocks: 52
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 6259 | Revised Blocks: 25
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 2864 | Revised Blocks: 12
+Epoch: 4001 | Walks at Sink: 259280 | Revised Blocks: 12
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 1254 | Revised Blocks: 5
+Epoch: 5001 | Walks at Sink: 261514 | Revised Blocks: 5
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 274 | Revised Blocks: 2
+Epoch: 6001 | Walks at Sink: 262134 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 0 | Revised Blocks: 0
+Round 2 Terminated | Total Epochs: 6501 | Final Sink Count: 262266
+ -> Round 2 | Top-R (50) Graded NDCG: 1.00000
+
+[TERMINATION TRIGGER] NDCG (1.00000) reached threshold 0.95000 at Round 2. Stopping multi-round loop.
+
+Total Multi-Round Execution Time: 20650 ms
+
+First 10 calculated Eta (cnt / total_walks) values:
+eta[0] = 0.00031
+eta[1] = 0.00001
+eta[2] = 0.15953
+eta[3] = 0.01058
+eta[4] = 0.00975
+eta[5] = 0.00059
+eta[6] = 0.01422
+eta[7] = 0.03467
+eta[8] = 0.02618
+eta[9] = 0.00011
+
+--------------------------------------------------
+ LAPLACIAN SYSTEM DETAILED VALUES (Lx, b, Lx - b) 
+--------------------------------------------------
+Lx[0] = -0.00003	 b[0] = 0.00000	 Lx - b[0] = -0.00003
+Lx[1] = 0.00000	 b[1] = 0.00000	 Lx - b[1] = 0.00000
+Lx[2] = 0.00037	 b[2] = 0.00000	 Lx - b[2] = 0.00037
+Lx[3] = 0.00690	 b[3] = 0.00000	 Lx - b[3] = 0.00690
+Lx[4] = 0.00672	 b[4] = 0.00000	 Lx - b[4] = 0.00672
+Lx[5] = 0.00004	 b[5] = 0.00000	 Lx - b[5] = 0.00004
+Lx[6] = -0.00010	 b[6] = 0.00000	 Lx - b[6] = -0.00011
+Lx[7] = -0.00038	 b[7] = 0.00000	 Lx - b[7] = -0.00038
+Lx[8] = -0.00001	 b[8] = 0.00000	 Lx - b[8] = -0.00001
+Lx[9] = -0.00000	 b[9] = 0.00000	 Lx - b[9] = -0.00000
+Lx[1307069] = -1.00073	 b[1307069] = -1.00000	 Lx - b[1307069] = -0.00073
+--------------------------------------------------
+
+ Norm ||Lx - b||_2 : 0.09107
+ Norm ||b||_2      : 1.00000
+ Relative Residual : 0.09107
+--------------------------------------------------
+
+Final Relative Residual calculated: 0.09107
+Writing solution output (Eta values) to file: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/wiki-sr/wikisr_b11_262144
+Printing to file OpFileSolK complete.
+
+Main application finished.
+
+----------------------------------------
+Program finished. Press ENTER to exit...gene
+config_backup.h
+config.h
+modules
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Parallel K-Walk Solver Pipeline
+==================================
+Using GPU: NVIDIA A100-SXM4-80GB
+Code is executing on device 0 
+K-WalkSolver starting: 
+Max epoch per iteration batch: 216
+Number of packets in network: 262144
+Negative index (Sink): 20039 	 -2403.000000
+
+==================================================
+STARTING MULTI-ROUND OPTIMIZED K-WALK SOLVER...
+==================================================
+
+>>> Beginning Round 1 Execution...
+ [AWC] Compacted grid. Time taken: 38 us | Active Walks: 239152 | Revised Blocks: 935
+Epoch: 1001 | Walks at Sink: 59339 | Revised Blocks: 935
+Epoch: 2001 | Walks at Sink: 114631 | Revised Blocks: 935
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 106881 | Revised Blocks: 418
+Epoch: 3001 | Walks at Sink: 155263 | Revised Blocks: 418
+Epoch: 4001 | Walks at Sink: 184941 | Revised Blocks: 418
+Epoch: 5001 | Walks at Sink: 206124 | Revised Blocks: 418
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 47784 | Revised Blocks: 187
+Epoch: 6001 | Walks at Sink: 221626 | Revised Blocks: 187
+Epoch: 7001 | Walks at Sink: 232805 | Revised Blocks: 187
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 21425 | Revised Blocks: 84
+Epoch: 8001 | Walks at Sink: 240719 | Revised Blocks: 84
+Epoch: 9001 | Walks at Sink: 246700 | Revised Blocks: 84
+Epoch: 10001 | Walks at Sink: 250995 | Revised Blocks: 84
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 9560 | Revised Blocks: 38
+Epoch: 11001 | Walks at Sink: 254028 | Revised Blocks: 38
+Epoch: 12001 | Walks at Sink: 256277 | Revised Blocks: 38
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 4169 | Revised Blocks: 17
+Epoch: 13001 | Walks at Sink: 257975 | Revised Blocks: 17
+Epoch: 14001 | Walks at Sink: 259158 | Revised Blocks: 17
+Epoch: 15001 | Walks at Sink: 260037 | Revised Blocks: 17
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 1789 | Revised Blocks: 7
+Epoch: 16001 | Walks at Sink: 260625 | Revised Blocks: 7
+Epoch: 17001 | Walks at Sink: 261053 | Revised Blocks: 7
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 790 | Revised Blocks: 4
+Epoch: 18001 | Walks at Sink: 261354 | Revised Blocks: 4
+Epoch: 19001 | Walks at Sink: 261660 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 372 | Revised Blocks: 2
+Epoch: 20001 | Walks at Sink: 261833 | Revised Blocks: 2
+Epoch: 21001 | Walks at Sink: 261969 | Revised Blocks: 2
+Epoch: 22001 | Walks at Sink: 262057 | Revised Blocks: 2
+Epoch: 23001 | Walks at Sink: 262129 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 0 | Revised Blocks: 0
+Round 1 Terminated | Total Epochs: 23501 | Final Sink Count: 262154
+>>> Beginning Round 2 Execution...
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 239152 | Revised Blocks: 935
+Epoch: 1001 | Walks at Sink: 59339 | Revised Blocks: 935
+Epoch: 2001 | Walks at Sink: 114631 | Revised Blocks: 935
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 106881 | Revised Blocks: 418
+Epoch: 3001 | Walks at Sink: 155263 | Revised Blocks: 418
+Epoch: 4001 | Walks at Sink: 184941 | Revised Blocks: 418
+Epoch: 5001 | Walks at Sink: 206124 | Revised Blocks: 418
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 47784 | Revised Blocks: 187
+Epoch: 6001 | Walks at Sink: 221626 | Revised Blocks: 187
+Epoch: 7001 | Walks at Sink: 232805 | Revised Blocks: 187
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 21425 | Revised Blocks: 84
+Epoch: 8001 | Walks at Sink: 240719 | Revised Blocks: 84
+Epoch: 9001 | Walks at Sink: 246700 | Revised Blocks: 84
+Epoch: 10001 | Walks at Sink: 250995 | Revised Blocks: 84
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 9560 | Revised Blocks: 38
+Epoch: 11001 | Walks at Sink: 254028 | Revised Blocks: 38
+Epoch: 12001 | Walks at Sink: 256277 | Revised Blocks: 38
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 4169 | Revised Blocks: 17
+Epoch: 13001 | Walks at Sink: 257975 | Revised Blocks: 17
+Epoch: 14001 | Walks at Sink: 259158 | Revised Blocks: 17
+Epoch: 15001 | Walks at Sink: 260037 | Revised Blocks: 17
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 1789 | Revised Blocks: 7
+Epoch: 16001 | Walks at Sink: 260625 | Revised Blocks: 7
+Epoch: 17001 | Walks at Sink: 261053 | Revised Blocks: 7
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 790 | Revised Blocks: 4
+Epoch: 18001 | Walks at Sink: 261354 | Revised Blocks: 4
+Epoch: 19001 | Walks at Sink: 261660 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 372 | Revised Blocks: 2
+Epoch: 20001 | Walks at Sink: 261833 | Revised Blocks: 2
+Epoch: 21001 | Walks at Sink: 261969 | Revised Blocks: 2
+Epoch: 22001 | Walks at Sink: 262057 | Revised Blocks: 2
+Epoch: 23001 | Walks at Sink: 262129 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 0 | Revised Blocks: 0
+Round 2 Terminated | Total Epochs: 23501 | Final Sink Count: 262154
+ -> Round 2 | Top-R (50) Graded NDCG: 1.00000
+
+[TERMINATION TRIGGER] NDCG (1.00000) reached threshold 0.95000 at Round 2. Stopping multi-round loop.
+
+Total Multi-Round Execution Time: 532 ms
+
+First 10 calculated Eta (cnt / total_walks) values:
+eta[0] = 0.07196
+eta[1] = 0.06211
+eta[2] = 0.07215
+eta[3] = 0.07350
+eta[4] = 0.11116
+eta[5] = 0.09960
+eta[6] = 0.06574
+eta[7] = 0.14538
+eta[8] = 0.09704
+eta[9] = 0.03062
+
+--------------------------------------------------
+ LAPLACIAN SYSTEM DETAILED VALUES (Lx, b, Lx - b) 
+--------------------------------------------------
+Lx[0] = 0.00018	 b[0] = 0.00000	 Lx - b[0] = 0.00018
+Lx[1] = 0.00044	 b[1] = 0.00000	 Lx - b[1] = 0.00044
+Lx[2] = -0.00018	 b[2] = 0.00000	 Lx - b[2] = -0.00018
+Lx[3] = -0.00012	 b[3] = 0.00000	 Lx - b[3] = -0.00012
+Lx[4] = 0.00006	 b[4] = 0.00000	 Lx - b[4] = 0.00006
+Lx[5] = 0.00082	 b[5] = 0.00000	 Lx - b[5] = 0.00082
+Lx[6] = -0.00015	 b[6] = 0.00000	 Lx - b[6] = -0.00015
+Lx[7] = -0.00074	 b[7] = 0.00000	 Lx - b[7] = -0.00074
+Lx[8] = 0.00078	 b[8] = 0.00000	 Lx - b[8] = 0.00078
+Lx[9] = 0.00043	 b[9] = 0.00000	 Lx - b[9] = 0.00043
+Lx[20039] = -1.00089	 b[20039] = -1.00000	 Lx - b[20039] = -0.00089
+--------------------------------------------------
+
+ Norm ||Lx - b||_2 : 0.10850
+ Norm ||b||_2      : 1.00021
+ Relative Residual : 0.10848
+--------------------------------------------------
+
+Final Relative Residual calculated: 0.10848
+Writing solution output (Eta values) to file: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/gene/gene_b11_262144
+Printing to file OpFileSolK complete.
+
+Main application finished.
+
+----------------------------------------
+Program finished. Press ENTER to exit...brain
+config_backup.h
+config.h
+modules
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Parallel K-Walk Solver Pipeline
+==================================
+Using GPU: NVIDIA A100-SXM4-80GB
+Code is executing on device 0 
+K-WalkSolver starting: 
+Max epoch per iteration batch: 216
+Number of packets in network: 262144
+Negative index (Sink): 708150 	 -86268.000000
+
+==================================================
+STARTING MULTI-ROUND OPTIMIZED K-WALK SOLVER...
+==================================================
+
+>>> Beginning Round 1 Execution...
+ [AWC] Compacted grid. Time taken: 32 us | Active Walks: 259097 | Revised Blocks: 1013
+Epoch: 1001 | Walks at Sink: 7991 | Revised Blocks: 1013
+Epoch: 2001 | Walks at Sink: 18026 | Revised Blocks: 1013
+Epoch: 3001 | Walks at Sink: 27683 | Revised Blocks: 1013
+Epoch: 4001 | Walks at Sink: 37113 | Revised Blocks: 1013
+Epoch: 5001 | Walks at Sink: 45932 | Revised Blocks: 1013
+Epoch: 6001 | Walks at Sink: 54411 | Revised Blocks: 1013
+Epoch: 7001 | Walks at Sink: 62719 | Revised Blocks: 1013
+Epoch: 8001 | Walks at Sink: 70814 | Revised Blocks: 1013
+Epoch: 9001 | Walks at Sink: 78401 | Revised Blocks: 1013
+Epoch: 10001 | Walks at Sink: 85703 | Revised Blocks: 1013
+Epoch: 11001 | Walks at Sink: 92665 | Revised Blocks: 1013
+Epoch: 12001 | Walks at Sink: 99426 | Revised Blocks: 1013
+Epoch: 13001 | Walks at Sink: 105816 | Revised Blocks: 1013
+Epoch: 14001 | Walks at Sink: 111964 | Revised Blocks: 1013
+Epoch: 15001 | Walks at Sink: 117894 | Revised Blocks: 1013
+Epoch: 16001 | Walks at Sink: 123691 | Revised Blocks: 1013
+Epoch: 17001 | Walks at Sink: 129089 | Revised Blocks: 1013
+ [AWC] Compacted grid. Time taken: 25 us | Active Walks: 127719 | Revised Blocks: 499
+Epoch: 18001 | Walks at Sink: 134425 | Revised Blocks: 499
+Epoch: 19001 | Walks at Sink: 139339 | Revised Blocks: 499
+Epoch: 20001 | Walks at Sink: 144364 | Revised Blocks: 499
+Epoch: 21001 | Walks at Sink: 149082 | Revised Blocks: 499
+Epoch: 22001 | Walks at Sink: 153508 | Revised Blocks: 499
+Epoch: 23001 | Walks at Sink: 157772 | Revised Blocks: 499
+Epoch: 24001 | Walks at Sink: 161911 | Revised Blocks: 499
+Epoch: 25001 | Walks at Sink: 165698 | Revised Blocks: 499
+Epoch: 26001 | Walks at Sink: 169486 | Revised Blocks: 499
+Epoch: 27001 | Walks at Sink: 173055 | Revised Blocks: 499
+Epoch: 28001 | Walks at Sink: 176694 | Revised Blocks: 499
+Epoch: 29001 | Walks at Sink: 180043 | Revised Blocks: 499
+Epoch: 30001 | Walks at Sink: 183229 | Revised Blocks: 499
+Epoch: 31001 | Walks at Sink: 186437 | Revised Blocks: 499
+Epoch: 32001 | Walks at Sink: 189412 | Revised Blocks: 499
+Epoch: 33001 | Walks at Sink: 192354 | Revised Blocks: 499
+Epoch: 34001 | Walks at Sink: 195143 | Revised Blocks: 499
+Epoch: 35001 | Walks at Sink: 197788 | Revised Blocks: 499
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 63127 | Revised Blocks: 247
+Epoch: 36001 | Walks at Sink: 200298 | Revised Blocks: 247
+Epoch: 37001 | Walks at Sink: 202740 | Revised Blocks: 247
+Epoch: 38001 | Walks at Sink: 205073 | Revised Blocks: 247
+Epoch: 39001 | Walks at Sink: 207335 | Revised Blocks: 247
+Epoch: 40001 | Walks at Sink: 209506 | Revised Blocks: 247
+Epoch: 41001 | Walks at Sink: 211567 | Revised Blocks: 247
+Epoch: 42001 | Walks at Sink: 213597 | Revised Blocks: 247
+Epoch: 43001 | Walks at Sink: 215528 | Revised Blocks: 247
+Epoch: 44001 | Walks at Sink: 217342 | Revised Blocks: 247
+Epoch: 45001 | Walks at Sink: 219042 | Revised Blocks: 247
+Epoch: 46001 | Walks at Sink: 220765 | Revised Blocks: 247
+Epoch: 47001 | Walks at Sink: 222406 | Revised Blocks: 247
+Epoch: 48001 | Walks at Sink: 223947 | Revised Blocks: 247
+Epoch: 49001 | Walks at Sink: 225513 | Revised Blocks: 247
+Epoch: 50001 | Walks at Sink: 226998 | Revised Blocks: 247
+Epoch: 51001 | Walks at Sink: 228405 | Revised Blocks: 247
+Epoch: 52001 | Walks at Sink: 229741 | Revised Blocks: 247
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 31151 | Revised Blocks: 122
+Epoch: 53001 | Walks at Sink: 230993 | Revised Blocks: 122
+Epoch: 54001 | Walks at Sink: 232220 | Revised Blocks: 122
+Epoch: 55001 | Walks at Sink: 233395 | Revised Blocks: 122
+Epoch: 56001 | Walks at Sink: 234570 | Revised Blocks: 122
+Epoch: 57001 | Walks at Sink: 235701 | Revised Blocks: 122
+Epoch: 58001 | Walks at Sink: 236760 | Revised Blocks: 122
+Epoch: 59001 | Walks at Sink: 237759 | Revised Blocks: 122
+Epoch: 60001 | Walks at Sink: 238716 | Revised Blocks: 122
+Epoch: 61001 | Walks at Sink: 239652 | Revised Blocks: 122
+Epoch: 62001 | Walks at Sink: 240545 | Revised Blocks: 122
+Epoch: 63001 | Walks at Sink: 241383 | Revised Blocks: 122
+Epoch: 64001 | Walks at Sink: 242276 | Revised Blocks: 122
+Epoch: 65001 | Walks at Sink: 243068 | Revised Blocks: 122
+Epoch: 66001 | Walks at Sink: 243829 | Revised Blocks: 122
+Epoch: 67001 | Walks at Sink: 244555 | Revised Blocks: 122
+Epoch: 68001 | Walks at Sink: 245237 | Revised Blocks: 122
+Epoch: 69001 | Walks at Sink: 245920 | Revised Blocks: 122
+Epoch: 70001 | Walks at Sink: 246539 | Revised Blocks: 122
+ [AWC] Compacted grid. Time taken: 28 us | Active Walks: 15324 | Revised Blocks: 60
+Epoch: 71001 | Walks at Sink: 247125 | Revised Blocks: 60
+Epoch: 72001 | Walks at Sink: 247706 | Revised Blocks: 60
+Epoch: 73001 | Walks at Sink: 248313 | Revised Blocks: 60
+Epoch: 74001 | Walks at Sink: 248868 | Revised Blocks: 60
+Epoch: 75001 | Walks at Sink: 249391 | Revised Blocks: 60
+Epoch: 76001 | Walks at Sink: 249911 | Revised Blocks: 60
+Epoch: 77001 | Walks at Sink: 250382 | Revised Blocks: 60
+Epoch: 78001 | Walks at Sink: 250873 | Revised Blocks: 60
+Epoch: 79001 | Walks at Sink: 251341 | Revised Blocks: 60
+Epoch: 80001 | Walks at Sink: 251773 | Revised Blocks: 60
+Epoch: 81001 | Walks at Sink: 252161 | Revised Blocks: 60
+Epoch: 82001 | Walks at Sink: 252553 | Revised Blocks: 60
+Epoch: 83001 | Walks at Sink: 252915 | Revised Blocks: 60
+Epoch: 84001 | Walks at Sink: 253303 | Revised Blocks: 60
+Epoch: 85001 | Walks at Sink: 253640 | Revised Blocks: 60
+Epoch: 86001 | Walks at Sink: 253986 | Revised Blocks: 60
+Epoch: 87001 | Walks at Sink: 254295 | Revised Blocks: 60
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 7541 | Revised Blocks: 30
+Epoch: 88001 | Walks at Sink: 254603 | Revised Blocks: 30
+Epoch: 89001 | Walks at Sink: 254910 | Revised Blocks: 30
+Epoch: 90001 | Walks at Sink: 255171 | Revised Blocks: 30
+Epoch: 91001 | Walks at Sink: 255460 | Revised Blocks: 30
+Epoch: 92001 | Walks at Sink: 255730 | Revised Blocks: 30
+Epoch: 93001 | Walks at Sink: 256002 | Revised Blocks: 30
+Epoch: 94001 | Walks at Sink: 256253 | Revised Blocks: 30
+Epoch: 95001 | Walks at Sink: 256499 | Revised Blocks: 30
+Epoch: 96001 | Walks at Sink: 256726 | Revised Blocks: 30
+Epoch: 97001 | Walks at Sink: 256915 | Revised Blocks: 30
+Epoch: 98001 | Walks at Sink: 257130 | Revised Blocks: 30
+Epoch: 99001 | Walks at Sink: 257322 | Revised Blocks: 30
+Epoch: 100001 | Walks at Sink: 257522 | Revised Blocks: 30
+Epoch: 101001 | Walks at Sink: 257732 | Revised Blocks: 30
+Epoch: 102001 | Walks at Sink: 257953 | Revised Blocks: 30
+Epoch: 103001 | Walks at Sink: 258115 | Revised Blocks: 30
+Epoch: 104001 | Walks at Sink: 258256 | Revised Blocks: 30
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 3736 | Revised Blocks: 15
+Epoch: 105001 | Walks at Sink: 258408 | Revised Blocks: 15
+Epoch: 106001 | Walks at Sink: 258557 | Revised Blocks: 15
+Epoch: 107001 | Walks at Sink: 258697 | Revised Blocks: 15
+Epoch: 108001 | Walks at Sink: 258836 | Revised Blocks: 15
+Epoch: 109001 | Walks at Sink: 258968 | Revised Blocks: 15
+Epoch: 110001 | Walks at Sink: 259096 | Revised Blocks: 15
+Epoch: 111001 | Walks at Sink: 259223 | Revised Blocks: 15
+Epoch: 112001 | Walks at Sink: 259332 | Revised Blocks: 15
+Epoch: 113001 | Walks at Sink: 259456 | Revised Blocks: 15
+Epoch: 114001 | Walks at Sink: 259561 | Revised Blocks: 15
+Epoch: 115001 | Walks at Sink: 259662 | Revised Blocks: 15
+Epoch: 116001 | Walks at Sink: 259775 | Revised Blocks: 15
+Epoch: 117001 | Walks at Sink: 259860 | Revised Blocks: 15
+Epoch: 118001 | Walks at Sink: 259965 | Revised Blocks: 15
+Epoch: 119001 | Walks at Sink: 260063 | Revised Blocks: 15
+Epoch: 120001 | Walks at Sink: 260140 | Revised Blocks: 15
+Epoch: 121001 | Walks at Sink: 260244 | Revised Blocks: 15
+ [AWC] Compacted grid. Time taken: 25 us | Active Walks: 1858 | Revised Blocks: 8
+Epoch: 122001 | Walks at Sink: 260327 | Revised Blocks: 8
+Epoch: 123001 | Walks at Sink: 260419 | Revised Blocks: 8
+Epoch: 124001 | Walks at Sink: 260498 | Revised Blocks: 8
+Epoch: 125001 | Walks at Sink: 260571 | Revised Blocks: 8
+Epoch: 126001 | Walks at Sink: 260650 | Revised Blocks: 8
+Epoch: 127001 | Walks at Sink: 260712 | Revised Blocks: 8
+Epoch: 128001 | Walks at Sink: 260771 | Revised Blocks: 8
+Epoch: 129001 | Walks at Sink: 260827 | Revised Blocks: 8
+Epoch: 130001 | Walks at Sink: 260890 | Revised Blocks: 8
+Epoch: 131001 | Walks at Sink: 260947 | Revised Blocks: 8
+Epoch: 132001 | Walks at Sink: 261003 | Revised Blocks: 8
+Epoch: 133001 | Walks at Sink: 261079 | Revised Blocks: 8
+Epoch: 134001 | Walks at Sink: 261120 | Revised Blocks: 8
+Epoch: 135001 | Walks at Sink: 261163 | Revised Blocks: 8
+Epoch: 136001 | Walks at Sink: 261212 | Revised Blocks: 8
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 902 | Revised Blocks: 4
+Epoch: 137001 | Walks at Sink: 261267 | Revised Blocks: 4
+Epoch: 138001 | Walks at Sink: 261307 | Revised Blocks: 4
+Epoch: 139001 | Walks at Sink: 261356 | Revised Blocks: 4
+Epoch: 140001 | Walks at Sink: 261384 | Revised Blocks: 4
+Epoch: 141001 | Walks at Sink: 261412 | Revised Blocks: 4
+Epoch: 142001 | Walks at Sink: 261441 | Revised Blocks: 4
+Epoch: 143001 | Walks at Sink: 261488 | Revised Blocks: 4
+Epoch: 144001 | Walks at Sink: 261524 | Revised Blocks: 4
+Epoch: 145001 | Walks at Sink: 261555 | Revised Blocks: 4
+Epoch: 146001 | Walks at Sink: 261582 | Revised Blocks: 4
+Epoch: 147001 | Walks at Sink: 261602 | Revised Blocks: 4
+Epoch: 148001 | Walks at Sink: 261628 | Revised Blocks: 4
+Epoch: 149001 | Walks at Sink: 261654 | Revised Blocks: 4
+Epoch: 150001 | Walks at Sink: 261677 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 446 | Revised Blocks: 2
+Epoch: 151001 | Walks at Sink: 261698 | Revised Blocks: 2
+Epoch: 152001 | Walks at Sink: 261720 | Revised Blocks: 2
+Epoch: 153001 | Walks at Sink: 261739 | Revised Blocks: 2
+Epoch: 154001 | Walks at Sink: 261756 | Revised Blocks: 2
+Epoch: 155001 | Walks at Sink: 261774 | Revised Blocks: 2
+Epoch: 156001 | Walks at Sink: 261791 | Revised Blocks: 2
+Epoch: 157001 | Walks at Sink: 261806 | Revised Blocks: 2
+Epoch: 158001 | Walks at Sink: 261811 | Revised Blocks: 2
+Epoch: 159001 | Walks at Sink: 261820 | Revised Blocks: 2
+Epoch: 160001 | Walks at Sink: 261830 | Revised Blocks: 2
+Epoch: 161001 | Walks at Sink: 261843 | Revised Blocks: 2
+Epoch: 162001 | Walks at Sink: 261857 | Revised Blocks: 2
+Epoch: 163001 | Walks at Sink: 261871 | Revised Blocks: 2
+Epoch: 164001 | Walks at Sink: 261881 | Revised Blocks: 2
+Epoch: 165001 | Walks at Sink: 261898 | Revised Blocks: 2
+Epoch: 166001 | Walks at Sink: 261920 | Revised Blocks: 2
+Epoch: 167001 | Walks at Sink: 261929 | Revised Blocks: 2
+Epoch: 168001 | Walks at Sink: 261941 | Revised Blocks: 2
+Epoch: 169001 | Walks at Sink: 261948 | Revised Blocks: 2
+Epoch: 170001 | Walks at Sink: 261958 | Revised Blocks: 2
+Epoch: 171001 | Walks at Sink: 261970 | Revised Blocks: 2
+Epoch: 172001 | Walks at Sink: 261977 | Revised Blocks: 2
+Epoch: 173001 | Walks at Sink: 261983 | Revised Blocks: 2
+Epoch: 174001 | Walks at Sink: 261990 | Revised Blocks: 2
+Epoch: 175001 | Walks at Sink: 261998 | Revised Blocks: 2
+Epoch: 176001 | Walks at Sink: 262005 | Revised Blocks: 2
+Epoch: 177001 | Walks at Sink: 262009 | Revised Blocks: 2
+Epoch: 178001 | Walks at Sink: 262015 | Revised Blocks: 2
+Epoch: 179001 | Walks at Sink: 262020 | Revised Blocks: 2
+Epoch: 180001 | Walks at Sink: 262036 | Revised Blocks: 2
+Epoch: 181001 | Walks at Sink: 262042 | Revised Blocks: 2
+Epoch: 182001 | Walks at Sink: 262047 | Revised Blocks: 2
+Epoch: 183001 | Walks at Sink: 262054 | Revised Blocks: 2
+Epoch: 184001 | Walks at Sink: 262063 | Revised Blocks: 2
+Epoch: 185001 | Walks at Sink: 262067 | Revised Blocks: 2
+Epoch: 186001 | Walks at Sink: 262071 | Revised Blocks: 2
+Epoch: 187001 | Walks at Sink: 262075 | Revised Blocks: 2
+Epoch: 188001 | Walks at Sink: 262084 | Revised Blocks: 2
+Epoch: 189001 | Walks at Sink: 262086 | Revised Blocks: 2
+Epoch: 190001 | Walks at Sink: 262089 | Revised Blocks: 2
+Epoch: 191001 | Walks at Sink: 262091 | Revised Blocks: 2
+Epoch: 192001 | Walks at Sink: 262095 | Revised Blocks: 2
+Epoch: 193001 | Walks at Sink: 262101 | Revised Blocks: 2
+Epoch: 194001 | Walks at Sink: 262104 | Revised Blocks: 2
+Epoch: 195001 | Walks at Sink: 262110 | Revised Blocks: 2
+Epoch: 196001 | Walks at Sink: 262112 | Revised Blocks: 2
+Epoch: 197001 | Walks at Sink: 262117 | Revised Blocks: 2
+Epoch: 198001 | Walks at Sink: 262122 | Revised Blocks: 2
+Epoch: 199001 | Walks at Sink: 262126 | Revised Blocks: 2
+Epoch: 200001 | Walks at Sink: 262132 | Revised Blocks: 2
+Epoch: 201001 | Walks at Sink: 262135 | Revised Blocks: 2
+Epoch: 202001 | Walks at Sink: 262138 | Revised Blocks: 2
+Epoch: 203001 | Walks at Sink: 262140 | Revised Blocks: 2
+Epoch: 204001 | Walks at Sink: 262141 | Revised Blocks: 2
+Epoch: 205001 | Walks at Sink: 262143 | Revised Blocks: 2
+Round 1 Terminated | Total Epochs: 205501 | Final Sink Count: 262144
+>>> Beginning Round 2 Execution...
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 259097 | Revised Blocks: 1013
+Epoch: 1001 | Walks at Sink: 7991 | Revised Blocks: 1013
+Epoch: 2001 | Walks at Sink: 18026 | Revised Blocks: 1013
+Epoch: 3001 | Walks at Sink: 27683 | Revised Blocks: 1013
+Epoch: 4001 | Walks at Sink: 37113 | Revised Blocks: 1013
+Epoch: 5001 | Walks at Sink: 45932 | Revised Blocks: 1013
+Epoch: 6001 | Walks at Sink: 54411 | Revised Blocks: 1013
+Epoch: 7001 | Walks at Sink: 62719 | Revised Blocks: 1013
+Epoch: 8001 | Walks at Sink: 70814 | Revised Blocks: 1013
+Epoch: 9001 | Walks at Sink: 78401 | Revised Blocks: 1013
+Epoch: 10001 | Walks at Sink: 85703 | Revised Blocks: 1013
+Epoch: 11001 | Walks at Sink: 92665 | Revised Blocks: 1013
+Epoch: 12001 | Walks at Sink: 99426 | Revised Blocks: 1013
+Epoch: 13001 | Walks at Sink: 105816 | Revised Blocks: 1013
+Epoch: 14001 | Walks at Sink: 111964 | Revised Blocks: 1013
+Epoch: 15001 | Walks at Sink: 117894 | Revised Blocks: 1013
+Epoch: 16001 | Walks at Sink: 123691 | Revised Blocks: 1013
+Epoch: 17001 | Walks at Sink: 129089 | Revised Blocks: 1013
+ [AWC] Compacted grid. Time taken: 24 us | Active Walks: 127719 | Revised Blocks: 499
+Epoch: 18001 | Walks at Sink: 134425 | Revised Blocks: 499
+Epoch: 19001 | Walks at Sink: 139339 | Revised Blocks: 499
+Epoch: 20001 | Walks at Sink: 144364 | Revised Blocks: 499
+Epoch: 21001 | Walks at Sink: 149082 | Revised Blocks: 499
+Epoch: 22001 | Walks at Sink: 153508 | Revised Blocks: 499
+Epoch: 23001 | Walks at Sink: 157772 | Revised Blocks: 499
+Epoch: 24001 | Walks at Sink: 161911 | Revised Blocks: 499
+Epoch: 25001 | Walks at Sink: 165698 | Revised Blocks: 499
+Epoch: 26001 | Walks at Sink: 169486 | Revised Blocks: 499
+Epoch: 27001 | Walks at Sink: 173055 | Revised Blocks: 499
+Epoch: 28001 | Walks at Sink: 176694 | Revised Blocks: 499
+Epoch: 29001 | Walks at Sink: 180043 | Revised Blocks: 499
+Epoch: 30001 | Walks at Sink: 183229 | Revised Blocks: 499
+Epoch: 31001 | Walks at Sink: 186437 | Revised Blocks: 499
+Epoch: 32001 | Walks at Sink: 189412 | Revised Blocks: 499
+Epoch: 33001 | Walks at Sink: 192354 | Revised Blocks: 499
+Epoch: 34001 | Walks at Sink: 195143 | Revised Blocks: 499
+Epoch: 35001 | Walks at Sink: 197788 | Revised Blocks: 499
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 63127 | Revised Blocks: 247
+Epoch: 36001 | Walks at Sink: 200298 | Revised Blocks: 247
+Epoch: 37001 | Walks at Sink: 202740 | Revised Blocks: 247
+Epoch: 38001 | Walks at Sink: 205073 | Revised Blocks: 247
+Epoch: 39001 | Walks at Sink: 207335 | Revised Blocks: 247
+Epoch: 40001 | Walks at Sink: 209506 | Revised Blocks: 247
+Epoch: 41001 | Walks at Sink: 211567 | Revised Blocks: 247
+Epoch: 42001 | Walks at Sink: 213597 | Revised Blocks: 247
+Epoch: 43001 | Walks at Sink: 215528 | Revised Blocks: 247
+Epoch: 44001 | Walks at Sink: 217342 | Revised Blocks: 247
+Epoch: 45001 | Walks at Sink: 219042 | Revised Blocks: 247
+Epoch: 46001 | Walks at Sink: 220765 | Revised Blocks: 247
+Epoch: 47001 | Walks at Sink: 222406 | Revised Blocks: 247
+Epoch: 48001 | Walks at Sink: 223947 | Revised Blocks: 247
+Epoch: 49001 | Walks at Sink: 225513 | Revised Blocks: 247
+Epoch: 50001 | Walks at Sink: 226998 | Revised Blocks: 247
+Epoch: 51001 | Walks at Sink: 228405 | Revised Blocks: 247
+Epoch: 52001 | Walks at Sink: 229741 | Revised Blocks: 247
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 31151 | Revised Blocks: 122
+Epoch: 53001 | Walks at Sink: 230993 | Revised Blocks: 122
+Epoch: 54001 | Walks at Sink: 232220 | Revised Blocks: 122
+Epoch: 55001 | Walks at Sink: 233395 | Revised Blocks: 122
+Epoch: 56001 | Walks at Sink: 234570 | Revised Blocks: 122
+Epoch: 57001 | Walks at Sink: 235701 | Revised Blocks: 122
+Epoch: 58001 | Walks at Sink: 236760 | Revised Blocks: 122
+Epoch: 59001 | Walks at Sink: 237759 | Revised Blocks: 122
+Epoch: 60001 | Walks at Sink: 238716 | Revised Blocks: 122
+Epoch: 61001 | Walks at Sink: 239652 | Revised Blocks: 122
+Epoch: 62001 | Walks at Sink: 240545 | Revised Blocks: 122
+Epoch: 63001 | Walks at Sink: 241383 | Revised Blocks: 122
+Epoch: 64001 | Walks at Sink: 242276 | Revised Blocks: 122
+Epoch: 65001 | Walks at Sink: 243068 | Revised Blocks: 122
+Epoch: 66001 | Walks at Sink: 243829 | Revised Blocks: 122
+Epoch: 67001 | Walks at Sink: 244555 | Revised Blocks: 122
+Epoch: 68001 | Walks at Sink: 245237 | Revised Blocks: 122
+Epoch: 69001 | Walks at Sink: 245920 | Revised Blocks: 122
+Epoch: 70001 | Walks at Sink: 246539 | Revised Blocks: 122
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 15324 | Revised Blocks: 60
+Epoch: 71001 | Walks at Sink: 247125 | Revised Blocks: 60
+Epoch: 72001 | Walks at Sink: 247706 | Revised Blocks: 60
+Epoch: 73001 | Walks at Sink: 248313 | Revised Blocks: 60
+Epoch: 74001 | Walks at Sink: 248868 | Revised Blocks: 60
+Epoch: 75001 | Walks at Sink: 249391 | Revised Blocks: 60
+Epoch: 76001 | Walks at Sink: 249911 | Revised Blocks: 60
+Epoch: 77001 | Walks at Sink: 250382 | Revised Blocks: 60
+Epoch: 78001 | Walks at Sink: 250873 | Revised Blocks: 60
+Epoch: 79001 | Walks at Sink: 251341 | Revised Blocks: 60
+Epoch: 80001 | Walks at Sink: 251773 | Revised Blocks: 60
+Epoch: 81001 | Walks at Sink: 252161 | Revised Blocks: 60
+Epoch: 82001 | Walks at Sink: 252553 | Revised Blocks: 60
+Epoch: 83001 | Walks at Sink: 252915 | Revised Blocks: 60
+Epoch: 84001 | Walks at Sink: 253303 | Revised Blocks: 60
+Epoch: 85001 | Walks at Sink: 253640 | Revised Blocks: 60
+Epoch: 86001 | Walks at Sink: 253986 | Revised Blocks: 60
+Epoch: 87001 | Walks at Sink: 254295 | Revised Blocks: 60
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 7541 | Revised Blocks: 30
+Epoch: 88001 | Walks at Sink: 254603 | Revised Blocks: 30
+Epoch: 89001 | Walks at Sink: 254910 | Revised Blocks: 30
+Epoch: 90001 | Walks at Sink: 255171 | Revised Blocks: 30
+Epoch: 91001 | Walks at Sink: 255460 | Revised Blocks: 30
+Epoch: 92001 | Walks at Sink: 255730 | Revised Blocks: 30
+Epoch: 93001 | Walks at Sink: 256002 | Revised Blocks: 30
+Epoch: 94001 | Walks at Sink: 256253 | Revised Blocks: 30
+Epoch: 95001 | Walks at Sink: 256499 | Revised Blocks: 30
+Epoch: 96001 | Walks at Sink: 256726 | Revised Blocks: 30
+Epoch: 97001 | Walks at Sink: 256915 | Revised Blocks: 30
+Epoch: 98001 | Walks at Sink: 257130 | Revised Blocks: 30
+Epoch: 99001 | Walks at Sink: 257322 | Revised Blocks: 30
+Epoch: 100001 | Walks at Sink: 257522 | Revised Blocks: 30
+Epoch: 101001 | Walks at Sink: 257732 | Revised Blocks: 30
+Epoch: 102001 | Walks at Sink: 257953 | Revised Blocks: 30
+Epoch: 103001 | Walks at Sink: 258115 | Revised Blocks: 30
+Epoch: 104001 | Walks at Sink: 258256 | Revised Blocks: 30
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 3736 | Revised Blocks: 15
+Epoch: 105001 | Walks at Sink: 258408 | Revised Blocks: 15
+Epoch: 106001 | Walks at Sink: 258557 | Revised Blocks: 15
+Epoch: 107001 | Walks at Sink: 258697 | Revised Blocks: 15
+Epoch: 108001 | Walks at Sink: 258836 | Revised Blocks: 15
+Epoch: 109001 | Walks at Sink: 258968 | Revised Blocks: 15
+Epoch: 110001 | Walks at Sink: 259096 | Revised Blocks: 15
+Epoch: 111001 | Walks at Sink: 259223 | Revised Blocks: 15
+Epoch: 112001 | Walks at Sink: 259332 | Revised Blocks: 15
+Epoch: 113001 | Walks at Sink: 259456 | Revised Blocks: 15
+Epoch: 114001 | Walks at Sink: 259561 | Revised Blocks: 15
+Epoch: 115001 | Walks at Sink: 259662 | Revised Blocks: 15
+Epoch: 116001 | Walks at Sink: 259775 | Revised Blocks: 15
+Epoch: 117001 | Walks at Sink: 259860 | Revised Blocks: 15
+Epoch: 118001 | Walks at Sink: 259965 | Revised Blocks: 15
+Epoch: 119001 | Walks at Sink: 260063 | Revised Blocks: 15
+Epoch: 120001 | Walks at Sink: 260140 | Revised Blocks: 15
+Epoch: 121001 | Walks at Sink: 260244 | Revised Blocks: 15
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 1858 | Revised Blocks: 8
+Epoch: 122001 | Walks at Sink: 260327 | Revised Blocks: 8
+Epoch: 123001 | Walks at Sink: 260419 | Revised Blocks: 8
+Epoch: 124001 | Walks at Sink: 260498 | Revised Blocks: 8
+Epoch: 125001 | Walks at Sink: 260571 | Revised Blocks: 8
+Epoch: 126001 | Walks at Sink: 260650 | Revised Blocks: 8
+Epoch: 127001 | Walks at Sink: 260712 | Revised Blocks: 8
+Epoch: 128001 | Walks at Sink: 260771 | Revised Blocks: 8
+Epoch: 129001 | Walks at Sink: 260827 | Revised Blocks: 8
+Epoch: 130001 | Walks at Sink: 260890 | Revised Blocks: 8
+Epoch: 131001 | Walks at Sink: 260947 | Revised Blocks: 8
+Epoch: 132001 | Walks at Sink: 261003 | Revised Blocks: 8
+Epoch: 133001 | Walks at Sink: 261079 | Revised Blocks: 8
+Epoch: 134001 | Walks at Sink: 261120 | Revised Blocks: 8
+Epoch: 135001 | Walks at Sink: 261163 | Revised Blocks: 8
+Epoch: 136001 | Walks at Sink: 261212 | Revised Blocks: 8
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 902 | Revised Blocks: 4
+Epoch: 137001 | Walks at Sink: 261267 | Revised Blocks: 4
+Epoch: 138001 | Walks at Sink: 261307 | Revised Blocks: 4
+Epoch: 139001 | Walks at Sink: 261356 | Revised Blocks: 4
+Epoch: 140001 | Walks at Sink: 261384 | Revised Blocks: 4
+Epoch: 141001 | Walks at Sink: 261412 | Revised Blocks: 4
+Epoch: 142001 | Walks at Sink: 261441 | Revised Blocks: 4
+Epoch: 143001 | Walks at Sink: 261488 | Revised Blocks: 4
+Epoch: 144001 | Walks at Sink: 261524 | Revised Blocks: 4
+Epoch: 145001 | Walks at Sink: 261555 | Revised Blocks: 4
+Epoch: 146001 | Walks at Sink: 261582 | Revised Blocks: 4
+Epoch: 147001 | Walks at Sink: 261602 | Revised Blocks: 4
+Epoch: 148001 | Walks at Sink: 261628 | Revised Blocks: 4
+Epoch: 149001 | Walks at Sink: 261654 | Revised Blocks: 4
+Epoch: 150001 | Walks at Sink: 261677 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 446 | Revised Blocks: 2
+Epoch: 151001 | Walks at Sink: 261698 | Revised Blocks: 2
+Epoch: 152001 | Walks at Sink: 261720 | Revised Blocks: 2
+Epoch: 153001 | Walks at Sink: 261739 | Revised Blocks: 2
+Epoch: 154001 | Walks at Sink: 261756 | Revised Blocks: 2
+Epoch: 155001 | Walks at Sink: 261774 | Revised Blocks: 2
+Epoch: 156001 | Walks at Sink: 261791 | Revised Blocks: 2
+Epoch: 157001 | Walks at Sink: 261806 | Revised Blocks: 2
+Epoch: 158001 | Walks at Sink: 261811 | Revised Blocks: 2
+Epoch: 159001 | Walks at Sink: 261820 | Revised Blocks: 2
+Epoch: 160001 | Walks at Sink: 261830 | Revised Blocks: 2
+Epoch: 161001 | Walks at Sink: 261843 | Revised Blocks: 2
+Epoch: 162001 | Walks at Sink: 261857 | Revised Blocks: 2
+Epoch: 163001 | Walks at Sink: 261871 | Revised Blocks: 2
+Epoch: 164001 | Walks at Sink: 261881 | Revised Blocks: 2
+Epoch: 165001 | Walks at Sink: 261898 | Revised Blocks: 2
+Epoch: 166001 | Walks at Sink: 261920 | Revised Blocks: 2
+Epoch: 167001 | Walks at Sink: 261929 | Revised Blocks: 2
+Epoch: 168001 | Walks at Sink: 261941 | Revised Blocks: 2
+Epoch: 169001 | Walks at Sink: 261948 | Revised Blocks: 2
+Epoch: 170001 | Walks at Sink: 261958 | Revised Blocks: 2
+Epoch: 171001 | Walks at Sink: 261970 | Revised Blocks: 2
+Epoch: 172001 | Walks at Sink: 261977 | Revised Blocks: 2
+Epoch: 173001 | Walks at Sink: 261983 | Revised Blocks: 2
+Epoch: 174001 | Walks at Sink: 261990 | Revised Blocks: 2
+Epoch: 175001 | Walks at Sink: 261998 | Revised Blocks: 2
+Epoch: 176001 | Walks at Sink: 262005 | Revised Blocks: 2
+Epoch: 177001 | Walks at Sink: 262009 | Revised Blocks: 2
+Epoch: 178001 | Walks at Sink: 262015 | Revised Blocks: 2
+Epoch: 179001 | Walks at Sink: 262020 | Revised Blocks: 2
+Epoch: 180001 | Walks at Sink: 262036 | Revised Blocks: 2
+Epoch: 181001 | Walks at Sink: 262042 | Revised Blocks: 2
+Epoch: 182001 | Walks at Sink: 262047 | Revised Blocks: 2
+Epoch: 183001 | Walks at Sink: 262054 | Revised Blocks: 2
+Epoch: 184001 | Walks at Sink: 262063 | Revised Blocks: 2
+Epoch: 185001 | Walks at Sink: 262067 | Revised Blocks: 2
+Epoch: 186001 | Walks at Sink: 262071 | Revised Blocks: 2
+Epoch: 187001 | Walks at Sink: 262075 | Revised Blocks: 2
+Epoch: 188001 | Walks at Sink: 262084 | Revised Blocks: 2
+Epoch: 189001 | Walks at Sink: 262086 | Revised Blocks: 2
+Epoch: 190001 | Walks at Sink: 262089 | Revised Blocks: 2
+Epoch: 191001 | Walks at Sink: 262091 | Revised Blocks: 2
+Epoch: 192001 | Walks at Sink: 262095 | Revised Blocks: 2
+Epoch: 193001 | Walks at Sink: 262101 | Revised Blocks: 2
+Epoch: 194001 | Walks at Sink: 262104 | Revised Blocks: 2
+Epoch: 195001 | Walks at Sink: 262110 | Revised Blocks: 2
+Epoch: 196001 | Walks at Sink: 262112 | Revised Blocks: 2
+Epoch: 197001 | Walks at Sink: 262117 | Revised Blocks: 2
+Epoch: 198001 | Walks at Sink: 262122 | Revised Blocks: 2
+Epoch: 199001 | Walks at Sink: 262126 | Revised Blocks: 2
+Epoch: 200001 | Walks at Sink: 262132 | Revised Blocks: 2
+Epoch: 201001 | Walks at Sink: 262135 | Revised Blocks: 2
+Epoch: 202001 | Walks at Sink: 262138 | Revised Blocks: 2
+Epoch: 203001 | Walks at Sink: 262140 | Revised Blocks: 2
+Epoch: 204001 | Walks at Sink: 262141 | Revised Blocks: 2
+Epoch: 205001 | Walks at Sink: 262143 | Revised Blocks: 2
+Round 2 Terminated | Total Epochs: 205501 | Final Sink Count: 262144
+ -> Round 2 | Top-R (50) Graded NDCG: 1.00000
+
+[TERMINATION TRIGGER] NDCG (1.00000) reached threshold 0.95000 at Round 2. Stopping multi-round loop.
+
+Total Multi-Round Execution Time: 8510 ms
+
+First 10 calculated Eta (cnt / total_walks) values:
+eta[0] = 0.00019
+eta[1] = 0.00024
+eta[2] = 0.00045
+eta[3] = 0.00000
+eta[4] = 0.00000
+eta[5] = 0.00000
+eta[6] = 0.00000
+eta[7] = 0.00000
+eta[8] = 0.00000
+eta[9] = 0.00000
+
+--------------------------------------------------
+ LAPLACIAN SYSTEM DETAILED VALUES (Lx, b, Lx - b) 
+--------------------------------------------------
+Lx[0] = 0.00003	 b[0] = 0.00000	 Lx - b[0] = 0.00003
+Lx[1] = 0.00002	 b[1] = 0.00000	 Lx - b[1] = 0.00002
+Lx[2] = -0.00005	 b[2] = 0.00000	 Lx - b[2] = -0.00005
+Lx[3] = 0.00000	 b[3] = 0.00000	 Lx - b[3] = 0.00000
+Lx[4] = 0.00000	 b[4] = 0.00000	 Lx - b[4] = 0.00000
+Lx[5] = 0.00000	 b[5] = 0.00000	 Lx - b[5] = 0.00000
+Lx[6] = 0.00000	 b[6] = 0.00000	 Lx - b[6] = 0.00000
+Lx[7] = 0.00000	 b[7] = 0.00000	 Lx - b[7] = 0.00000
+Lx[8] = 0.00000	 b[8] = 0.00000	 Lx - b[8] = 0.00000
+Lx[9] = 0.00000	 b[9] = 0.00000	 Lx - b[9] = 0.00000
+Lx[708150] = -0.99739	 b[708150] = -1.00000	 Lx - b[708150] = 0.00261
+--------------------------------------------------
+
+ Norm ||Lx - b||_2 : 0.31424
+ Norm ||b||_2      : 1.00001
+ Relative Residual : 0.31423
+--------------------------------------------------
+
+Final Relative Residual calculated: 0.31423
+Writing solution output (Eta values) to file: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/brain/brain_b11_262144
+Printing to file OpFileSolK complete.
+
+Main application finished.
+
+----------------------------------------
+Program finished. Press ENTER to exit...holl09
+config_backup.h
+config.h
+modules
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Parallel K-Walk Solver Pipeline
+==================================
+Using GPU: NVIDIA A100-SXM4-80GB
+Code is executing on device 0 
+K-WalkSolver starting: 
+Max epoch per iteration batch: 216
+Number of packets in network: 262144
+Negative index (Sink): 595098 	 -124350.000000
+
+==================================================
+STARTING MULTI-ROUND OPTIMIZED K-WALK SOLVER...
+==================================================
+
+>>> Beginning Round 1 Execution...
+ [AWC] Compacted grid. Time taken: 39 us | Active Walks: 256206 | Revised Blocks: 1001
+Epoch: 1001 | Walks at Sink: 15156 | Revised Blocks: 1001
+Epoch: 2001 | Walks at Sink: 34181 | Revised Blocks: 1001
+Epoch: 3001 | Walks at Sink: 51845 | Revised Blocks: 1001
+Epoch: 4001 | Walks at Sink: 67958 | Revised Blocks: 1001
+Epoch: 5001 | Walks at Sink: 82911 | Revised Blocks: 1001
+Epoch: 6001 | Walks at Sink: 96741 | Revised Blocks: 1001
+Epoch: 7001 | Walks at Sink: 109516 | Revised Blocks: 1001
+Epoch: 8001 | Walks at Sink: 121295 | Revised Blocks: 1001
+Epoch: 9001 | Walks at Sink: 132061 | Revised Blocks: 1001
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 124893 | Revised Blocks: 488
+Epoch: 10001 | Walks at Sink: 141769 | Revised Blocks: 488
+Epoch: 11001 | Walks at Sink: 151028 | Revised Blocks: 488
+Epoch: 12001 | Walks at Sink: 159452 | Revised Blocks: 488
+Epoch: 13001 | Walks at Sink: 167451 | Revised Blocks: 488
+Epoch: 14001 | Walks at Sink: 174694 | Revised Blocks: 488
+Epoch: 15001 | Walks at Sink: 181456 | Revised Blocks: 488
+Epoch: 16001 | Walks at Sink: 187741 | Revised Blocks: 488
+Epoch: 17001 | Walks at Sink: 193411 | Revised Blocks: 488
+Epoch: 18001 | Walks at Sink: 198741 | Revised Blocks: 488
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 60927 | Revised Blocks: 238
+Epoch: 19001 | Walks at Sink: 203471 | Revised Blocks: 238
+Epoch: 20001 | Walks at Sink: 208123 | Revised Blocks: 238
+Epoch: 21001 | Walks at Sink: 212287 | Revised Blocks: 238
+Epoch: 22001 | Walks at Sink: 216170 | Revised Blocks: 238
+Epoch: 23001 | Walks at Sink: 219606 | Revised Blocks: 238
+Epoch: 24001 | Walks at Sink: 222815 | Revised Blocks: 238
+Epoch: 25001 | Walks at Sink: 225898 | Revised Blocks: 238
+Epoch: 26001 | Walks at Sink: 228669 | Revised Blocks: 238
+Epoch: 27001 | Walks at Sink: 231231 | Revised Blocks: 238
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 29696 | Revised Blocks: 116
+Epoch: 28001 | Walks at Sink: 233506 | Revised Blocks: 116
+Epoch: 29001 | Walks at Sink: 235697 | Revised Blocks: 116
+Epoch: 30001 | Walks at Sink: 237748 | Revised Blocks: 116
+Epoch: 31001 | Walks at Sink: 239673 | Revised Blocks: 116
+Epoch: 32001 | Walks at Sink: 241384 | Revised Blocks: 116
+Epoch: 33001 | Walks at Sink: 242946 | Revised Blocks: 116
+Epoch: 34001 | Walks at Sink: 244397 | Revised Blocks: 116
+Epoch: 35001 | Walks at Sink: 245755 | Revised Blocks: 116
+Epoch: 36001 | Walks at Sink: 247033 | Revised Blocks: 116
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 14587 | Revised Blocks: 57
+Epoch: 37001 | Walks at Sink: 248118 | Revised Blocks: 57
+Epoch: 38001 | Walks at Sink: 249191 | Revised Blocks: 57
+Epoch: 39001 | Walks at Sink: 250171 | Revised Blocks: 57
+Epoch: 40001 | Walks at Sink: 251112 | Revised Blocks: 57
+Epoch: 41001 | Walks at Sink: 251927 | Revised Blocks: 57
+Epoch: 42001 | Walks at Sink: 252690 | Revised Blocks: 57
+Epoch: 43001 | Walks at Sink: 253401 | Revised Blocks: 57
+Epoch: 44001 | Walks at Sink: 254076 | Revised Blocks: 57
+Epoch: 45001 | Walks at Sink: 254685 | Revised Blocks: 57
+ [AWC] Compacted grid. Time taken: 24 us | Active Walks: 7163 | Revised Blocks: 28
+Epoch: 46001 | Walks at Sink: 255234 | Revised Blocks: 28
+Epoch: 47001 | Walks at Sink: 255734 | Revised Blocks: 28
+Epoch: 48001 | Walks at Sink: 256220 | Revised Blocks: 28
+Epoch: 49001 | Walks at Sink: 256686 | Revised Blocks: 28
+Epoch: 50001 | Walks at Sink: 257096 | Revised Blocks: 28
+Epoch: 51001 | Walks at Sink: 257474 | Revised Blocks: 28
+Epoch: 52001 | Walks at Sink: 257852 | Revised Blocks: 28
+Epoch: 53001 | Walks at Sink: 258195 | Revised Blocks: 28
+Epoch: 54001 | Walks at Sink: 258490 | Revised Blocks: 28
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 3496 | Revised Blocks: 14
+Epoch: 55001 | Walks at Sink: 258775 | Revised Blocks: 14
+Epoch: 56001 | Walks at Sink: 259055 | Revised Blocks: 14
+Epoch: 57001 | Walks at Sink: 259281 | Revised Blocks: 14
+Epoch: 58001 | Walks at Sink: 259509 | Revised Blocks: 14
+Epoch: 59001 | Walks at Sink: 259728 | Revised Blocks: 14
+Epoch: 60001 | Walks at Sink: 259941 | Revised Blocks: 14
+Epoch: 61001 | Walks at Sink: 260130 | Revised Blocks: 14
+Epoch: 62001 | Walks at Sink: 260296 | Revised Blocks: 14
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 1713 | Revised Blocks: 7
+Epoch: 63001 | Walks at Sink: 260431 | Revised Blocks: 7
+Epoch: 64001 | Walks at Sink: 260564 | Revised Blocks: 7
+Epoch: 65001 | Walks at Sink: 260698 | Revised Blocks: 7
+Epoch: 66001 | Walks at Sink: 260801 | Revised Blocks: 7
+Epoch: 67001 | Walks at Sink: 260907 | Revised Blocks: 7
+Epoch: 68001 | Walks at Sink: 260998 | Revised Blocks: 7
+Epoch: 69001 | Walks at Sink: 261080 | Revised Blocks: 7
+Epoch: 70001 | Walks at Sink: 261170 | Revised Blocks: 7
+Epoch: 71001 | Walks at Sink: 261242 | Revised Blocks: 7
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 829 | Revised Blocks: 4
+Epoch: 72001 | Walks at Sink: 261315 | Revised Blocks: 4
+Epoch: 73001 | Walks at Sink: 261401 | Revised Blocks: 4
+Epoch: 74001 | Walks at Sink: 261465 | Revised Blocks: 4
+Epoch: 75001 | Walks at Sink: 261534 | Revised Blocks: 4
+Epoch: 76001 | Walks at Sink: 261594 | Revised Blocks: 4
+Epoch: 77001 | Walks at Sink: 261645 | Revised Blocks: 4
+Epoch: 78001 | Walks at Sink: 261700 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 392 | Revised Blocks: 2
+Epoch: 79001 | Walks at Sink: 261752 | Revised Blocks: 2
+Epoch: 80001 | Walks at Sink: 261785 | Revised Blocks: 2
+Epoch: 81001 | Walks at Sink: 261819 | Revised Blocks: 2
+Epoch: 82001 | Walks at Sink: 261857 | Revised Blocks: 2
+Epoch: 83001 | Walks at Sink: 261892 | Revised Blocks: 2
+Epoch: 84001 | Walks at Sink: 261915 | Revised Blocks: 2
+Epoch: 85001 | Walks at Sink: 261951 | Revised Blocks: 2
+Epoch: 86001 | Walks at Sink: 261980 | Revised Blocks: 2
+Epoch: 87001 | Walks at Sink: 262001 | Revised Blocks: 2
+Epoch: 88001 | Walks at Sink: 262017 | Revised Blocks: 2
+Epoch: 89001 | Walks at Sink: 262035 | Revised Blocks: 2
+Epoch: 90001 | Walks at Sink: 262052 | Revised Blocks: 2
+Epoch: 91001 | Walks at Sink: 262068 | Revised Blocks: 2
+Epoch: 92001 | Walks at Sink: 262088 | Revised Blocks: 2
+Epoch: 93001 | Walks at Sink: 262097 | Revised Blocks: 2
+Epoch: 94001 | Walks at Sink: 262111 | Revised Blocks: 2
+Epoch: 95001 | Walks at Sink: 262125 | Revised Blocks: 2
+Epoch: 96001 | Walks at Sink: 262139 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 0 | Revised Blocks: 0
+Epoch: 97001 | Walks at Sink: 262150 | Revised Blocks: 0
+Round 1 Terminated | Total Epochs: 97001 | Final Sink Count: 262150
+>>> Beginning Round 2 Execution...
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 256206 | Revised Blocks: 1001
+Epoch: 1001 | Walks at Sink: 15156 | Revised Blocks: 1001
+Epoch: 2001 | Walks at Sink: 34181 | Revised Blocks: 1001
+Epoch: 3001 | Walks at Sink: 51845 | Revised Blocks: 1001
+Epoch: 4001 | Walks at Sink: 67958 | Revised Blocks: 1001
+Epoch: 5001 | Walks at Sink: 82911 | Revised Blocks: 1001
+Epoch: 6001 | Walks at Sink: 96741 | Revised Blocks: 1001
+Epoch: 7001 | Walks at Sink: 109516 | Revised Blocks: 1001
+Epoch: 8001 | Walks at Sink: 121295 | Revised Blocks: 1001
+Epoch: 9001 | Walks at Sink: 132061 | Revised Blocks: 1001
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 124893 | Revised Blocks: 488
+Epoch: 10001 | Walks at Sink: 141769 | Revised Blocks: 488
+Epoch: 11001 | Walks at Sink: 151028 | Revised Blocks: 488
+Epoch: 12001 | Walks at Sink: 159452 | Revised Blocks: 488
+Epoch: 13001 | Walks at Sink: 167451 | Revised Blocks: 488
+Epoch: 14001 | Walks at Sink: 174694 | Revised Blocks: 488
+Epoch: 15001 | Walks at Sink: 181456 | Revised Blocks: 488
+Epoch: 16001 | Walks at Sink: 187741 | Revised Blocks: 488
+Epoch: 17001 | Walks at Sink: 193411 | Revised Blocks: 488
+Epoch: 18001 | Walks at Sink: 198741 | Revised Blocks: 488
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 60927 | Revised Blocks: 238
+Epoch: 19001 | Walks at Sink: 203471 | Revised Blocks: 238
+Epoch: 20001 | Walks at Sink: 208123 | Revised Blocks: 238
+Epoch: 21001 | Walks at Sink: 212287 | Revised Blocks: 238
+Epoch: 22001 | Walks at Sink: 216170 | Revised Blocks: 238
+Epoch: 23001 | Walks at Sink: 219606 | Revised Blocks: 238
+Epoch: 24001 | Walks at Sink: 222815 | Revised Blocks: 238
+Epoch: 25001 | Walks at Sink: 225898 | Revised Blocks: 238
+Epoch: 26001 | Walks at Sink: 228669 | Revised Blocks: 238
+Epoch: 27001 | Walks at Sink: 231231 | Revised Blocks: 238
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 29696 | Revised Blocks: 116
+Epoch: 28001 | Walks at Sink: 233506 | Revised Blocks: 116
+Epoch: 29001 | Walks at Sink: 235697 | Revised Blocks: 116
+Epoch: 30001 | Walks at Sink: 237748 | Revised Blocks: 116
+Epoch: 31001 | Walks at Sink: 239673 | Revised Blocks: 116
+Epoch: 32001 | Walks at Sink: 241384 | Revised Blocks: 116
+Epoch: 33001 | Walks at Sink: 242946 | Revised Blocks: 116
+Epoch: 34001 | Walks at Sink: 244397 | Revised Blocks: 116
+Epoch: 35001 | Walks at Sink: 245755 | Revised Blocks: 116
+Epoch: 36001 | Walks at Sink: 247033 | Revised Blocks: 116
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 14587 | Revised Blocks: 57
+Epoch: 37001 | Walks at Sink: 248118 | Revised Blocks: 57
+Epoch: 38001 | Walks at Sink: 249191 | Revised Blocks: 57
+Epoch: 39001 | Walks at Sink: 250171 | Revised Blocks: 57
+Epoch: 40001 | Walks at Sink: 251112 | Revised Blocks: 57
+Epoch: 41001 | Walks at Sink: 251927 | Revised Blocks: 57
+Epoch: 42001 | Walks at Sink: 252690 | Revised Blocks: 57
+Epoch: 43001 | Walks at Sink: 253401 | Revised Blocks: 57
+Epoch: 44001 | Walks at Sink: 254076 | Revised Blocks: 57
+Epoch: 45001 | Walks at Sink: 254685 | Revised Blocks: 57
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 7163 | Revised Blocks: 28
+Epoch: 46001 | Walks at Sink: 255234 | Revised Blocks: 28
+Epoch: 47001 | Walks at Sink: 255734 | Revised Blocks: 28
+Epoch: 48001 | Walks at Sink: 256220 | Revised Blocks: 28
+Epoch: 49001 | Walks at Sink: 256686 | Revised Blocks: 28
+Epoch: 50001 | Walks at Sink: 257096 | Revised Blocks: 28
+Epoch: 51001 | Walks at Sink: 257474 | Revised Blocks: 28
+Epoch: 52001 | Walks at Sink: 257852 | Revised Blocks: 28
+Epoch: 53001 | Walks at Sink: 258195 | Revised Blocks: 28
+Epoch: 54001 | Walks at Sink: 258490 | Revised Blocks: 28
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 3496 | Revised Blocks: 14
+Epoch: 55001 | Walks at Sink: 258775 | Revised Blocks: 14
+Epoch: 56001 | Walks at Sink: 259055 | Revised Blocks: 14
+Epoch: 57001 | Walks at Sink: 259281 | Revised Blocks: 14
+Epoch: 58001 | Walks at Sink: 259509 | Revised Blocks: 14
+Epoch: 59001 | Walks at Sink: 259728 | Revised Blocks: 14
+Epoch: 60001 | Walks at Sink: 259941 | Revised Blocks: 14
+Epoch: 61001 | Walks at Sink: 260130 | Revised Blocks: 14
+Epoch: 62001 | Walks at Sink: 260296 | Revised Blocks: 14
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 1713 | Revised Blocks: 7
+Epoch: 63001 | Walks at Sink: 260431 | Revised Blocks: 7
+Epoch: 64001 | Walks at Sink: 260564 | Revised Blocks: 7
+Epoch: 65001 | Walks at Sink: 260698 | Revised Blocks: 7
+Epoch: 66001 | Walks at Sink: 260801 | Revised Blocks: 7
+Epoch: 67001 | Walks at Sink: 260907 | Revised Blocks: 7
+Epoch: 68001 | Walks at Sink: 260998 | Revised Blocks: 7
+Epoch: 69001 | Walks at Sink: 261080 | Revised Blocks: 7
+Epoch: 70001 | Walks at Sink: 261170 | Revised Blocks: 7
+Epoch: 71001 | Walks at Sink: 261242 | Revised Blocks: 7
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 829 | Revised Blocks: 4
+Epoch: 72001 | Walks at Sink: 261315 | Revised Blocks: 4
+Epoch: 73001 | Walks at Sink: 261401 | Revised Blocks: 4
+Epoch: 74001 | Walks at Sink: 261465 | Revised Blocks: 4
+Epoch: 75001 | Walks at Sink: 261534 | Revised Blocks: 4
+Epoch: 76001 | Walks at Sink: 261594 | Revised Blocks: 4
+Epoch: 77001 | Walks at Sink: 261645 | Revised Blocks: 4
+Epoch: 78001 | Walks at Sink: 261700 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 392 | Revised Blocks: 2
+Epoch: 79001 | Walks at Sink: 261752 | Revised Blocks: 2
+Epoch: 80001 | Walks at Sink: 261785 | Revised Blocks: 2
+Epoch: 81001 | Walks at Sink: 261819 | Revised Blocks: 2
+Epoch: 82001 | Walks at Sink: 261857 | Revised Blocks: 2
+Epoch: 83001 | Walks at Sink: 261892 | Revised Blocks: 2
+Epoch: 84001 | Walks at Sink: 261915 | Revised Blocks: 2
+Epoch: 85001 | Walks at Sink: 261951 | Revised Blocks: 2
+Epoch: 86001 | Walks at Sink: 261980 | Revised Blocks: 2
+Epoch: 87001 | Walks at Sink: 262001 | Revised Blocks: 2
+Epoch: 88001 | Walks at Sink: 262017 | Revised Blocks: 2
+Epoch: 89001 | Walks at Sink: 262035 | Revised Blocks: 2
+Epoch: 90001 | Walks at Sink: 262052 | Revised Blocks: 2
+Epoch: 91001 | Walks at Sink: 262068 | Revised Blocks: 2
+Epoch: 92001 | Walks at Sink: 262088 | Revised Blocks: 2
+Epoch: 93001 | Walks at Sink: 262097 | Revised Blocks: 2
+Epoch: 94001 | Walks at Sink: 262111 | Revised Blocks: 2
+Epoch: 95001 | Walks at Sink: 262125 | Revised Blocks: 2
+Epoch: 96001 | Walks at Sink: 262139 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 0 | Revised Blocks: 0
+Epoch: 97001 | Walks at Sink: 262150 | Revised Blocks: 0
+Round 2 Terminated | Total Epochs: 97001 | Final Sink Count: 262150
+ -> Round 2 | Top-R (50) Graded NDCG: 1.00000
+
+[TERMINATION TRIGGER] NDCG (1.00000) reached threshold 0.95000 at Round 2. Stopping multi-round loop.
+
+Total Multi-Round Execution Time: 8946 ms
+
+First 10 calculated Eta (cnt / total_walks) values:
+eta[0] = 0.00130
+eta[1] = 0.00091
+eta[2] = 0.00086
+eta[3] = 0.00089
+eta[4] = 0.00178
+eta[5] = 0.00084
+eta[6] = 0.00092
+eta[7] = 0.00144
+eta[8] = 0.00286
+eta[9] = 0.00086
+
+--------------------------------------------------
+ LAPLACIAN SYSTEM DETAILED VALUES (Lx, b, Lx - b) 
+--------------------------------------------------
+Lx[0] = -0.00003	 b[0] = 0.00000	 Lx - b[0] = -0.00003
+Lx[1] = 0.00005	 b[1] = 0.00000	 Lx - b[1] = 0.00005
+Lx[2] = -0.00004	 b[2] = 0.00000	 Lx - b[2] = -0.00004
+Lx[3] = -0.00002	 b[3] = 0.00000	 Lx - b[3] = -0.00002
+Lx[4] = -0.00009	 b[4] = 0.00000	 Lx - b[4] = -0.00009
+Lx[5] = -0.00006	 b[5] = 0.00000	 Lx - b[5] = -0.00006
+Lx[6] = 0.00002	 b[6] = 0.00000	 Lx - b[6] = 0.00002
+Lx[7] = -0.00000	 b[7] = 0.00000	 Lx - b[7] = -0.00000
+Lx[8] = 0.00000	 b[8] = 0.00000	 Lx - b[8] = 0.00000
+Lx[9] = -0.00010	 b[9] = 0.00000	 Lx - b[9] = -0.00010
+Lx[595098] = -0.99777	 b[595098] = -1.00000	 Lx - b[595098] = 0.00223
+--------------------------------------------------
+
+ Norm ||Lx - b||_2 : 0.31432
+ Norm ||b||_2      : 1.00000
+ Relative Residual : 0.31432
+--------------------------------------------------
+
+Final Relative Residual calculated: 0.31432
+Writing solution output (Eta values) to file: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/holl09/holl09_b11_262144
+Printing to file OpFileSolK complete.
+
+Main application finished.
+
+----------------------------------------
+Program finished. Press ENTER to exit...holl11
+config_backup.h
+config.h
+modules
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Parallel K-Walk Solver Pipeline
+==================================
+Using GPU: NVIDIA A100-SXM4-80GB
+Code is executing on device 0 
+K-WalkSolver starting: 
+Max epoch per iteration batch: 216
+Number of packets in network: 262144
+Negative index (Sink): 579521 	 -210848.000000
+
+==================================================
+STARTING MULTI-ROUND OPTIMIZED K-WALK SOLVER...
+==================================================
+
+>>> Beginning Round 1 Execution...
+ [AWC] Compacted grid. Time taken: 35 us | Active Walks: 258231 | Revised Blocks: 1009
+Epoch: 1001 | Walks at Sink: 10794 | Revised Blocks: 1009
+Epoch: 2001 | Walks at Sink: 23988 | Revised Blocks: 1009
+Epoch: 3001 | Walks at Sink: 36390 | Revised Blocks: 1009
+Epoch: 4001 | Walks at Sink: 48276 | Revised Blocks: 1009
+Epoch: 5001 | Walks at Sink: 59363 | Revised Blocks: 1009
+Epoch: 6001 | Walks at Sink: 69959 | Revised Blocks: 1009
+Epoch: 7001 | Walks at Sink: 79948 | Revised Blocks: 1009
+Epoch: 8001 | Walks at Sink: 89444 | Revised Blocks: 1009
+Epoch: 9001 | Walks at Sink: 98537 | Revised Blocks: 1009
+Epoch: 10001 | Walks at Sink: 107271 | Revised Blocks: 1009
+Epoch: 11001 | Walks at Sink: 115192 | Revised Blocks: 1009
+Epoch: 12001 | Walks at Sink: 122994 | Revised Blocks: 1009
+Epoch: 13001 | Walks at Sink: 130201 | Revised Blocks: 1009
+ [AWC] Compacted grid. Time taken: 22 us | Active Walks: 128480 | Revised Blocks: 502
+Epoch: 14001 | Walks at Sink: 137062 | Revised Blocks: 502
+Epoch: 15001 | Walks at Sink: 143601 | Revised Blocks: 502
+Epoch: 16001 | Walks at Sink: 149696 | Revised Blocks: 502
+Epoch: 17001 | Walks at Sink: 155640 | Revised Blocks: 502
+Epoch: 18001 | Walks at Sink: 161295 | Revised Blocks: 502
+Epoch: 19001 | Walks at Sink: 166551 | Revised Blocks: 502
+Epoch: 20001 | Walks at Sink: 171589 | Revised Blocks: 502
+Epoch: 21001 | Walks at Sink: 176379 | Revised Blocks: 502
+Epoch: 22001 | Walks at Sink: 180913 | Revised Blocks: 502
+Epoch: 23001 | Walks at Sink: 185086 | Revised Blocks: 502
+Epoch: 24001 | Walks at Sink: 189092 | Revised Blocks: 502
+Epoch: 25001 | Walks at Sink: 192906 | Revised Blocks: 502
+Epoch: 26001 | Walks at Sink: 196437 | Revised Blocks: 502
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 63922 | Revised Blocks: 250
+Epoch: 27001 | Walks at Sink: 199839 | Revised Blocks: 250
+Epoch: 28001 | Walks at Sink: 203103 | Revised Blocks: 250
+Epoch: 29001 | Walks at Sink: 206224 | Revised Blocks: 250
+Epoch: 30001 | Walks at Sink: 209228 | Revised Blocks: 250
+Epoch: 31001 | Walks at Sink: 212003 | Revised Blocks: 250
+Epoch: 32001 | Walks at Sink: 214674 | Revised Blocks: 250
+Epoch: 33001 | Walks at Sink: 217162 | Revised Blocks: 250
+Epoch: 34001 | Walks at Sink: 219507 | Revised Blocks: 250
+Epoch: 35001 | Walks at Sink: 221731 | Revised Blocks: 250
+Epoch: 36001 | Walks at Sink: 223791 | Revised Blocks: 250
+Epoch: 37001 | Walks at Sink: 225813 | Revised Blocks: 250
+Epoch: 38001 | Walks at Sink: 227718 | Revised Blocks: 250
+Epoch: 39001 | Walks at Sink: 229544 | Revised Blocks: 250
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 31787 | Revised Blocks: 125
+Epoch: 40001 | Walks at Sink: 231119 | Revised Blocks: 125
+Epoch: 41001 | Walks at Sink: 232762 | Revised Blocks: 125
+Epoch: 42001 | Walks at Sink: 234357 | Revised Blocks: 125
+Epoch: 43001 | Walks at Sink: 235789 | Revised Blocks: 125
+Epoch: 44001 | Walks at Sink: 237144 | Revised Blocks: 125
+Epoch: 45001 | Walks at Sink: 238430 | Revised Blocks: 125
+Epoch: 46001 | Walks at Sink: 239707 | Revised Blocks: 125
+Epoch: 47001 | Walks at Sink: 240851 | Revised Blocks: 125
+Epoch: 48001 | Walks at Sink: 241926 | Revised Blocks: 125
+Epoch: 49001 | Walks at Sink: 243012 | Revised Blocks: 125
+Epoch: 50001 | Walks at Sink: 243990 | Revised Blocks: 125
+Epoch: 51001 | Walks at Sink: 244959 | Revised Blocks: 125
+Epoch: 52001 | Walks at Sink: 245844 | Revised Blocks: 125
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 15833 | Revised Blocks: 62
+Epoch: 53001 | Walks at Sink: 246696 | Revised Blocks: 62
+Epoch: 54001 | Walks at Sink: 247501 | Revised Blocks: 62
+Epoch: 55001 | Walks at Sink: 248296 | Revised Blocks: 62
+Epoch: 56001 | Walks at Sink: 249015 | Revised Blocks: 62
+Epoch: 57001 | Walks at Sink: 249667 | Revised Blocks: 62
+Epoch: 58001 | Walks at Sink: 250313 | Revised Blocks: 62
+Epoch: 59001 | Walks at Sink: 250923 | Revised Blocks: 62
+Epoch: 60001 | Walks at Sink: 251512 | Revised Blocks: 62
+Epoch: 61001 | Walks at Sink: 252055 | Revised Blocks: 62
+Epoch: 62001 | Walks at Sink: 252607 | Revised Blocks: 62
+Epoch: 63001 | Walks at Sink: 253072 | Revised Blocks: 62
+Epoch: 64001 | Walks at Sink: 253533 | Revised Blocks: 62
+Epoch: 65001 | Walks at Sink: 253989 | Revised Blocks: 62
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 7731 | Revised Blocks: 31
+Epoch: 66001 | Walks at Sink: 254413 | Revised Blocks: 31
+Epoch: 67001 | Walks at Sink: 254800 | Revised Blocks: 31
+Epoch: 68001 | Walks at Sink: 255201 | Revised Blocks: 31
+Epoch: 69001 | Walks at Sink: 255570 | Revised Blocks: 31
+Epoch: 70001 | Walks at Sink: 255951 | Revised Blocks: 31
+Epoch: 71001 | Walks at Sink: 256315 | Revised Blocks: 31
+Epoch: 72001 | Walks at Sink: 256637 | Revised Blocks: 31
+Epoch: 73001 | Walks at Sink: 256941 | Revised Blocks: 31
+Epoch: 74001 | Walks at Sink: 257228 | Revised Blocks: 31
+Epoch: 75001 | Walks at Sink: 257486 | Revised Blocks: 31
+Epoch: 76001 | Walks at Sink: 257736 | Revised Blocks: 31
+Epoch: 77001 | Walks at Sink: 257951 | Revised Blocks: 31
+Epoch: 78001 | Walks at Sink: 258159 | Revised Blocks: 31
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 3774 | Revised Blocks: 15
+Epoch: 79001 | Walks at Sink: 258370 | Revised Blocks: 15
+Epoch: 80001 | Walks at Sink: 258574 | Revised Blocks: 15
+Epoch: 81001 | Walks at Sink: 258750 | Revised Blocks: 15
+Epoch: 82001 | Walks at Sink: 258933 | Revised Blocks: 15
+Epoch: 83001 | Walks at Sink: 259101 | Revised Blocks: 15
+Epoch: 84001 | Walks at Sink: 259257 | Revised Blocks: 15
+Epoch: 85001 | Walks at Sink: 259418 | Revised Blocks: 15
+Epoch: 86001 | Walks at Sink: 259580 | Revised Blocks: 15
+Epoch: 87001 | Walks at Sink: 259715 | Revised Blocks: 15
+Epoch: 88001 | Walks at Sink: 259818 | Revised Blocks: 15
+Epoch: 89001 | Walks at Sink: 259924 | Revised Blocks: 15
+Epoch: 90001 | Walks at Sink: 260050 | Revised Blocks: 15
+Epoch: 91001 | Walks at Sink: 260160 | Revised Blocks: 15
+Epoch: 92001 | Walks at Sink: 260249 | Revised Blocks: 15
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 1839 | Revised Blocks: 8
+Epoch: 93001 | Walks at Sink: 260347 | Revised Blocks: 8
+Epoch: 94001 | Walks at Sink: 260445 | Revised Blocks: 8
+Epoch: 95001 | Walks at Sink: 260541 | Revised Blocks: 8
+Epoch: 96001 | Walks at Sink: 260628 | Revised Blocks: 8
+Epoch: 97001 | Walks at Sink: 260713 | Revised Blocks: 8
+Epoch: 98001 | Walks at Sink: 260803 | Revised Blocks: 8
+Epoch: 99001 | Walks at Sink: 260884 | Revised Blocks: 8
+Epoch: 100001 | Walks at Sink: 260962 | Revised Blocks: 8
+Epoch: 101001 | Walks at Sink: 261033 | Revised Blocks: 8
+Epoch: 102001 | Walks at Sink: 261099 | Revised Blocks: 8
+Epoch: 103001 | Walks at Sink: 261157 | Revised Blocks: 8
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 915 | Revised Blocks: 4
+Epoch: 104001 | Walks at Sink: 261229 | Revised Blocks: 4
+Epoch: 105001 | Walks at Sink: 261286 | Revised Blocks: 4
+Epoch: 106001 | Walks at Sink: 261330 | Revised Blocks: 4
+Epoch: 107001 | Walks at Sink: 261377 | Revised Blocks: 4
+Epoch: 108001 | Walks at Sink: 261424 | Revised Blocks: 4
+Epoch: 109001 | Walks at Sink: 261467 | Revised Blocks: 4
+Epoch: 110001 | Walks at Sink: 261506 | Revised Blocks: 4
+Epoch: 111001 | Walks at Sink: 261538 | Revised Blocks: 4
+Epoch: 112001 | Walks at Sink: 261580 | Revised Blocks: 4
+Epoch: 113001 | Walks at Sink: 261616 | Revised Blocks: 4
+Epoch: 114001 | Walks at Sink: 261649 | Revised Blocks: 4
+Epoch: 115001 | Walks at Sink: 261675 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 454 | Revised Blocks: 2
+Epoch: 116001 | Walks at Sink: 261706 | Revised Blocks: 2
+Epoch: 117001 | Walks at Sink: 261734 | Revised Blocks: 2
+Epoch: 118001 | Walks at Sink: 261753 | Revised Blocks: 2
+Epoch: 119001 | Walks at Sink: 261772 | Revised Blocks: 2
+Epoch: 120001 | Walks at Sink: 261792 | Revised Blocks: 2
+Epoch: 121001 | Walks at Sink: 261814 | Revised Blocks: 2
+Epoch: 122001 | Walks at Sink: 261826 | Revised Blocks: 2
+Epoch: 123001 | Walks at Sink: 261850 | Revised Blocks: 2
+Epoch: 124001 | Walks at Sink: 261871 | Revised Blocks: 2
+Epoch: 125001 | Walks at Sink: 261897 | Revised Blocks: 2
+Epoch: 126001 | Walks at Sink: 261911 | Revised Blocks: 2
+Epoch: 127001 | Walks at Sink: 261931 | Revised Blocks: 2
+Epoch: 128001 | Walks at Sink: 261944 | Revised Blocks: 2
+Epoch: 129001 | Walks at Sink: 261957 | Revised Blocks: 2
+Epoch: 130001 | Walks at Sink: 261975 | Revised Blocks: 2
+Epoch: 131001 | Walks at Sink: 261991 | Revised Blocks: 2
+Epoch: 132001 | Walks at Sink: 262008 | Revised Blocks: 2
+Epoch: 133001 | Walks at Sink: 262021 | Revised Blocks: 2
+Epoch: 134001 | Walks at Sink: 262029 | Revised Blocks: 2
+Epoch: 135001 | Walks at Sink: 262040 | Revised Blocks: 2
+Epoch: 136001 | Walks at Sink: 262047 | Revised Blocks: 2
+Epoch: 137001 | Walks at Sink: 262049 | Revised Blocks: 2
+Epoch: 138001 | Walks at Sink: 262054 | Revised Blocks: 2
+Epoch: 139001 | Walks at Sink: 262063 | Revised Blocks: 2
+Epoch: 140001 | Walks at Sink: 262070 | Revised Blocks: 2
+Epoch: 141001 | Walks at Sink: 262076 | Revised Blocks: 2
+Epoch: 142001 | Walks at Sink: 262079 | Revised Blocks: 2
+Epoch: 143001 | Walks at Sink: 262087 | Revised Blocks: 2
+Epoch: 144001 | Walks at Sink: 262093 | Revised Blocks: 2
+Epoch: 145001 | Walks at Sink: 262097 | Revised Blocks: 2
+Epoch: 146001 | Walks at Sink: 262103 | Revised Blocks: 2
+Epoch: 147001 | Walks at Sink: 262105 | Revised Blocks: 2
+Epoch: 148001 | Walks at Sink: 262108 | Revised Blocks: 2
+Epoch: 149001 | Walks at Sink: 262116 | Revised Blocks: 2
+Epoch: 150001 | Walks at Sink: 262120 | Revised Blocks: 2
+Epoch: 151001 | Walks at Sink: 262127 | Revised Blocks: 2
+Epoch: 152001 | Walks at Sink: 262129 | Revised Blocks: 2
+Epoch: 153001 | Walks at Sink: 262134 | Revised Blocks: 2
+Epoch: 154001 | Walks at Sink: 262138 | Revised Blocks: 2
+Epoch: 155001 | Walks at Sink: 262141 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 0 | Revised Blocks: 0
+Epoch: 156001 | Walks at Sink: 262145 | Revised Blocks: 0
+Round 1 Terminated | Total Epochs: 156001 | Final Sink Count: 262145
+>>> Beginning Round 2 Execution...
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 258231 | Revised Blocks: 1009
+Epoch: 1001 | Walks at Sink: 10794 | Revised Blocks: 1009
+Epoch: 2001 | Walks at Sink: 23988 | Revised Blocks: 1009
+Epoch: 3001 | Walks at Sink: 36390 | Revised Blocks: 1009
+Epoch: 4001 | Walks at Sink: 48276 | Revised Blocks: 1009
+Epoch: 5001 | Walks at Sink: 59363 | Revised Blocks: 1009
+Epoch: 6001 | Walks at Sink: 69959 | Revised Blocks: 1009
+Epoch: 7001 | Walks at Sink: 79948 | Revised Blocks: 1009
+Epoch: 8001 | Walks at Sink: 89444 | Revised Blocks: 1009
+Epoch: 9001 | Walks at Sink: 98537 | Revised Blocks: 1009
+Epoch: 10001 | Walks at Sink: 107271 | Revised Blocks: 1009
+Epoch: 11001 | Walks at Sink: 115192 | Revised Blocks: 1009
+Epoch: 12001 | Walks at Sink: 122994 | Revised Blocks: 1009
+Epoch: 13001 | Walks at Sink: 130201 | Revised Blocks: 1009
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 128480 | Revised Blocks: 502
+Epoch: 14001 | Walks at Sink: 137062 | Revised Blocks: 502
+Epoch: 15001 | Walks at Sink: 143601 | Revised Blocks: 502
+Epoch: 16001 | Walks at Sink: 149696 | Revised Blocks: 502
+Epoch: 17001 | Walks at Sink: 155640 | Revised Blocks: 502
+Epoch: 18001 | Walks at Sink: 161295 | Revised Blocks: 502
+Epoch: 19001 | Walks at Sink: 166551 | Revised Blocks: 502
+Epoch: 20001 | Walks at Sink: 171589 | Revised Blocks: 502
+Epoch: 21001 | Walks at Sink: 176379 | Revised Blocks: 502
+Epoch: 22001 | Walks at Sink: 180913 | Revised Blocks: 502
+Epoch: 23001 | Walks at Sink: 185086 | Revised Blocks: 502
+Epoch: 24001 | Walks at Sink: 189092 | Revised Blocks: 502
+Epoch: 25001 | Walks at Sink: 192906 | Revised Blocks: 502
+Epoch: 26001 | Walks at Sink: 196437 | Revised Blocks: 502
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 63922 | Revised Blocks: 250
+Epoch: 27001 | Walks at Sink: 199839 | Revised Blocks: 250
+Epoch: 28001 | Walks at Sink: 203103 | Revised Blocks: 250
+Epoch: 29001 | Walks at Sink: 206224 | Revised Blocks: 250
+Epoch: 30001 | Walks at Sink: 209228 | Revised Blocks: 250
+Epoch: 31001 | Walks at Sink: 212003 | Revised Blocks: 250
+Epoch: 32001 | Walks at Sink: 214674 | Revised Blocks: 250
+Epoch: 33001 | Walks at Sink: 217162 | Revised Blocks: 250
+Epoch: 34001 | Walks at Sink: 219507 | Revised Blocks: 250
+Epoch: 35001 | Walks at Sink: 221731 | Revised Blocks: 250
+Epoch: 36001 | Walks at Sink: 223791 | Revised Blocks: 250
+Epoch: 37001 | Walks at Sink: 225813 | Revised Blocks: 250
+Epoch: 38001 | Walks at Sink: 227718 | Revised Blocks: 250
+Epoch: 39001 | Walks at Sink: 229544 | Revised Blocks: 250
+ [AWC] Compacted grid. Time taken: 21 us | Active Walks: 31787 | Revised Blocks: 125
+Epoch: 40001 | Walks at Sink: 231119 | Revised Blocks: 125
+Epoch: 41001 | Walks at Sink: 232762 | Revised Blocks: 125
+Epoch: 42001 | Walks at Sink: 234357 | Revised Blocks: 125
+Epoch: 43001 | Walks at Sink: 235789 | Revised Blocks: 125
+Epoch: 44001 | Walks at Sink: 237144 | Revised Blocks: 125
+Epoch: 45001 | Walks at Sink: 238430 | Revised Blocks: 125
+Epoch: 46001 | Walks at Sink: 239707 | Revised Blocks: 125
+Epoch: 47001 | Walks at Sink: 240851 | Revised Blocks: 125
+Epoch: 48001 | Walks at Sink: 241926 | Revised Blocks: 125
+Epoch: 49001 | Walks at Sink: 243012 | Revised Blocks: 125
+Epoch: 50001 | Walks at Sink: 243990 | Revised Blocks: 125
+Epoch: 51001 | Walks at Sink: 244959 | Revised Blocks: 125
+Epoch: 52001 | Walks at Sink: 245844 | Revised Blocks: 125
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 15833 | Revised Blocks: 62
+Epoch: 53001 | Walks at Sink: 246696 | Revised Blocks: 62
+Epoch: 54001 | Walks at Sink: 247501 | Revised Blocks: 62
+Epoch: 55001 | Walks at Sink: 248296 | Revised Blocks: 62
+Epoch: 56001 | Walks at Sink: 249015 | Revised Blocks: 62
+Epoch: 57001 | Walks at Sink: 249667 | Revised Blocks: 62
+Epoch: 58001 | Walks at Sink: 250313 | Revised Blocks: 62
+Epoch: 59001 | Walks at Sink: 250923 | Revised Blocks: 62
+Epoch: 60001 | Walks at Sink: 251512 | Revised Blocks: 62
+Epoch: 61001 | Walks at Sink: 252055 | Revised Blocks: 62
+Epoch: 62001 | Walks at Sink: 252607 | Revised Blocks: 62
+Epoch: 63001 | Walks at Sink: 253072 | Revised Blocks: 62
+Epoch: 64001 | Walks at Sink: 253533 | Revised Blocks: 62
+Epoch: 65001 | Walks at Sink: 253989 | Revised Blocks: 62
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 7731 | Revised Blocks: 31
+Epoch: 66001 | Walks at Sink: 254413 | Revised Blocks: 31
+Epoch: 67001 | Walks at Sink: 254800 | Revised Blocks: 31
+Epoch: 68001 | Walks at Sink: 255201 | Revised Blocks: 31
+Epoch: 69001 | Walks at Sink: 255570 | Revised Blocks: 31
+Epoch: 70001 | Walks at Sink: 255951 | Revised Blocks: 31
+Epoch: 71001 | Walks at Sink: 256315 | Revised Blocks: 31
+Epoch: 72001 | Walks at Sink: 256637 | Revised Blocks: 31
+Epoch: 73001 | Walks at Sink: 256941 | Revised Blocks: 31
+Epoch: 74001 | Walks at Sink: 257228 | Revised Blocks: 31
+Epoch: 75001 | Walks at Sink: 257486 | Revised Blocks: 31
+Epoch: 76001 | Walks at Sink: 257736 | Revised Blocks: 31
+Epoch: 77001 | Walks at Sink: 257951 | Revised Blocks: 31
+Epoch: 78001 | Walks at Sink: 258159 | Revised Blocks: 31
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 3774 | Revised Blocks: 15
+Epoch: 79001 | Walks at Sink: 258370 | Revised Blocks: 15
+Epoch: 80001 | Walks at Sink: 258574 | Revised Blocks: 15
+Epoch: 81001 | Walks at Sink: 258750 | Revised Blocks: 15
+Epoch: 82001 | Walks at Sink: 258933 | Revised Blocks: 15
+Epoch: 83001 | Walks at Sink: 259101 | Revised Blocks: 15
+Epoch: 84001 | Walks at Sink: 259257 | Revised Blocks: 15
+Epoch: 85001 | Walks at Sink: 259418 | Revised Blocks: 15
+Epoch: 86001 | Walks at Sink: 259580 | Revised Blocks: 15
+Epoch: 87001 | Walks at Sink: 259715 | Revised Blocks: 15
+Epoch: 88001 | Walks at Sink: 259818 | Revised Blocks: 15
+Epoch: 89001 | Walks at Sink: 259924 | Revised Blocks: 15
+Epoch: 90001 | Walks at Sink: 260050 | Revised Blocks: 15
+Epoch: 91001 | Walks at Sink: 260160 | Revised Blocks: 15
+Epoch: 92001 | Walks at Sink: 260249 | Revised Blocks: 15
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 1839 | Revised Blocks: 8
+Epoch: 93001 | Walks at Sink: 260347 | Revised Blocks: 8
+Epoch: 94001 | Walks at Sink: 260445 | Revised Blocks: 8
+Epoch: 95001 | Walks at Sink: 260541 | Revised Blocks: 8
+Epoch: 96001 | Walks at Sink: 260628 | Revised Blocks: 8
+Epoch: 97001 | Walks at Sink: 260713 | Revised Blocks: 8
+Epoch: 98001 | Walks at Sink: 260803 | Revised Blocks: 8
+Epoch: 99001 | Walks at Sink: 260884 | Revised Blocks: 8
+Epoch: 100001 | Walks at Sink: 260962 | Revised Blocks: 8
+Epoch: 101001 | Walks at Sink: 261033 | Revised Blocks: 8
+Epoch: 102001 | Walks at Sink: 261099 | Revised Blocks: 8
+Epoch: 103001 | Walks at Sink: 261157 | Revised Blocks: 8
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 915 | Revised Blocks: 4
+Epoch: 104001 | Walks at Sink: 261229 | Revised Blocks: 4
+Epoch: 105001 | Walks at Sink: 261286 | Revised Blocks: 4
+Epoch: 106001 | Walks at Sink: 261330 | Revised Blocks: 4
+Epoch: 107001 | Walks at Sink: 261377 | Revised Blocks: 4
+Epoch: 108001 | Walks at Sink: 261424 | Revised Blocks: 4
+Epoch: 109001 | Walks at Sink: 261467 | Revised Blocks: 4
+Epoch: 110001 | Walks at Sink: 261506 | Revised Blocks: 4
+Epoch: 111001 | Walks at Sink: 261538 | Revised Blocks: 4
+Epoch: 112001 | Walks at Sink: 261580 | Revised Blocks: 4
+Epoch: 113001 | Walks at Sink: 261616 | Revised Blocks: 4
+Epoch: 114001 | Walks at Sink: 261649 | Revised Blocks: 4
+Epoch: 115001 | Walks at Sink: 261675 | Revised Blocks: 4
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 454 | Revised Blocks: 2
+Epoch: 116001 | Walks at Sink: 261706 | Revised Blocks: 2
+Epoch: 117001 | Walks at Sink: 261734 | Revised Blocks: 2
+Epoch: 118001 | Walks at Sink: 261753 | Revised Blocks: 2
+Epoch: 119001 | Walks at Sink: 261772 | Revised Blocks: 2
+Epoch: 120001 | Walks at Sink: 261792 | Revised Blocks: 2
+Epoch: 121001 | Walks at Sink: 261814 | Revised Blocks: 2
+Epoch: 122001 | Walks at Sink: 261826 | Revised Blocks: 2
+Epoch: 123001 | Walks at Sink: 261850 | Revised Blocks: 2
+Epoch: 124001 | Walks at Sink: 261871 | Revised Blocks: 2
+Epoch: 125001 | Walks at Sink: 261897 | Revised Blocks: 2
+Epoch: 126001 | Walks at Sink: 261911 | Revised Blocks: 2
+Epoch: 127001 | Walks at Sink: 261931 | Revised Blocks: 2
+Epoch: 128001 | Walks at Sink: 261944 | Revised Blocks: 2
+Epoch: 129001 | Walks at Sink: 261957 | Revised Blocks: 2
+Epoch: 130001 | Walks at Sink: 261975 | Revised Blocks: 2
+Epoch: 131001 | Walks at Sink: 261991 | Revised Blocks: 2
+Epoch: 132001 | Walks at Sink: 262008 | Revised Blocks: 2
+Epoch: 133001 | Walks at Sink: 262021 | Revised Blocks: 2
+Epoch: 134001 | Walks at Sink: 262029 | Revised Blocks: 2
+Epoch: 135001 | Walks at Sink: 262040 | Revised Blocks: 2
+Epoch: 136001 | Walks at Sink: 262047 | Revised Blocks: 2
+Epoch: 137001 | Walks at Sink: 262049 | Revised Blocks: 2
+Epoch: 138001 | Walks at Sink: 262054 | Revised Blocks: 2
+Epoch: 139001 | Walks at Sink: 262063 | Revised Blocks: 2
+Epoch: 140001 | Walks at Sink: 262070 | Revised Blocks: 2
+Epoch: 141001 | Walks at Sink: 262076 | Revised Blocks: 2
+Epoch: 142001 | Walks at Sink: 262079 | Revised Blocks: 2
+Epoch: 143001 | Walks at Sink: 262087 | Revised Blocks: 2
+Epoch: 144001 | Walks at Sink: 262093 | Revised Blocks: 2
+Epoch: 145001 | Walks at Sink: 262097 | Revised Blocks: 2
+Epoch: 146001 | Walks at Sink: 262103 | Revised Blocks: 2
+Epoch: 147001 | Walks at Sink: 262105 | Revised Blocks: 2
+Epoch: 148001 | Walks at Sink: 262108 | Revised Blocks: 2
+Epoch: 149001 | Walks at Sink: 262116 | Revised Blocks: 2
+Epoch: 150001 | Walks at Sink: 262120 | Revised Blocks: 2
+Epoch: 151001 | Walks at Sink: 262127 | Revised Blocks: 2
+Epoch: 152001 | Walks at Sink: 262129 | Revised Blocks: 2
+Epoch: 153001 | Walks at Sink: 262134 | Revised Blocks: 2
+Epoch: 154001 | Walks at Sink: 262138 | Revised Blocks: 2
+Epoch: 155001 | Walks at Sink: 262141 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 0 | Revised Blocks: 0
+Epoch: 156001 | Walks at Sink: 262145 | Revised Blocks: 0
+Round 2 Terminated | Total Epochs: 156001 | Final Sink Count: 262145
+ -> Round 2 | Top-R (50) Graded NDCG: 1.00000
+
+[TERMINATION TRIGGER] NDCG (1.00000) reached threshold 0.95000 at Round 2. Stopping multi-round loop.
+
+Total Multi-Round Execution Time: 15100 ms
+
+First 10 calculated Eta (cnt / total_walks) values:
+eta[0] = 0.00078
+eta[1] = 0.00079
+eta[2] = 0.00155
+eta[3] = 0.00075
+eta[4] = 0.00161
+eta[5] = 0.00082
+eta[6] = 0.00170
+eta[7] = 0.00081
+eta[8] = 0.00066
+eta[9] = 0.00067
+
+--------------------------------------------------
+ LAPLACIAN SYSTEM DETAILED VALUES (Lx, b, Lx - b) 
+--------------------------------------------------
+Lx[0] = -0.00000	 b[0] = 0.00000	 Lx - b[0] = -0.00000
+Lx[1] = 0.00001	 b[1] = 0.00000	 Lx - b[1] = 0.00001
+Lx[2] = -0.00001	 b[2] = 0.00000	 Lx - b[2] = -0.00001
+Lx[3] = -0.00004	 b[3] = 0.00000	 Lx - b[3] = -0.00004
+Lx[4] = 0.00001	 b[4] = 0.00000	 Lx - b[4] = 0.00001
+Lx[5] = -0.00001	 b[5] = 0.00000	 Lx - b[5] = -0.00001
+Lx[6] = 0.00010	 b[6] = 0.00000	 Lx - b[6] = 0.00010
+Lx[7] = 0.00001	 b[7] = 0.00000	 Lx - b[7] = 0.00001
+Lx[8] = -0.00004	 b[8] = 0.00000	 Lx - b[8] = -0.00004
+Lx[9] = -0.00002	 b[9] = 0.00000	 Lx - b[9] = -0.00002
+Lx[579521] = -0.99635	 b[579521] = -1.00000	 Lx - b[579521] = 0.00365
+--------------------------------------------------
+
+ Norm ||Lx - b||_2 : 0.40375
+ Norm ||b||_2      : 1.00000
+ Relative Residual : 0.40375
+--------------------------------------------------
+
+Final Relative Residual calculated: 0.40375
+Writing solution output (Eta values) to file: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/holl11/holl11_b11_262144
+Printing to file OpFileSolK complete.
+
+Main application finished.
+
+----------------------------------------
+Program finished. Press ENTER to exit...asSki
+config_backup.h
+config.h
+modules
+Configuration updated successfully in config.h.
+Compiling src/main.cu to bin/main.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/main.cu -o bin/main.o
+Compiling src/modules/SolverM.cu to bin/SolverM.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/SolverM.cu -o bin/SolverM.o
+Compiling src/modules/kwalk.cu to bin/kwalk.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/kwalk.cu -o bin/kwalk.o
+Compiling src/modules/helper.cu to bin/helper.o
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse -Iinclude -Iinclude/modules -c src/modules/helper.cu -o bin/helper.o
+Linking bin/main_app...
+/apps/cuda/13.0/bin/nvcc -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -gencode arch=compute_80,code=sm_80 -lcublas -lcusparse bin/main.o  bin/SolverM.o  bin/kwalk.o  bin/helper.o -o bin/main_app
+Starting main application...
+CUDA Parallel K-Walk Solver Pipeline
+==================================
+Using GPU: NVIDIA A100-SXM4-80GB
+Code is executing on device 0 
+K-WalkSolver starting: 
+Max epoch per iteration batch: 15625
+Number of packets in network: 262144
+Negative index (Sink): 1307069 	 -349250.000000
+
+==================================================
+STARTING MULTI-ROUND OPTIMIZED K-WALK SOLVER...
+==================================================
+
+>>> Beginning Round 1 Execution...
+Epoch: 1001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 2001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 3001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 4001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 5001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 6001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 7001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 8001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 9001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 10001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 11001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 12001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 13001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 14001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 15001 | Walks at Sink: 0 | Revised Blocks: 1024
+ [AWC] Compacted grid. Time taken: 46 us | Active Walks: 144468 | Revised Blocks: 565
+Epoch: 16001 | Walks at Sink: 117676 | Revised Blocks: 565
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 69086 | Revised Blocks: 270
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 32950 | Revised Blocks: 129
+Epoch: 17001 | Walks at Sink: 229194 | Revised Blocks: 129
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 15726 | Revised Blocks: 62
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 7438 | Revised Blocks: 30
+Epoch: 18001 | Walks at Sink: 254706 | Revised Blocks: 30
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 3405 | Revised Blocks: 14
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 1606 | Revised Blocks: 7
+Epoch: 19001 | Walks at Sink: 260538 | Revised Blocks: 7
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 662 | Revised Blocks: 3
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 267 | Revised Blocks: 2
+Epoch: 20001 | Walks at Sink: 261877 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 0 | Revised Blocks: 0
+Epoch: 21001 | Walks at Sink: 262257 | Revised Blocks: 0
+Round 1 Terminated | Total Epochs: 21001 | Final Sink Count: 262257
+>>> Beginning Round 2 Execution...
+Epoch: 1001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 2001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 3001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 4001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 5001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 6001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 7001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 8001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 9001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 10001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 11001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 12001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 13001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 14001 | Walks at Sink: 0 | Revised Blocks: 1024
+Epoch: 15001 | Walks at Sink: 0 | Revised Blocks: 1024
+ [AWC] Compacted grid. Time taken: 23 us | Active Walks: 144468 | Revised Blocks: 565
+Epoch: 16001 | Walks at Sink: 117676 | Revised Blocks: 565
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 69086 | Revised Blocks: 270
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 32950 | Revised Blocks: 129
+Epoch: 17001 | Walks at Sink: 229194 | Revised Blocks: 129
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 15726 | Revised Blocks: 62
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 7438 | Revised Blocks: 30
+Epoch: 18001 | Walks at Sink: 254706 | Revised Blocks: 30
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 3405 | Revised Blocks: 14
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 1606 | Revised Blocks: 7
+Epoch: 19001 | Walks at Sink: 260538 | Revised Blocks: 7
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 662 | Revised Blocks: 3
+ [AWC] Compacted grid. Time taken: 20 us | Active Walks: 267 | Revised Blocks: 2
+Epoch: 20001 | Walks at Sink: 261877 | Revised Blocks: 2
+ [AWC] Compacted grid. Time taken: 19 us | Active Walks: 0 | Revised Blocks: 0
+Epoch: 21001 | Walks at Sink: 262257 | Revised Blocks: 0
+Round 2 Terminated | Total Epochs: 21001 | Final Sink Count: 262257
+ -> Round 2 | Top-R (50) Graded NDCG: 1.00000
+
+[TERMINATION TRIGGER] NDCG (1.00000) reached threshold 0.95000 at Round 2. Stopping multi-round loop.
+
+Total Multi-Round Execution Time: 21736 ms
+
+First 10 calculated Eta (cnt / total_walks) values:
+eta[0] = 0.00019
+eta[1] = 0.00001
+eta[2] = 0.01137
+eta[3] = 0.00077
+eta[4] = 0.00070
+eta[5] = 0.00004
+eta[6] = 0.00127
+eta[7] = 0.00275
+eta[8] = 0.00213
+eta[9] = 0.00008
+
+--------------------------------------------------
+ LAPLACIAN SYSTEM DETAILED VALUES (Lx, b, Lx - b) 
+--------------------------------------------------
+Lx[0] = -0.00000	 b[0] = 0.00000	 Lx - b[0] = -0.00000
+Lx[1] = -0.00000	 b[1] = 0.00000	 Lx - b[1] = -0.00000
+Lx[2] = 0.00000	 b[2] = 0.00000	 Lx - b[2] = -0.00000
+Lx[3] = 0.00047	 b[3] = 0.00000	 Lx - b[3] = 0.00047
+Lx[4] = 0.00044	 b[4] = 0.00000	 Lx - b[4] = 0.00044
+Lx[5] = 0.00000	 b[5] = 0.00000	 Lx - b[5] = 0.00000
+Lx[6] = -0.00001	 b[6] = 0.00000	 Lx - b[6] = -0.00001
+Lx[7] = -0.00002	 b[7] = 0.00000	 Lx - b[7] = -0.00002
+Lx[8] = -0.00002	 b[8] = 0.00000	 Lx - b[8] = -0.00002
+Lx[9] = 0.00000	 b[9] = 0.00000	 Lx - b[9] = 0.00000
+Lx[1307069] = -0.99992	 b[1307069] = -1.00000	 Lx - b[1307069] = 0.00008
+--------------------------------------------------
+
+ Norm ||Lx - b||_2 : 0.01086
+ Norm ||b||_2      : 1.00000
+ Relative Residual : 0.01086
+--------------------------------------------------
+
+Final Relative Residual calculated: 0.01086
+Writing solution output (Eta values) to file: /home/cse/phd/csz208509/k-WalkLSolve-master/data/outputs/as_ski/asSki_b11_262144
+Printing to file OpFileSolK complete.
+
+Main application finished.
+
+----------------------------------------
+Program finished. Press ENTER to exit...
